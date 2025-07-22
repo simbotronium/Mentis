@@ -25,6 +25,7 @@ java {
 }
 
 application {
+  mainModule = 'com.example.mentis'
   mainClass = 'com.example.mentis.application.MentisApplication'
 }
 
