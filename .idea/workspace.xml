@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="adding release to workflow">
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="working on it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +126,7 @@
       <updated>1753183543486</updated>
       <workItem from="1753183544484" duration="16712000" />
       <workItem from="1753201488504" duration="6519000" />
-      <workItem from="1753208695175" duration="953000" />
+      <workItem from="1753208695175" duration="1660000" />
     </task>
     <task id="LOCAL-00001" summary="changed build.gradle for CD">
       <option name="closed" value="true" />
@@ -216,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753209022873</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="working on it">
+      <option name="closed" value="true" />
+      <created>1753209875701</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753209875701</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +265,7 @@
     <MESSAGE value="added icons" />
     <MESSAGE value="fixing icons" />
     <MESSAGE value="adding release to workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding release to workflow" />
+    <MESSAGE value="working on it" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on it" />
   </component>
 </project>
