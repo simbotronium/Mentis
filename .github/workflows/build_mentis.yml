@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mentis-app
-          path: build/MentisApp/bin/
+          path: build/MentisApp/
 
       - name: Upload mac
         uses: actions/upload-artifact@v4
