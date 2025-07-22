@@ -24,14 +24,8 @@ jobs:
       - name: Build with JLink
         run: ./gradlew jlink
 
-      - name: Upload mac
+      - name: Upload zip
         uses: actions/upload-artifact@v4
         with:
-          name: mentis-mac
-          path: build/MentisApp/bin/mentis
-
-      - name: Upload win
-        uses: actions/upload-artifact@v4
-        with:
-          name: mentis-win
-          path: build/MentisApp/bin/mentis.bat
+          name: mentis-app
+          path: build/MentisApp/bin/
