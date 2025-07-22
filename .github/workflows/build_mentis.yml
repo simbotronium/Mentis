@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-14
 
     steps:
       - name: Checkout
@@ -24,8 +24,17 @@ jobs:
       - name: Build with JLink
         run: ./gradlew jlink
 
+      - name: Build with JPackage
+        run: ./gradlew jpackage
+
       - name: Upload zip
         uses: actions/upload-artifact@v4
         with:
           name: mentis-app
           path: build/MentisApp/bin/
+
+      - name: Upload mac
+        uses: actions/upload-artifact@v4
+        with:
+          name: mentis-app-mac-installer
+          path: build/jpackage/Mentis.app/*.dmg
