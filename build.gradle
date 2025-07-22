@@ -12,6 +12,11 @@ repositories {
   mavenCentral()
 }
 
+dependencies {
+  implementation 'org.openjfx:javafx-controls:21'
+  implementation 'org.openjfx:javafx-fxml:21'
+}
+
 java {
   toolchain {
     languageVersion = JavaLanguageVersion.of(21)
