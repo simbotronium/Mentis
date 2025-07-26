@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="tracing back to working state">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ViewManager.java" afterDir="false" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="setup navigation architecture">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/AppFolderManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/MentisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/MentisApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MainMenuViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MainMenuViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MainViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectSettingsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectSettingsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/main-menu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/main-menu-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-settings-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-settings-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +26,8 @@
         <option value="FxmlFile" />
         <option value="Enum" />
         <option value="Record" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -255,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753210895393</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="setup navigation architecture">
+      <option name="closed" value="true" />
+      <created>1753545181818</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753545181818</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +298,7 @@
     <MESSAGE value="working on it" />
     <MESSAGE value="working on it!" />
     <MESSAGE value="tracing back to working state" />
-    <option name="LAST_COMMIT_MESSAGE" value="tracing back to working state" />
+    <MESSAGE value="setup navigation architecture" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup navigation architecture" />
   </component>
 </project>
