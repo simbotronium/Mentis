@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="working on it!">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build_mentis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build_mentis.yml" afterDir="false" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="tracing back to working state">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Area.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectSettingsViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-settings-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="module-info" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -126,7 +132,8 @@
       <updated>1753183543486</updated>
       <workItem from="1753183544484" duration="16712000" />
       <workItem from="1753201488504" duration="6519000" />
-      <workItem from="1753208695175" duration="2141000" />
+      <workItem from="1753208695175" duration="2796000" />
+      <workItem from="1753535516713" duration="2707000" />
     </task>
     <task id="LOCAL-00001" summary="changed build.gradle for CD">
       <option name="closed" value="true" />
@@ -232,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753210608614</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="tracing back to working state">
+      <option name="closed" value="true" />
+      <created>1753210895393</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753210895393</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +290,7 @@
     <MESSAGE value="adding release to workflow" />
     <MESSAGE value="working on it" />
     <MESSAGE value="working on it!" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on it!" />
+    <MESSAGE value="tracing back to working state" />
+    <option name="LAST_COMMIT_MESSAGE" value="tracing back to working state" />
   </component>
 </project>

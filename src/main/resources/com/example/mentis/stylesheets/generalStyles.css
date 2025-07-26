@@ -1,8 +1,15 @@
-.big-label {
+.standard-text {
     -fx-text-fill: #333333;
+    -fx-font-family: arial;
+}
+
+.big-label {
     -fx-font-weight: bold;
     -fx-font-size: 48;
-    -fx-font-family: arial;
+}
+
+.medium-label {
+    -fx-font-size: 32;
 }
 
 .red-bg-for-testing {
@@ -56,4 +63,14 @@
 .secondary-button:pressed {
     -fx-background-color: #d0e4f9;
 }
+
+.standard-container {
+    -fx-background-color: #efefef;
+    -fx-border-color: #999999;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.3, 2, 2);
+}
+
 
