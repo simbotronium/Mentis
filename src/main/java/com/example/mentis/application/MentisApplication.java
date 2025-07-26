@@ -1,17 +1,15 @@
 package com.example.mentis.application;
 
-import com.example.mentis.presentation.MainViewController;
+import com.example.mentis.presentation.ViewManager;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class MentisApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        Scene scene = new Scene(MainViewController.getInstance().getRoot(), 1920, 1080);
+    public void start(Stage stage) {
+        ViewManager mainController = new ViewManager();
+        Scene scene = new Scene(mainController.getRoot(), 1920, 1080);
         stage.setTitle("Mentis");
         stage.setScene(scene);
         stage.show();

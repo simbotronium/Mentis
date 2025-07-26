@@ -5,11 +5,11 @@
 
 .big-label {
     -fx-font-weight: bold;
-    -fx-font-size: 48;
+    -fx-font-size: 40;
 }
 
 .medium-label {
-    -fx-font-size: 32;
+    -fx-font-size: 24;
 }
 
 .red-bg-for-testing {

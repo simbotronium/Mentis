@@ -1,4 +1,14 @@
 package com.example.mentis.presentation;
 
-public class ProjectSettingsViewController {
+import javafx.fxml.FXML;
+import javafx.scene.Node;
+
+public class ProjectSettingsViewController implements Controller {
+
+    @FXML
+    private Node root;
+
+    public Node getRoot() {
+        return root;
+    }
 }
