@@ -1,11 +1,13 @@
 package com.example.mentis.business.logic;
 
+import com.example.mentis.business.data.Project;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class Manager {
 
     private static final Manager instance = new Manager();
     private SimpleObjectProperty<View> currentView = new SimpleObjectProperty<>();
+    private SimpleObjectProperty<Project> currentProject = new SimpleObjectProperty<>();
 
     private Manager() {}
 
@@ -15,5 +17,13 @@ public class Manager {
 
     public SimpleObjectProperty<View> currentViewProperty() {
         return currentView;
+    }
+
+    public Project getCurrentProject() {
+        return currentProject.get();
+    }
+
+    public SimpleObjectProperty<Project> currentProjectProperty() {
+        return currentProject;
     }
 }

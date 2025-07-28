@@ -1,6 +1,11 @@
 .standard-text {
     -fx-text-fill: #333333;
     -fx-font-family: arial;
+    -fx-font-size: 20;
+}
+
+.bold-text {
+    -fx-font-weight: bold;
 }
 
 .big-label {
@@ -71,6 +76,25 @@
     -fx-border-radius: 15;
     -fx-background-radius: 15;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.3, 2, 2);
+}
+
+.new-element-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #999999;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-text-fill: #999999;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 10;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
+    -fx-max-width: Infinity;
+}
+
+.new-element-button:hover {
+    -fx-border-color: #024E7E;
+    -fx-text-fill: #024E7E;
 }
 
 

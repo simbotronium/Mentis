@@ -11,6 +11,7 @@ public class Project {
     private String name;
 
     private List<Area> areas = new ArrayList<>();
+    private List<Member> members = new ArrayList<>();
 
     public Project(String typeOfSpectroscopy, int numVoxels, int maxDeviation, String name) {
         this.typeOfSpectroscopy = typeOfSpectroscopy;
@@ -43,4 +44,11 @@ public class Project {
         areas.add(a);
     }
 
+    public List<Member> getMembers() {
+        return members;
+    }
+
+    public void addMember(Member member) {
+        this.members.add(member);
+    }
 }
