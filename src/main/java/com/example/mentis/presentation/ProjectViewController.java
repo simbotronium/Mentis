@@ -43,6 +43,10 @@ public class ProjectViewController implements Controller {
             }
         });
 
+        manager.changedProperty().addListener(observable -> {
+            refreshView(manager.getCurrentProject());
+        });
+
         if (manager.getCurrentProject() != null) {
             refreshView(manager.getCurrentProject());
         }
@@ -85,6 +89,7 @@ public class ProjectViewController implements Controller {
                     if (!newValue) {
                         overlayController.getRoot().setVisible(false);
                         projectPane.setEffect(null);
+                        //TODO: fix overlay closing
                     }
                 });
                 root.getChildren().add(overlayRoot);

@@ -1,5 +1,8 @@
 package com.example.mentis.business.data;
 
+import com.example.mentis.business.logic.Manager;
+import javafx.beans.property.SimpleIntegerProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
