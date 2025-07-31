@@ -3,11 +3,13 @@ package com.example.mentis.presentation;
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.Manager;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -25,7 +27,7 @@ public class ProjectViewController implements Controller {
     private Label memberLabel;
 
     @FXML
-    private VBox memberBox;
+    private ListView<Member> memberListView;
 
     private NewMemberOverlayController overlayController;
 
@@ -43,6 +45,12 @@ public class ProjectViewController implements Controller {
             }
         });
 
+        memberListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentProject().getMembers()));
+        memberListView.managedProperty().bind(memberListView.visibleProperty());
+
+        memberListView.setItems(manager.getCurrentProject().getMembers());
+        memberListView.setCellFactory(list -> new MemberListCell());
+
         if (manager.getCurrentProject() != null) {
             refreshView(manager.getCurrentProject());
         }
@@ -54,11 +62,9 @@ public class ProjectViewController implements Controller {
 
     private void refreshView(Project project) {
         memberLabel.setText("Teilnehmer: " + project.getMembers().size());
-
-        memberBox.getChildren().clear();
-        createMemberComponents(project.getMembers());
     }
 
+    /*
     private void createMemberComponents(List<Member> members) {
         try {
             for (Member member : members) {
@@ -75,6 +81,8 @@ public class ProjectViewController implements Controller {
         }
     }
 
+     */
+
     public void onAddNewMemberButton() {
         if (overlayController == null) {
             try {
@@ -82,12 +90,11 @@ public class ProjectViewController implements Controller {
                 Parent overlayRoot = loader.load();
                 overlayController = loader.getController();
                 overlayController.showProperty().addListener((observable, oldValue, newValue) -> {
-                    if (!newValue) {
-                        overlayController.getRoot().setVisible(false);
-                        projectPane.setEffect(null);
-                    }
+                    overlayController.getRoot().setVisible(newValue);
+                    projectPane.setEffect(newValue ? new GaussianBlur(20) : null);
                 });
                 root.getChildren().add(overlayRoot);
+                projectPane.setEffect(new GaussianBlur(20));
             } catch (IOException e) {
                 System.out.println("Something went wrong while loading new member overlay:");
                 e.printStackTrace();
@@ -95,8 +102,7 @@ public class ProjectViewController implements Controller {
         } else {
             overlayController.refresh();
         }
-        overlayController.getRoot().setVisible(true);
-        projectPane.setEffect(new GaussianBlur(20));
+        overlayController.showProperty().set(true);
     }
 
 }

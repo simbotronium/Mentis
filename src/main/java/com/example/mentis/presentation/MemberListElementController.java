@@ -21,6 +21,7 @@ public class MemberListElementController implements Controller {
     private Label examinationsLabel;
 
     public void setMember(Member m) {
+        System.out.println("setting member with id: " +  m.getId());
         idLabel.setText(Long.toString(m.getId()));
         examinationsLabel.setText(createExaminationsString(m.getExaminations()));
     }

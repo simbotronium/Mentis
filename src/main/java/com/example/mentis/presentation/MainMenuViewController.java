@@ -18,9 +18,9 @@ public class MainMenuViewController implements Controller {
 
     @FXML
     protected void onSomeProject() {
-        manager.currentViewProperty().set(View.PROJECT);
         Project testProject = new Project("normal", 256, 5, "MyProject");
         manager.currentProjectProperty().set(testProject);
+        manager.currentViewProperty().set(View.PROJECT);
     }
 
     @FXML

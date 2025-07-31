@@ -4,6 +4,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -89,7 +90,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </Label>
-                              <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="standard-container">
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" styleClass="standard-container">
                                  <VBox.margin>
                                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                  </VBox.margin>
@@ -122,11 +123,15 @@
                                           <String fx:value="bold-text" />
                                        </styleClass>
                                     </GridPane>
-                                    <VBox fx:id="memberBox" spacing="10.0">
-                                       <padding>
-                                          <Insets bottom="10.0" top="10.0" />
-                                       </padding>
-                                    </VBox>
+                                    <ListView fx:id="memberListView" maxHeight="-Infinity" maxWidth="1.7976931348623157E308">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" top="20.0" />
+                                       </VBox.margin>
+                                       <styleClass>
+                                          <String fx:value="standard-text" />
+                                          <String fx:value="transparent-listview" />
+                                       </styleClass>
+                                    </ListView>
                                     <Button mnemonicParsing="false" onAction="#onAddNewMemberButton" styleClass="new-element-button" text="+" textAlignment="CENTER" />
                                  </children>
                               </VBox>

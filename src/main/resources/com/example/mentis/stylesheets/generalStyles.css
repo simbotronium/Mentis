@@ -107,3 +107,10 @@
     -fx-transition: all 0.5s ease-in-out;
 }
 
+.transparent-listview {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-text-fill: #333333;
+}

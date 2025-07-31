@@ -1,5 +1,8 @@
 package com.example.mentis.business.data;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +14,7 @@ public class Project {
     private String name;
 
     private List<Area> areas = new ArrayList<>();
-    private List<Member> members = new ArrayList<>();
+    private ObservableList<Member> members = FXCollections.observableArrayList();
 
     public Project(String typeOfSpectroscopy, int numVoxels, int maxDeviation, String name) {
         this.typeOfSpectroscopy = typeOfSpectroscopy;
@@ -44,12 +47,15 @@ public class Project {
         areas.add(a);
     }
 
-    public List<Member> getMembers() {
+    public ObservableList<Member> getMembers() {
         return members;
     }
 
     public void addMember(Member member) {
         System.out.println("New Member with id: " + member.getId());
         this.members.add(member);
+        for (Member m: members) {
+            System.out.println("id: " + m.getId());
+        }
     }
 }
