@@ -1,5 +1,6 @@
 package com.example.mentis.business.logic;
 
+import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
 import javafx.beans.property.SimpleObjectProperty;
 
@@ -25,5 +26,12 @@ public class Manager {
 
     public SimpleObjectProperty<Project> currentProjectProperty() {
         return currentProject;
+    }
+
+    public void addMember(Member m) {
+        if (currentProject == null) {
+            return;
+        }
+        currentProject.get().addMember(m);
     }
 }

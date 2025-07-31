@@ -97,4 +97,13 @@
     -fx-text-fill: #024E7E;
 }
 
+.liquid-glass {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-border-radius: 20;
+    -fx-border-color: #024E7E;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.05), 10, 0.1, 0, 0);
+    -fx-padding: 16;
+    -fx-transition: all 0.5s ease-in-out;
+}
 

@@ -49,6 +49,7 @@ public class Project {
     }
 
     public void addMember(Member member) {
+        System.out.println("New Member with id: " + member.getId());
         this.members.add(member);
     }
 }
