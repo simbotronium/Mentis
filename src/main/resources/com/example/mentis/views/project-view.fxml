@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <StackPane fx:id="root" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mentis.presentation.ProjectViewController">
    <children>
       <AnchorPane fx:id="projectPane" stylesheets="@../stylesheets/generalStyles.css">
@@ -109,12 +108,15 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <Label text="ID" />
+                                          <Label text="ID">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding></Label>
                                           <Label text="Untersuchungen" GridPane.columnIndex="1" />
                                           <Label text="Download" GridPane.columnIndex="2" />
                                           <Label text="Edit" GridPane.columnIndex="3">
                                              <padding>
-                                                <Insets right="20.0" />
+                                                <Insets right="40.0" />
                                              </padding>
                                           </Label>
                                        </children>

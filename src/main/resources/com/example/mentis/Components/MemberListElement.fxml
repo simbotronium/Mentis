@@ -22,8 +22,12 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label fx:id="idLabel" alignment="CENTER" text="14" />
-      <Label fx:id="examinationsLabel" text="A1,A3,B2,B3,C1,C2" GridPane.columnIndex="1" />
+      <Label fx:id="idLabel" alignment="CENTER" text="14">
+         <styleClass>
+            <String fx:value="standard-text" />
+            <String fx:value="bold-text" />
+         </styleClass></Label>
+      <Label fx:id="examinationsLabel" styleClass="standard-text" text="A1,A3,B2,B3,C1,C2" GridPane.columnIndex="1" />
       <RadioButton mnemonicParsing="false" GridPane.columnIndex="2" />
       <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
          <image>
@@ -35,14 +39,14 @@
       </ImageView>
    </children>
    <stylesheets>
-      <URL value="@../stylesheets/generalStyles.css" />
       <URL value="@../stylesheets/memberListElement.css" />
+      <URL value="@../stylesheets/generalStyles.css" />
    </stylesheets>
    <styleClass>
       <String fx:value="standard-text" />
       <String fx:value="elementContainer" />
    </styleClass>
    <padding>
-      <Insets bottom="15.0" top="15.0" />
+      <Insets bottom="10.0" top="10.0" />
    </padding>
 </GridPane>
