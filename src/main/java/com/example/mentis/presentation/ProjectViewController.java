@@ -13,10 +13,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 
 import java.io.IOException;
-import java.util.List;
 
 public class ProjectViewController implements Controller {
 
@@ -63,25 +61,6 @@ public class ProjectViewController implements Controller {
     private void refreshView(Project project) {
         memberLabel.setText("Teilnehmer: " + project.getMembers().size());
     }
-
-    /*
-    private void createMemberComponents(List<Member> members) {
-        try {
-            for (Member member : members) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/mentis/Components/MemberListElement.fxml"));
-                Parent root = loader.load();
-
-                MemberListElementController controller = loader.getController();
-                controller.setMember(member);
-                memberBox.getChildren().add(root);
-            }
-        } catch (IOException e) {
-            System.out.println("Something went wrong while loading Memberlist:");
-            e.printStackTrace();
-        }
-    }
-
-     */
 
     public void onAddNewMemberButton() {
         if (overlayController == null) {

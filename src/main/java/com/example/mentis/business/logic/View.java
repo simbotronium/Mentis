@@ -4,7 +4,8 @@ public enum View {
 
     MAIN_MENU("/com/example/mentis/views/main-menu-view.fxml"),
     PROJECT("/com/example/mentis/views/project-view.fxml"),
-    PROJECT_SETTINGS("/com/example/mentis/views/project-settings-view.fxml");
+    PROJECT_SETTINGS("/com/example/mentis/views/project-settings-view.fxml"),
+    MEMBER("/com/example/mentis/views/member-view.fxml");
 
     private final String fxmlPath;
 

@@ -5,6 +5,8 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +15,7 @@ public class Member {
     private SimpleLongProperty id = new SimpleLongProperty(0);
     private SimpleIntegerProperty age = new SimpleIntegerProperty(0);
     private SimpleBooleanProperty download = new SimpleBooleanProperty(false);
-    private List<Examination> examinations = new ArrayList<>();
+    private ObservableList<Examination> examinations = FXCollections.observableArrayList();
 
     private SimpleObjectProperty<Side> side = new SimpleObjectProperty<>(Side.LEFT);
 
@@ -28,10 +30,10 @@ public class Member {
     public Member(long id, Side side, List<Examination> examinations) {
         this.id.set(id);
         this.side.set(side);
-        this.examinations = examinations;
+        this.examinations.setAll(examinations);
     }
 
-    public List<Examination> getExaminations() {
+    public ObservableList<Examination> getExaminations() {
         return examinations;
     }
 
@@ -40,7 +42,7 @@ public class Member {
     }
 
     public void setExaminations(List<Examination> examinations) {
-        this.examinations = examinations;
+        this.examinations.setAll(examinations);
     }
 
     public long getId() {

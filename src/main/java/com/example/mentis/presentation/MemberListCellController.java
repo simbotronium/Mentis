@@ -2,6 +2,8 @@ package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.data.Member;
+import com.example.mentis.business.logic.Manager;
+import com.example.mentis.business.logic.View;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -9,7 +11,7 @@ import javafx.scene.layout.GridPane;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MemberListElementController implements Controller {
+public class MemberListCellController implements Controller {
 
     @FXML
     private GridPane root;
@@ -20,10 +22,21 @@ public class MemberListElementController implements Controller {
     @FXML
     private Label examinationsLabel;
 
+    private Member member;
+    private final Manager manager = Manager.getInstance();
+
     public void setMember(Member m) {
-        System.out.println("setting member with id: " +  m.getId());
+        member = m;
         idLabel.setText(Long.toString(m.getId()));
         examinationsLabel.setText(createExaminationsString(m.getExaminations()));
+    }
+
+    @FXML
+    protected void onEdit() {
+        if (member != null) {
+            manager.currentMemberProperty().set(member);
+            manager.currentViewProperty().set(View.MEMBER);
+        }
     }
 
     private String createExaminationsString(List<Examination> examinations) {

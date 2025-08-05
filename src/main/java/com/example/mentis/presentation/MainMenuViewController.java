@@ -32,6 +32,11 @@ public class MainMenuViewController implements Controller {
         manager.currentViewProperty().set(View.PROJECT_SETTINGS);
     }
 
+    @FXML
+    protected void onEdit() {
+
+    }
+
     public Node getRoot() {
         return root;
     }

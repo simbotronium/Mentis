@@ -10,7 +10,7 @@ import java.io.IOException;
 public class MemberListCell extends ListCell<Member> {
 
     private Parent root;
-    private MemberListElementController controller;
+    private MemberListCellController controller;
 
     public MemberListCell() {
         try {
