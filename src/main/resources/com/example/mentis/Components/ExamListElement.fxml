@@ -26,10 +26,10 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <Label fx:id="idLabel" alignment="CENTER" styleClass="standard-text" text="C" />
-      <Label fx:id="examinationsLabel" styleClass="standard-text" text="3" GridPane.columnIndex="1" />
-      <Circle fill="DODGERBLUE" radius="10.0" stroke="#00000033" strokeType="INSIDE" GridPane.columnIndex="2" />
-      <Circle fill="DODGERBLUE" radius="10.0" stroke="#00000033" strokeType="INSIDE" GridPane.columnIndex="3" />
+      <Label fx:id="examLabel" alignment="CENTER" styleClass="standard-text" text="C" />
+      <Label fx:id="sliceLabel" styleClass="standard-text" text="3" GridPane.columnIndex="1" />
+      <Circle fx:id="valid" fill="DODGERBLUE" radius="10.0" stroke="#00000033" strokeType="INSIDE" GridPane.columnIndex="2" />
+      <Circle fx:id="mapped" fill="DODGERBLUE" radius="10.0" stroke="#00000033" strokeType="INSIDE" GridPane.columnIndex="3" />
       <RadioButton mnemonicParsing="false" GridPane.columnIndex="4" />
       <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
          <image>

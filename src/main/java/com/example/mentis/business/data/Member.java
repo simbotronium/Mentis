@@ -38,6 +38,7 @@ public class Member {
     }
 
     public void addExamination(Examination e) {
+        System.out.println("New Examination with exam " + e.getExam());
         examinations.add(e);
     }
 

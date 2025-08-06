@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="created MemberView and corresponding ListCell">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/NewExamOverlayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-exam-overlay.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/overlayStyles.css" afterDir="false" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="implemented overlay for new exam and file upload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Examination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Examination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MemberListCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MemberListCellController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ExamListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ExamListCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ExamListCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ExamListCellController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MainMenuViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MainMenuViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MemberViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MemberViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/NewMemberOverlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/NewMemberOverlayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ExamListElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ExamListElement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-member-overlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-member-overlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/member-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/member-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754407000685</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="implemented overlay for new exam and file upload">
+      <option name="closed" value="true" />
+      <created>1754508053087</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1754508053087</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +345,7 @@
     <MESSAGE value="added AppFolderManager" />
     <MESSAGE value="fixed ListView text color and performance issues" />
     <MESSAGE value="created MemberView and corresponding ListCell" />
-    <option name="LAST_COMMIT_MESSAGE" value="created MemberView and corresponding ListCell" />
+    <MESSAGE value="implemented overlay for new exam and file upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented overlay for new exam and file upload" />
   </component>
 </project>

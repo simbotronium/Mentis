@@ -20,7 +20,7 @@ public class MainMenuViewController implements Controller {
     @FXML
     protected void onSomeProject() {
         Project testProject = new Project("normal", 256, 5, "MyProject");
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 5; i++) {
             testProject.addMember(new Member(12, Side.RIGHT));
         }
         manager.currentProjectProperty().set(testProject);

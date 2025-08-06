@@ -30,8 +30,9 @@ public class ExamListCell extends ListCell<Examination> {
             setGraphic(null);
             setText(null);
         } else {
-            controller.setExamination(exam);
+            setText(null);
             setGraphic(root);
+            controller.setExamination(exam);
         }
     }
 

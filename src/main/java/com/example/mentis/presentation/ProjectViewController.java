@@ -39,7 +39,11 @@ public class ProjectViewController implements Controller {
         manager.currentProjectProperty().addListener((observable, oldValue, newValue) -> {
             System.out.println("changed project");
             if (newValue != null) {
-                memberLabel.setText("Teilnehmer: " + newValue.getMembers().size());
+                memberLabel.setText("Members: " + newValue.getMembers().size());
+
+                newValue.getMembers().addListener((ListChangeListener<? super Member>) o -> {
+                    memberLabel.setText("Members: " + manager.getCurrentProject().getMembers().size());
+                });
             }
         });
 
@@ -50,10 +54,12 @@ public class ProjectViewController implements Controller {
         memberListView.setCellFactory(list -> new MemberListCell());
 
         if (manager.getCurrentProject() != null) {
+            memberLabel.setText("Members: " + manager.getCurrentProject().getMembers().size());
             manager.getCurrentProject().getMembers().addListener((ListChangeListener<? super Member>) o -> {
-                memberLabel.setText("Teilnehmer: " + manager.getCurrentProject().getMembers().size());
+                memberLabel.setText("Members: " + manager.getCurrentProject().getMembers().size());
             });
         }
+
     }
 
     public Node getRoot() {

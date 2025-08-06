@@ -1,6 +1,7 @@
 package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Examination;
+import com.example.mentis.business.data.Member;
 import com.example.mentis.business.logic.Manager;
 import javafx.beans.binding.Bindings;
 import javafx.collections.ListChangeListener;
@@ -55,6 +56,9 @@ public class MemberViewController implements Controller {
         if (manager.getCurrentMember() != null) {
             titleLabel.setText("Member: " + manager.getCurrentMember().getId());
             examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size());
+            manager.getCurrentMember().getExaminations().addListener((ListChangeListener<? super Examination>) o -> {
+                examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size());
+            });
         }
     }
 
