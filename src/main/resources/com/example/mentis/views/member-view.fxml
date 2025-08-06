@@ -135,7 +135,7 @@
                                           <String fx:value="transparent-listview" />
                                        </styleClass>
                                     </ListView>
-                                    <Button mnemonicParsing="false" styleClass="new-element-button" text="+" textAlignment="CENTER" />
+                                    <Button mnemonicParsing="false" onAction="#onAddNewExamButton" styleClass="new-element-button" text="+" textAlignment="CENTER" />
                                  </children>
                               </VBox>
                            </children>

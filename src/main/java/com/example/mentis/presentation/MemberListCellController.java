@@ -41,7 +41,7 @@ public class MemberListCellController implements Controller {
 
     private String createExaminationsString(List<Examination> examinations) {
         return examinations.stream()
-                .map(examination -> examination.getLayer() + Integer.toString(examination.getNum()))
+                .map(examination -> examination.getExam() + Integer.toString(examination.getSlice()))
                 .collect(Collectors.joining(","));
     }
 

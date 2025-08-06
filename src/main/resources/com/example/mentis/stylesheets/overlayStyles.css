@@ -1,0 +1,9 @@
+.successful-upload {
+    -fx-text-fill: lightgreen;
+    -fx-border-color: lightgreen;
+}
+
+.unsuccessful-upload {
+    -fx-text-fill: red;
+    -fx-border-color: red;
+}

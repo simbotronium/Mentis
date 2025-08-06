@@ -13,7 +13,7 @@
 
 <VBox fx:id="root" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="20.0" stylesheets="@../stylesheets/generalStyles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mentis.presentation.NewMemberOverlayController">
    <children>
-      <Label styleClass="big-label" text="Neuer Teilnehmer">
+      <Label styleClass="big-label" text="New Case">
          <VBox.margin>
             <Insets bottom="50.0" />
          </VBox.margin>
@@ -27,23 +27,23 @@
       </HBox>
       <HBox alignment="CENTER" prefWidth="400.0" spacing="20.0" styleClass="bold-text">
          <children>
-            <Label text="Alter:" />
+            <Label text="Age:" />
             <Region HBox.hgrow="ALWAYS" />
             <TextField fx:id="ageTextField" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefWidth="400.0">
          <children>
-            <Label styleClass="bold-text" text="Seite:" />
+            <Label styleClass="bold-text" text="Side:" />
             <Region HBox.hgrow="ALWAYS" />
             <HBox spacing="10.0">
                <children>
-                  <RadioButton fx:id="left" mnemonicParsing="false" onAction="#onRadioButtonPress" selected="true" text="links">
+                  <RadioButton fx:id="left" mnemonicParsing="false" onAction="#onRadioButtonPress" selected="true" text="left">
                      <toggleGroup>
                         <ToggleGroup fx:id="sideGroup" />
                      </toggleGroup></RadioButton>
-                  <RadioButton fx:id="right" mnemonicParsing="false" onAction="#onRadioButtonPress" text="rechts" toggleGroup="$sideGroup" />
-                  <RadioButton fx:id="both" mnemonicParsing="false" onAction="#onRadioButtonPress" text="beide" toggleGroup="$sideGroup" />
+                  <RadioButton fx:id="right" mnemonicParsing="false" onAction="#onRadioButtonPress" text="right" toggleGroup="$sideGroup" />
+                  <RadioButton fx:id="both" mnemonicParsing="false" onAction="#onRadioButtonPress" text="both" toggleGroup="$sideGroup" />
                </children>
                <padding>
                   <Insets left="30.0" />

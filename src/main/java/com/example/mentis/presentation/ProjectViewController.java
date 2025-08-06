@@ -1,9 +1,9 @@
 package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Member;
-import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.Manager;
 import javafx.beans.binding.Bindings;
+import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -39,7 +39,7 @@ public class ProjectViewController implements Controller {
         manager.currentProjectProperty().addListener((observable, oldValue, newValue) -> {
             System.out.println("changed project");
             if (newValue != null) {
-                refreshView(newValue);
+                memberLabel.setText("Teilnehmer: " + newValue.getMembers().size());
             }
         });
 
@@ -50,16 +50,14 @@ public class ProjectViewController implements Controller {
         memberListView.setCellFactory(list -> new MemberListCell());
 
         if (manager.getCurrentProject() != null) {
-            refreshView(manager.getCurrentProject());
+            manager.getCurrentProject().getMembers().addListener((ListChangeListener<? super Member>) o -> {
+                memberLabel.setText("Teilnehmer: " + manager.getCurrentProject().getMembers().size());
+            });
         }
     }
 
     public Node getRoot() {
         return root;
-    }
-
-    private void refreshView(Project project) {
-        memberLabel.setText("Teilnehmer: " + project.getMembers().size());
     }
 
     public void onAddNewMemberButton() {

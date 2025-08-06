@@ -1,28 +1,35 @@
 package com.example.mentis.business.data;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 public class Examination {
 
-    private String layer;
-    private int num;
+    private SimpleStringProperty exam = new SimpleStringProperty("");
+    private SimpleIntegerProperty slice = new SimpleIntegerProperty(0);
 
-    public Examination(String layer, int num) {
-        this.layer = layer;
-        this.num = num;
+    public Examination() {
+        this("X", 0);
     }
 
-    public String getLayer() {
-        return layer;
+    public Examination(String exam, int slice) {
+        this.exam.set(exam);
+        this.slice.set(slice);
     }
 
-    public void setLayer(String layer) {
-        this.layer = layer;
+    public String getExam() {
+        return exam.get();
     }
 
-    public int getNum() {
-        return num;
+    public SimpleStringProperty examProperty() {
+        return exam;
     }
 
-    public void setNum(int num) {
-        this.num = num;
+    public int getSlice() {
+        return slice.get();
+    }
+
+    public SimpleIntegerProperty sliceProperty() {
+        return slice;
     }
 }

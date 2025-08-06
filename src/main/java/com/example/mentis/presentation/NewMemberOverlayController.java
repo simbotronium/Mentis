@@ -58,7 +58,7 @@ public class NewMemberOverlayController implements Controller {
     public void onOk() {
         manager.addMember(member);
         refresh();
-        showProperty().set(false);
+        show.set(false);
     }
 
     @Override
