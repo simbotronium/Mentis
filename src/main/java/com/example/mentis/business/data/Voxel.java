@@ -1,11 +1,13 @@
 package com.example.mentis.business.data;
 
 import com.example.mentis.business.logic.ValidationStatus;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class Voxel {
 
     private SimpleObjectProperty<ValidationStatus> validationStatus = new SimpleObjectProperty<>(ValidationStatus.UNDECIDED);
+    private SimpleBooleanProperty selected = new SimpleBooleanProperty(false);
 
     private final int row;
     private final int col;
@@ -34,4 +36,13 @@ public class Voxel {
     public int getCol() {
         return col;
     }
+
+    public boolean isSelected() {
+        return selected.get();
+    }
+
+    public SimpleBooleanProperty selectedProperty() {
+        return selected;
+    }
+
 }

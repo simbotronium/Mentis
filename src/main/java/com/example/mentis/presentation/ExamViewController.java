@@ -5,16 +5,15 @@ import com.example.mentis.business.logic.Manager;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
-import javafx.stage.Stage;
+
+import java.util.Arrays;
 
 public class ExamViewController implements Controller {
 
@@ -68,7 +67,11 @@ public class ExamViewController implements Controller {
         for (Voxel voxel: manager.getCurrentExamination().getVoxels()) {
             StackPane cell = new StackPane();
             cell.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-            Polygon triangle = new Triangle(cell, voxel.getValidationStatus().getColor().brighter(), voxel.getValidationStatus().getColor(), 0.5, renderProperty);
+            cell.setOnMouseClicked(e -> {
+                Arrays.stream(manager.getCurrentExamination().getVoxels()).forEach(v -> v.selectedProperty().set(false));
+                voxel.selectedProperty().set(true);
+            });
+            Polygon triangle = new VoxelComponent(cell, voxel.getValidationStatus().getColor().brighter(), voxel.getValidationStatus().getColor(), 0.5, renderProperty, voxel);
             cell.getChildren().add(triangle);
             GridPane.setHgrow(cell, Priority.ALWAYS);
             GridPane.setVgrow(cell, Priority.ALWAYS);

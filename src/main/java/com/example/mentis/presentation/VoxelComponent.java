@@ -1,5 +1,6 @@
 package com.example.mentis.presentation;
 
+import com.example.mentis.business.data.Voxel;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -10,12 +11,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.util.Duration;
 
-public class Triangle extends Polygon {
+public class VoxelComponent extends Polygon {
 
     private final double space;
     private Color fillColor;
+    private Color strokeColor;
+    private final Controller controller;
 
-    public Triangle(StackPane container, Color fillColor, Color strokeColor, double space, SimpleBooleanProperty renderProperty) {
+    public VoxelComponent(StackPane container, Color fillColor, Color strokeColor, double space, SimpleBooleanProperty renderProperty, Voxel voxel) {
         super();
         super.getPoints().setAll(
                 0.0, 0.0,
@@ -28,9 +31,12 @@ public class Triangle extends Polygon {
 
         this.space = space;
         this.fillColor = fillColor;
+        this.strokeColor = strokeColor;
         renderProperty.addListener((observable, oldValue, newValue) -> updateTriangle(container));
 
         setupHoverEffect(container);
+
+        controller = new VoxelComponentController(this, voxel);
     }
 
     private void updateTriangle(StackPane container) {
@@ -58,5 +64,4 @@ public class Triangle extends Polygon {
         );
         timeline.play();
     }
-
 }
