@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../stylesheets/generalStyles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mentis.presentation.ExamViewController">
+   <children>
+      <HBox alignment="CENTER" spacing="20.0">
+         <children>
+            <VBox spacing="20.0">
+               <children>
+                  <Label text="ProjectName" />
+                  <HBox spacing="20.0">
+                     <children>
+                        <Label text="Exam:" />
+                        <Label text="Slice:" />
+                        <Label text="Side:" />
+                        <Label text="Study:" />
+                        <Label text="Age:" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <styleClass>
+                  <String fx:value="standard-container" />
+                  <String fx:value="standard-text" />
+               </styleClass>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" styleClass="secondary-button" text="Back" />
+            <Button alignment="CENTER" mnemonicParsing="false" styleClass="primary-button" text="Save" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" spacing="30.0">
+         <children>
+            <StackPane fx:id="leftStack">
+               <children>
+                  <ImageView fx:id="leftImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <GridPane fx:id="leftGrid" alignment="CENTER" StackPane.alignment="CENTER">
+                  </GridPane>
+               </children>
+            </StackPane>
+            <StackPane fx:id="middleStack">
+               <children>
+                  <GridPane fx:id="middleGrid" alignment="CENTER" StackPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <ImageView fx:id="middleImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="rightStack">
+               <children>
+                  <GridPane fx:id="rightGrid" alignment="CENTER" StackPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <ImageView fx:id="rightImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <HBox>
+         <children>
+            <VBox alignment="CENTER_LEFT" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="selected Voxel" />
+                  <Button fx:id="validateButton" mnemonicParsing="false" text="validate" />
+                  <Button fx:id="refuteButton" mnemonicParsing="false" text="refute" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

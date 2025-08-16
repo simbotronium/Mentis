@@ -11,6 +11,7 @@ public class Manager {
     private SimpleObjectProperty<View> currentView = new SimpleObjectProperty<>();
     private SimpleObjectProperty<Project> currentProject = new SimpleObjectProperty<>();
     private SimpleObjectProperty<Member> currentMember = new SimpleObjectProperty<>();
+    private SimpleObjectProperty<Examination> currentExamination = new SimpleObjectProperty<>();
 
     private Manager() {
 
@@ -54,4 +55,15 @@ public class Manager {
         currentMember.get().addExamination(e);
     }
 
+    public Examination getCurrentExamination() {
+        return currentExamination.get();
+    }
+
+    public SimpleObjectProperty<Examination> currentExaminationProperty() {
+        return currentExamination;
+    }
+
+    public void setCurrentExamination(Examination currentExamination) {
+        this.currentExamination.set(currentExamination);
+    }
 }

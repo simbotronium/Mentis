@@ -9,7 +9,7 @@ import java.util.List;
 public class Project {
 
     private String typeOfSpectroscopy;
-    private int numVoxels = 0;
+    private int voxelDimensionSize = 0;
     private int maxDeviation;
     private String name;
 
@@ -18,7 +18,7 @@ public class Project {
 
     public Project(String typeOfSpectroscopy, int numVoxels, int maxDeviation, String name) {
         this.typeOfSpectroscopy = typeOfSpectroscopy;
-        this.numVoxels = numVoxels;
+        this.voxelDimensionSize = numVoxels;
         this.maxDeviation = maxDeviation;
         this.name = name;
     }
@@ -27,8 +27,8 @@ public class Project {
         this.typeOfSpectroscopy = typeOfSpectroscopy;
     }
 
-    public void setNumVoxels(int numVoxels) {
-        this.numVoxels = numVoxels;
+    public void setVoxelDimensionSize(int voxelDimensionSize) {
+        this.voxelDimensionSize = voxelDimensionSize;
     }
 
     public void setMaxDeviation(int maxDeviation) {

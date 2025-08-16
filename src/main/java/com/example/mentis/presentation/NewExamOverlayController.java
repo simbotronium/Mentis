@@ -78,10 +78,15 @@ public class NewExamOverlayController implements Controller {
 
     @FXML
     public void ontxtUpload() {
-        handleFileUpload(overlayUploadButton, "*.txt", "Textdateien");
+        handleFileUpload(txtUploadButton, "*.txt", "Textfiles");
     }
 
-    private void handleFileUpload(Button button, String fileExtension, String fileDescription) {
+    @FXML
+    public void onOverlayUpload() {
+        handleFileUpload(overlayUploadButton, "*.jpeg", "Picturefiles");
+    }
+
+    private void handleFileUpload(Button sourceButton, String fileExtension, String fileDescription) {
         Stage stage = (Stage) root.getScene().getWindow();
 
         if (stage == null) {
@@ -98,13 +103,14 @@ public class NewExamOverlayController implements Controller {
         File selectedFile = fileChooser.showOpenDialog(stage);
 
         if (selectedFile != null) {
-            System.out.println("selected File: " + selectedFile.getAbsolutePath());
-            button.setText(selectedFile.getName());
-            button.getStyleClass().add("successful-upload");
+            System.out.println("selected File: " + selectedFile.getPath());
+            examination.setOverlayFile(selectedFile);
+            sourceButton.setText(selectedFile.getName());
+            sourceButton.getStyleClass().add("successful-upload");
 
         } else {
             System.out.println("no file selected");
-            button.getStyleClass().add("unsuccessful-upload");
+            sourceButton.getStyleClass().add("unsuccessful-upload");
         }
     }
 

@@ -31,7 +31,7 @@
       <Circle fx:id="valid" fill="DODGERBLUE" radius="10.0" stroke="#00000033" strokeType="INSIDE" GridPane.columnIndex="2" />
       <Circle fx:id="mapped" fill="DODGERBLUE" radius="10.0" stroke="#00000033" strokeType="INSIDE" GridPane.columnIndex="3" />
       <RadioButton mnemonicParsing="false" GridPane.columnIndex="4" />
-      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
+      <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onEdit" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
          <image>
             <Image url="@../assets/edit_ion.png" />
          </image>

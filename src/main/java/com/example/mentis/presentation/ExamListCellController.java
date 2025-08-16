@@ -1,6 +1,8 @@
 package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Examination;
+import com.example.mentis.business.logic.Manager;
+import com.example.mentis.business.logic.View;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -20,14 +22,26 @@ public class ExamListCellController implements Controller {
     @FXML
     private Circle mapped;
 
+    private Examination exam;
+
     private final Color red = new Color(1.0, 0.0, 0.0, 1.0);
     private final Color green = new Color(0.0, 1.0, 0.0, 1.0);
 
     public void setExamination(Examination exam) {
+        this.exam = exam;
         examLabel.setText(exam.getExam().toUpperCase());
         sliceLabel.setText(Integer.toString(exam.getSlice()));
         valid.setFill(exam.isValid() ? green : red);
         mapped.setFill(exam.isMapped() ? green : red);
+    }
+
+    @FXML
+    public void onEdit() {
+        Manager manager = Manager.getInstance();
+        if (exam != null) {
+            manager.currentExaminationProperty().set(exam);
+            manager.currentViewProperty().set(View.EXAM);
+        }
     }
 
     @Override
