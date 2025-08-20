@@ -1,6 +1,7 @@
 package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Voxel;
+import com.example.mentis.business.logic.ValidationStatus;
 import javafx.scene.paint.Color;
 
 public class VoxelComponentController implements Controller {
@@ -15,17 +16,32 @@ public class VoxelComponentController implements Controller {
     }
 
     private void init() {
-        voxel.validationStatusProperty().addListener((observable, oldValue, newValue) -> {
-            System.out.println("Validation status changed");
+        root.getContainer().setOnMouseEntered(e -> root.animateHover(root.getContainer(), 2.0, root.getFillColor().deriveColor(0, 1, 1, 0.8), 150));
+        root.getContainer().setOnMouseExited(e -> {
+            if (!voxel.isSelected()) root.animateHover(root.getContainer(), 1, root.getFillColor().deriveColor(0, 1, 1, 0.5), 200);
         });
+
         voxel.selectedProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue) {
                 root.setStroke(Color.WHITE);
             } else {
                 root.setStroke(voxel.getValidationStatus().getColor());
+                root.animateHover(root.getContainer(), 1, root.getFillColor().deriveColor(0, 1, 1, 0.5), 200);
             }
         });
+
+        voxel.validationStatusProperty().addListener((observable, oldValue, newValue) -> {
+            updateColors(newValue);
+        });
     }
+
+    public void updateColors(ValidationStatus validationStatus) {
+        root.setFillColor(validationStatus.getColor());
+        root.setStrokeColor(validationStatus.getColor());
+        root.setFill(root.getFillColor().deriveColor(0, 1, 1, 0.5));
+        root.setStroke(root.getStrokeColor());
+    }
+
 
     @Override
     public VoxelComponent getRoot() {

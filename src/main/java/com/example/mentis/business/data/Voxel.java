@@ -6,8 +6,8 @@ import javafx.beans.property.SimpleObjectProperty;
 
 public class Voxel {
 
-    private SimpleObjectProperty<ValidationStatus> validationStatus = new SimpleObjectProperty<>(ValidationStatus.UNDECIDED);
-    private SimpleBooleanProperty selected = new SimpleBooleanProperty(false);
+    private final SimpleObjectProperty<ValidationStatus> validationStatus = new SimpleObjectProperty<>(ValidationStatus.UNDECIDED);
+    private final SimpleBooleanProperty selected = new SimpleBooleanProperty(false);
 
     private final int row;
     private final int col;
@@ -43,6 +43,11 @@ public class Voxel {
 
     public SimpleBooleanProperty selectedProperty() {
         return selected;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + this.row + " | " + this.col + ")";
     }
 
 }

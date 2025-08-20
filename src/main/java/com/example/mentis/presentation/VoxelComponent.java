@@ -17,6 +17,8 @@ public class VoxelComponent extends Polygon {
     private Color fillColor;
     private Color strokeColor;
     private final Controller controller;
+    private final Voxel voxel;
+    private final StackPane container;
 
     public VoxelComponent(StackPane container, Color fillColor, Color strokeColor, double space, SimpleBooleanProperty renderProperty, Voxel voxel) {
         super();
@@ -32,9 +34,9 @@ public class VoxelComponent extends Polygon {
         this.space = space;
         this.fillColor = fillColor;
         this.strokeColor = strokeColor;
+        this.voxel = voxel;
+        this.container = container;
         renderProperty.addListener((observable, oldValue, newValue) -> updateTriangle(container));
-
-        setupHoverEffect(container);
 
         controller = new VoxelComponentController(this, voxel);
     }
@@ -47,12 +49,11 @@ public class VoxelComponent extends Polygon {
         );
     }
 
-    private void setupHoverEffect(StackPane container) {
-        container.setOnMouseEntered(e -> animateHover(container, 2.0, fillColor.deriveColor(0, 1, 1, 0.8), 150));
-        container.setOnMouseExited(e -> animateHover(container, 1, fillColor.deriveColor(0, 1, 1, 0.5), 200));
+    public StackPane getContainer() {
+        return container;
     }
 
-    private void animateHover(StackPane container, double factor, Color targetFill, int ms) {
+    public void animateHover(StackPane container, double factor, Color targetFill, int ms) {
         double dy = (container.getHeight() * space) * (factor - 1);
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.millis(ms),
@@ -63,5 +64,21 @@ public class VoxelComponent extends Polygon {
                 )
         );
         timeline.play();
+    }
+
+    public Color getFillColor() {
+        return fillColor;
+    }
+
+    public void setFillColor(Color fillColor) {
+        this.fillColor = fillColor;
+    }
+
+    public Color getStrokeColor() {
+        return strokeColor;
+    }
+
+    public void setStrokeColor(Color strokeColor) {
+        this.strokeColor = strokeColor;
     }
 }

@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="added animation to voxel">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponentController.java" afterDir="false" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="made voxel selectable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Voxel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Voxel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ExamViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ExamViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/exam-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/exam-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +142,8 @@
       <workItem from="1753201488504" duration="6519000" />
       <workItem from="1753208695175" duration="2796000" />
       <workItem from="1753535516713" duration="2707000" />
-      <workItem from="1755356725099" duration="12839000" />
+      <workItem from="1755356725099" duration="12941000" />
+      <workItem from="1755699798002" duration="5617000" />
     </task>
     <task id="LOCAL-00001" summary="changed build.gradle for CD">
       <option name="closed" value="true" />
@@ -318,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755367939176</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="made voxel selectable">
+      <option name="closed" value="true" />
+      <created>1755373387063</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1755373387063</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +381,7 @@
     <MESSAGE value="fixed displaying issue in NewExamOverlay" />
     <MESSAGE value="created exam view and started implemented voxel edit" />
     <MESSAGE value="added animation to voxel" />
-    <option name="LAST_COMMIT_MESSAGE" value="added animation to voxel" />
+    <MESSAGE value="made voxel selectable" />
+    <option name="LAST_COMMIT_MESSAGE" value="made voxel selectable" />
   </component>
 </project>
