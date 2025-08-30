@@ -25,10 +25,10 @@
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button mnemonicParsing="false" styleClass="secondary-button" text="Back" />
+                                    <Button mnemonicParsing="false" onAction="#onBack" styleClass="secondary-button" text="Back" />
                                  </children>
                               </HBox>
-                              <Label alignment="TOP_CENTER" text="Project Overview">
+                              <Label fx:id="nameLabel" alignment="TOP_CENTER" text="Project Overview">
                                  <styleClass>
                                     <String fx:value="standard-text" />
                                     <String fx:value="big-label" />

@@ -26,7 +26,9 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                            <children>
-                              <Button mnemonicParsing="false" styleClass="primary-button" text="Confirm" />
+                              <Button mnemonicParsing="false" onAction="#onBack" styleClass="secondary-button" text="Back" />
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Button mnemonicParsing="false" onAction="#onConfirm" styleClass="primary-button" text="Confirm" />
                            </children>
                         </HBox>
                         <Label text="Project Settings" textAlignment="CENTER">
@@ -68,11 +70,11 @@
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </padding>
                            <children>
-                              <Label fx:id="projectNameLabel" styleClass="italic-text" text="My Project">
+                              <TextField fx:id="projectNameField" styleClass="invisible-text-field" text="My Project">
                                  <VBox.margin>
                                     <Insets bottom="20.0" />
                                  </VBox.margin>
-                              </Label>
+                              </TextField>
                               <HBox>
                                  <children>
                                     <Label text="Spectoscopy Type:" />

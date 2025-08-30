@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.StackPane?>
@@ -19,6 +20,7 @@
                   <Insets bottom="30.0" />
                </VBox.margin>
             </ImageView>
+            <ListView fx:id="projectsListView" styleClass="transparent-listview" />
             <Button mnemonicParsing="false" onAction="#onSomeProject" styleClass="primary-button" text="some project" />
             <Button mnemonicParsing="false" onAction="#onNewProject" styleClass="secondary-button" text="new project" />
          </children>

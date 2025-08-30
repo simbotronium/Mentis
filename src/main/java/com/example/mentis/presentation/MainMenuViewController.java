@@ -1,13 +1,16 @@
 package com.example.mentis.presentation;
 
+import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
+import com.example.mentis.business.data.ProjectListEntry;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.Side;
 import com.example.mentis.business.logic.View;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.StackPane;
 
 public class MainMenuViewController implements Controller {
@@ -16,6 +19,14 @@ public class MainMenuViewController implements Controller {
 
     @FXML
     private StackPane root;
+    @FXML
+    private ListView<ProjectListEntry> projectsListView;
+
+
+    @FXML
+    public void initialize() {
+        projectsListView.setItems(DataManager.getEntries());
+    }
 
     @FXML
     protected void onSomeProject() {

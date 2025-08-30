@@ -1,5 +1,6 @@
 package com.example.mentis.business.logic;
 
+import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
@@ -8,10 +9,12 @@ import javafx.beans.property.SimpleObjectProperty;
 public class Manager {
 
     private static final Manager instance = new Manager();
-    private SimpleObjectProperty<View> currentView = new SimpleObjectProperty<>();
-    private SimpleObjectProperty<Project> currentProject = new SimpleObjectProperty<>();
-    private SimpleObjectProperty<Member> currentMember = new SimpleObjectProperty<>();
-    private SimpleObjectProperty<Examination> currentExamination = new SimpleObjectProperty<>();
+
+    // TODO: move to ViewManager
+    private final SimpleObjectProperty<View> currentView = new SimpleObjectProperty<>();
+    private final SimpleObjectProperty<Project> currentProject = new SimpleObjectProperty<>();
+    private final SimpleObjectProperty<Member> currentMember = new SimpleObjectProperty<>();
+    private final SimpleObjectProperty<Examination> currentExamination = new SimpleObjectProperty<>();
 
     private Manager() {
 
@@ -63,7 +66,9 @@ public class Manager {
         return currentExamination;
     }
 
-    public void setCurrentExamination(Examination currentExamination) {
-        this.currentExamination.set(currentExamination);
+    public void confirmProject() {
+        DataManager.confirmProject(currentProject.get());
+        currentView.set(View.PROJECT);
     }
+
 }

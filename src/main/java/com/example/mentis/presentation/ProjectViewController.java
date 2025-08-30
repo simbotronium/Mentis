@@ -2,6 +2,7 @@ package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.logic.Manager;
+import com.example.mentis.business.logic.View;
 import javafx.beans.binding.Bindings;
 import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
@@ -26,6 +27,8 @@ public class ProjectViewController implements Controller {
 
     @FXML
     private ListView<Member> memberListView;
+    @FXML
+    private Label nameLabel;
 
     private NewMemberOverlayController overlayController;
 
@@ -36,6 +39,8 @@ public class ProjectViewController implements Controller {
 
     @FXML
     public void initialize() {
+        nameLabel.setText(manager.getCurrentProject().getName());
+
         manager.currentProjectProperty().addListener((observable, oldValue, newValue) -> {
             System.out.println("changed project");
             if (newValue != null) {
@@ -86,6 +91,10 @@ public class ProjectViewController implements Controller {
             overlayController.refresh();
         }
         overlayController.showProperty().set(true);
+    }
+
+    public void onBack() {
+        Manager.getInstance().currentViewProperty().set(View.MAIN_MENU);
     }
 
 }

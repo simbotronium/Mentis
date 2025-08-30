@@ -130,3 +130,7 @@
     -fx-background-color: #ffe5e5;
     -fx-text-fill: #e63946;
 }
+
+.invisible-text-field {
+    -fx-background-color: transparent;
+}

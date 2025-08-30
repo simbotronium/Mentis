@@ -4,6 +4,7 @@ import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.UID;
+import com.example.mentis.business.logic.View;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -28,7 +29,7 @@ public class ProjectSettingsViewController implements Controller {
     @FXML
     private ListView<Area> areaList;
     @FXML
-    private Label projectNameLabel;
+    private TextField projectNameField;
     @FXML
     private TextField spectroscopyField;
     @FXML
@@ -48,6 +49,7 @@ public class ProjectSettingsViewController implements Controller {
     }
 
     // TODO: handle navigation (confirm / bacK)
+    // TODO: make project name editable
 
     @FXML
     public void initialize() {
@@ -62,6 +64,7 @@ public class ProjectSettingsViewController implements Controller {
 
         newAreaOverlay.setVisible(false);
 
+        projectNameField.setOnMouseClicked(e -> projectNameField.selectAll());
         voxelNumberFormatter.setValue(0);
         deviationFormatter.setValue(0);
         voxelNumberField.setTextFormatter(voxelNumberFormatter);
@@ -77,14 +80,15 @@ public class ProjectSettingsViewController implements Controller {
     }
 
     private void updateView(Project project) {
-        projectNameLabel.setText(project.getName());
-
+        projectNameField.setText(project.getName());
         voxelNumberFormatter.setValue(project.getVoxelDimensionSize());
         deviationFormatter.setValue(project.getMaxDeviation());
         spectroscopyField.setText(project.getTypeOfSpectroscopy());
+
         project.voxelDimensionSizeProperty().asObject().bindBidirectional(voxelNumberFormatter.valueProperty());
         project.maxDeviationProperty().asObject().bindBidirectional(deviationFormatter.valueProperty());
         project.typeOfSpectroscopyProperty().bindBidirectional(spectroscopyField.textProperty());
+        project.nameProperty().bindBidirectional(projectNameField.textProperty());
     }
 
     public void onOverlayOk() {
@@ -97,7 +101,6 @@ public class ProjectSettingsViewController implements Controller {
     }
 
     public void onNewArea() {
-        System.out.println("new area");
         projectPane.setEffect(new GaussianBlur(20));
         newAreaOverlay.setVisible(true);
         showTransition.play();
@@ -106,6 +109,16 @@ public class ProjectSettingsViewController implements Controller {
     public void closeOverlay() {
         projectPane.setEffect(null);
         hideTransition.play();
+    }
+
+    @FXML
+    public void onBack() {
+        Manager.getInstance().currentViewProperty().set(View.MAIN_MENU);
+    }
+
+    @FXML
+    public void onConfirm() {
+        Manager.getInstance().confirmProject();
     }
 
 }
