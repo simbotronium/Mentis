@@ -8,6 +8,10 @@
     -fx-font-weight: bold;
 }
 
+.italic-text {
+    -fx-font-style: italic;
+}
+
 .footnote {
     -fx-text-fill: #999999;
     -fx-font-size: 15;

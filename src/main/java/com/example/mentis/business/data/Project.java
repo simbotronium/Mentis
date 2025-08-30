@@ -1,52 +1,79 @@
 package com.example.mentis.business.data;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Project {
 
-    private String typeOfSpectroscopy;
-    private int voxelDimensionSize = 0;
-    private int maxDeviation;
-    private String name;
+    private final SimpleStringProperty typeOfSpectroscopy = new SimpleStringProperty("");
+    private final SimpleIntegerProperty voxelDimensionSize = new SimpleIntegerProperty(0);
+    private final SimpleIntegerProperty maxDeviation = new SimpleIntegerProperty(5);
+    private final SimpleStringProperty name = new SimpleStringProperty("");
 
-    private ObservableList<Area> areas = FXCollections.observableArrayList();
-    private ObservableList<Member> members = FXCollections.observableArrayList();
+    private final ObservableList<Area> areas = FXCollections.observableArrayList();
+    private final ObservableList<Member> members = FXCollections.observableArrayList();
 
     public Project() {
-        this("normal", 256, 5, "project" + LocalDateTime.now());
+        this("normal", 16, 5, "project" + LocalDateTime.now());
     }
 
-    public Project(String typeOfSpectroscopy, int numVoxels, int maxDeviation, String name) {
-        this.typeOfSpectroscopy = typeOfSpectroscopy;
-        this.voxelDimensionSize = numVoxels;
-        this.maxDeviation = maxDeviation;
-        this.name = name;
+    public Project(String typeOfSpectroscopy, int voxelDimensionSize, int maxDeviation, String name) {
+        this.typeOfSpectroscopy.set(typeOfSpectroscopy);
+        this.voxelDimensionSize.set(voxelDimensionSize);
+        this.maxDeviation.set(maxDeviation);
+        this.name.set(name);
+    }
+
+    public String getTypeOfSpectroscopy() {
+        return typeOfSpectroscopy.get();
+    }
+
+    public SimpleStringProperty typeOfSpectroscopyProperty() {
+        return typeOfSpectroscopy;
     }
 
     public void setTypeOfSpectroscopy(String typeOfSpectroscopy) {
-        this.typeOfSpectroscopy = typeOfSpectroscopy;
+        this.typeOfSpectroscopy.set(typeOfSpectroscopy);
+    }
+
+    public int getVoxelDimensionSize() {
+        return voxelDimensionSize.get();
+    }
+
+    public SimpleIntegerProperty voxelDimensionSizeProperty() {
+        return voxelDimensionSize;
     }
 
     public void setVoxelDimensionSize(int voxelDimensionSize) {
-        this.voxelDimensionSize = voxelDimensionSize;
+        this.voxelDimensionSize.set(voxelDimensionSize);
+    }
+
+    public int getMaxDeviation() {
+        return maxDeviation.get();
+    }
+
+    public SimpleIntegerProperty maxDeviationProperty() {
+        return maxDeviation;
     }
 
     public void setMaxDeviation(int maxDeviation) {
-        this.maxDeviation = maxDeviation;
+        this.maxDeviation.set(maxDeviation);
     }
 
     public String getName() {
+        return name.get();
+    }
+
+    public SimpleStringProperty nameProperty() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name.set(name);
     }
 
     public void addArea(Area a) {

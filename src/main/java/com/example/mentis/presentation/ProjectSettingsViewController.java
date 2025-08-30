@@ -1,39 +1,53 @@
 package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Area;
-import com.example.mentis.business.data.Member;
+import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.UID;
 import javafx.animation.FadeTransition;
-import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.ColorPicker;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
+import javafx.util.converter.IntegerStringConverter;
 
 public class ProjectSettingsViewController implements Controller {
 
     @FXML
     private Node root;
     @FXML
+    private VBox projectPane;
+    @FXML
     private VBox newAreaOverlay;
     @FXML
-    private TextField nameField;
+    private TextField areaNameField;
     @FXML
     private ColorPicker colorPicker;
     @FXML
-    private VBox areaBox;
-    @FXML
     private ListView<Area> areaList;
+    @FXML
+    private Label projectNameLabel;
+    @FXML
+    private TextField spectroscopyField;
+    @FXML
+    private TextField voxelNumberField;
+    @FXML
+    private TextField voxelOrderField;
+    @FXML
+    private TextField deviationField;
     private FadeTransition showTransition;
     private FadeTransition hideTransition;
+
+    private final TextFormatter<Integer> voxelNumberFormatter = new TextFormatter<>(new IntegerStringConverter());
+    private final TextFormatter<Integer> deviationFormatter = new TextFormatter<>(new IntegerStringConverter());
 
     public Node getRoot() {
         return root;
     }
+
+    // TODO: handle navigation (confirm / bacK)
 
     @FXML
     public void initialize() {
@@ -48,6 +62,12 @@ public class ProjectSettingsViewController implements Controller {
 
         newAreaOverlay.setVisible(false);
 
+        voxelNumberFormatter.setValue(0);
+        deviationFormatter.setValue(0);
+        voxelNumberField.setTextFormatter(voxelNumberFormatter);
+        deviationField.setTextFormatter(deviationFormatter);
+        updateView(Manager.getInstance().getCurrentProject());
+
         Manager.getInstance().currentProjectProperty().addListener((observable, oldValue, newValue)
                 -> areaList.setItems(Manager.getInstance().getCurrentProject().getAreas()));
         areaList.setItems(Manager.getInstance().getCurrentProject().getAreas());
@@ -56,22 +76,35 @@ public class ProjectSettingsViewController implements Controller {
         }));
     }
 
-    public void onOk() {
-        if (nameField.getText().matches("^[A-Za-z]+$")) {
-            Manager.getInstance().getCurrentProject().addArea(new Area(UID.next(), colorPicker.getValue(), nameField.getText()));
+    private void updateView(Project project) {
+        projectNameLabel.setText(project.getName());
+
+        voxelNumberFormatter.setValue(project.getVoxelDimensionSize());
+        deviationFormatter.setValue(project.getMaxDeviation());
+        spectroscopyField.setText(project.getTypeOfSpectroscopy());
+        project.voxelDimensionSizeProperty().asObject().bindBidirectional(voxelNumberFormatter.valueProperty());
+        project.maxDeviationProperty().asObject().bindBidirectional(deviationFormatter.valueProperty());
+        project.typeOfSpectroscopyProperty().bindBidirectional(spectroscopyField.textProperty());
+    }
+
+    public void onOverlayOk() {
+        if (areaNameField.getText().matches("^[A-Za-z]+$")) {
+            Manager.getInstance().getCurrentProject().addArea(new Area(UID.next(), colorPicker.getValue(), areaNameField.getText()));
             closeOverlay();
         } else {
-            nameField.getStyleClass().add("input-error");
+            areaNameField.getStyleClass().add("input-error");
         }
     }
 
     public void onNewArea() {
         System.out.println("new area");
+        projectPane.setEffect(new GaussianBlur(20));
         newAreaOverlay.setVisible(true);
         showTransition.play();
     }
 
     public void closeOverlay() {
+        projectPane.setEffect(null);
         hideTransition.play();
     }
 
