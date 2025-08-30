@@ -3,6 +3,8 @@ package com.example.mentis.business.data;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +15,12 @@ public class Project {
     private int maxDeviation;
     private String name;
 
-    private List<Area> areas = new ArrayList<>();
+    private ObservableList<Area> areas = FXCollections.observableArrayList();
     private ObservableList<Member> members = FXCollections.observableArrayList();
+
+    public Project() {
+        this("normal", 256, 5, "project" + LocalDateTime.now());
+    }
 
     public Project(String typeOfSpectroscopy, int numVoxels, int maxDeviation, String name) {
         this.typeOfSpectroscopy = typeOfSpectroscopy;
@@ -54,5 +60,13 @@ public class Project {
     public void addMember(Member member) {
         System.out.println("New Member with id: " + member.getId());
         this.members.add(member);
+    }
+
+    public void deleteArea(long id) {
+
+    }
+
+    public ObservableList<Area> getAreas() {
+        return areas;
     }
 }

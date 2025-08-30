@@ -31,15 +31,8 @@ public class VoxelComponentController implements Controller {
         });
 
         voxel.validationStatusProperty().addListener((observable, oldValue, newValue) -> {
-            updateColors(newValue);
+            root.setColors();
         });
-    }
-
-    public void updateColors(ValidationStatus validationStatus) {
-        root.setFillColor(validationStatus.getColor());
-        root.setStrokeColor(validationStatus.getColor());
-        root.setFill(root.getFillColor().deriveColor(0, 1, 1, 0.5));
-        root.setStroke(root.getStrokeColor());
     }
 
 

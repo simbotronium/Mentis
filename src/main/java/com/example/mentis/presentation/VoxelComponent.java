@@ -1,6 +1,7 @@
 package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Voxel;
+import com.example.mentis.business.logic.ValidationStatus;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -19,26 +20,49 @@ public class VoxelComponent extends Polygon {
     private final Controller controller;
     private final Voxel voxel;
     private final StackPane container;
+    private final int gridPosition;
 
-    public VoxelComponent(StackPane container, Color fillColor, Color strokeColor, double space, SimpleBooleanProperty renderProperty, Voxel voxel) {
+    public VoxelComponent(StackPane container, int gridPosition, double space, SimpleBooleanProperty renderProperty, Voxel voxel) {
         super();
         super.getPoints().setAll(
                 0.0, 0.0,
                 container.getWidth() * space, 0.0,
                 container.getWidth() * space / 2.0, container.getHeight() * space
         );
-        super.setFill(fillColor.deriveColor(0, 1, 1, 0.5));
-        super.setStroke(strokeColor);
         super.setStrokeWidth(1.0);
 
         this.space = space;
-        this.fillColor = fillColor;
-        this.strokeColor = strokeColor;
         this.voxel = voxel;
         this.container = container;
+        this.gridPosition = gridPosition;
+        setColors();
         renderProperty.addListener((observable, oldValue, newValue) -> updateTriangle(container));
 
         controller = new VoxelComponentController(this, voxel);
+    }
+
+    public void setColors() {
+        switch (this.gridPosition) {
+            case 0 -> {
+                this.fillColor = voxel.getValidationStatus().getColor();
+                this.strokeColor = voxel.getValidationStatus().getColor();
+            }
+            case 1 -> {
+                if (voxel.getValidationStatus() == ValidationStatus.REFUTED) {
+                    this.fillColor = Color.GRAY;
+                    this.strokeColor = Color.GRAY;
+                } else {
+                    this.fillColor = voxel.getValidationStatus().getColor();
+                    this.strokeColor = voxel.getValidationStatus().getColor();
+                }
+            }
+            case 2 -> {
+                this.fillColor = Color.PINK;
+                this.strokeColor = Color.PINK;
+            }
+        }
+        super.setFill(this.fillColor.deriveColor(0, 1, 1, 0.5));
+        super.setStroke(this.strokeColor);
     }
 
     private void updateTriangle(StackPane container) {
@@ -70,15 +94,12 @@ public class VoxelComponent extends Polygon {
         return fillColor;
     }
 
-    public void setFillColor(Color fillColor) {
-        this.fillColor = fillColor;
+    public void setStroke(Color color) {
+        if (gridPosition == 1 && !voxel.isSelected() && voxel.getValidationStatus() == ValidationStatus.REFUTED) {
+            super.setStroke(Color.GRAY);
+        } else {
+            super.setStroke(color);
+        }
     }
 
-    public Color getStrokeColor() {
-        return strokeColor;
-    }
-
-    public void setStrokeColor(Color strokeColor) {
-        this.strokeColor = strokeColor;
-    }
 }

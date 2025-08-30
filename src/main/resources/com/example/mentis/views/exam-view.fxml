@@ -57,28 +57,16 @@
             </StackPane>
             <StackPane fx:id="middleStack">
                <children>
-                  <GridPane fx:id="middleGrid" alignment="CENTER" StackPane.alignment="CENTER">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints vgrow="SOMETIMES" />
-                    </rowConstraints>
-                  </GridPane>
                   <ImageView fx:id="middleImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <GridPane fx:id="middleGrid" alignment="CENTER" StackPane.alignment="CENTER">
+                  </GridPane>
                </children>
             </StackPane>
             <StackPane fx:id="rightStack">
                <children>
-                  <GridPane fx:id="rightGrid" alignment="CENTER" StackPane.alignment="CENTER">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints vgrow="SOMETIMES" />
-                    </rowConstraints>
-                  </GridPane>
                   <ImageView fx:id="rightImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <GridPane fx:id="rightGrid" alignment="CENTER" StackPane.alignment="CENTER">
+                  </GridPane>
                </children>
             </StackPane>
          </children>

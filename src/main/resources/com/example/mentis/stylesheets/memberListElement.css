@@ -17,3 +17,13 @@
     -fx-background-color: transparent;
     -fx-text-fill: #333;
 }
+
+.delete-button {
+    -fx-border-color: #a83232;
+    -fx-text-fill: #a83232;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+}

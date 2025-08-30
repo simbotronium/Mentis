@@ -9,7 +9,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
@@ -75,13 +74,21 @@ public class ExamViewController implements Controller {
         SimpleBooleanProperty renderProperty = new SimpleBooleanProperty(false);
 
         for (Voxel voxel: manager.getCurrentExamination().getVoxels()) {
-            StackPane cell = createContainer(voxel);
-            Polygon triangle = new VoxelComponent(cell, voxel.getValidationStatus().getColor().brighter(), voxel.getValidationStatus().getColor(), 0.5, renderProperty, voxel);
-            cell.getChildren().add(triangle);
-            GridPane.setHgrow(cell, Priority.ALWAYS);
-            GridPane.setVgrow(cell, Priority.ALWAYS);
+            StackPane cell0 = createContainer(voxel);
+            Polygon triangle0 = new VoxelComponent(cell0, 0, 0.5, renderProperty, voxel);
+            cell0.getChildren().add(triangle0);
 
-            leftGrid.add(cell, voxel.getRow(), voxel.getCol());
+            StackPane cell1 = createContainer(voxel);
+            Polygon triangle1 = new VoxelComponent(cell1, 1, 0.5, renderProperty, voxel);
+            cell1.getChildren().add(triangle1);
+
+            StackPane cell2 = createContainer(voxel);
+            Polygon triangle2 = new VoxelComponent(cell2, 2, 0.5, renderProperty, voxel);
+            cell2.getChildren().add(triangle2);
+
+            leftGrid.add(cell0, voxel.getRow(), voxel.getCol());
+            middleGrid.add(cell1, voxel.getRow(), voxel.getCol());
+            rightGrid.add(cell2, voxel.getRow(), voxel.getCol());
         }
 
         Platform.runLater(() -> renderProperty.set(true));
@@ -99,6 +106,8 @@ public class ExamViewController implements Controller {
             }
             this.setSelectedVoxel(voxel);
         });
+        GridPane.setHgrow(cell, Priority.ALWAYS);
+        GridPane.setVgrow(cell, Priority.ALWAYS);
         return cell;
     }
 

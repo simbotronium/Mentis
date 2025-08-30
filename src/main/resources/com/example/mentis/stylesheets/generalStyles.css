@@ -9,7 +9,6 @@
 }
 
 .footnote {
-    -fx-font-weight: light;
     -fx-text-fill: #999999;
     -fx-font-size: 15;
 }
@@ -119,4 +118,11 @@
     -fx-background-insets: 0;
     -fx-padding: 0;
     -fx-text-fill: #333333;
+}
+
+.input-error {
+    -fx-border-width: 2px;
+    -fx-border-color: #e63946;
+    -fx-background-color: #ffe5e5;
+    -fx-text-fill: #e63946;
 }
