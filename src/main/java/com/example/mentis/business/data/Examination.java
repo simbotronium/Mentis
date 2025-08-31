@@ -1,5 +1,6 @@
 package com.example.mentis.business.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -82,5 +83,25 @@ public class Examination {
 
     public int getVoxelDimensionSize() {
         return voxelDimensionSize;
+    }
+
+    public void setExam(String exam) {
+        this.exam.set(exam);
+    }
+
+    public void setSlice(int slice) {
+        this.slice.set(slice);
+    }
+
+    public void setValid(boolean valid) {
+        this.valid.set(valid);
+    }
+
+    public void setMapped(boolean mapped) {
+        this.mapped.set(mapped);
+    }
+
+    public void setVoxels(Voxel[] voxels) {
+        this.voxels = voxels;
     }
 }

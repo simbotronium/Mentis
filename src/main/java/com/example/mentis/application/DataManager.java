@@ -1,16 +1,14 @@
 package com.example.mentis.application;
 
-import com.example.mentis.application.serialisation.ColorDeserializer;
-import com.example.mentis.application.serialisation.ColorSerializer;
-import com.example.mentis.application.serialisation.ObservableListDeserializer;
-import com.example.mentis.business.data.Area;
-import com.example.mentis.business.data.Member;
-import com.example.mentis.business.data.Project;
-import com.example.mentis.business.data.ProjectListEntry;
+import com.example.mentis.application.serialisation.*;
+import com.example.mentis.business.data.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import javafx.application.Platform;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleLongProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
@@ -45,8 +43,10 @@ public class DataManager {
             return;
         }
         SimpleModule module = new SimpleModule();
-        module.addDeserializer(ObservableList.class, new ObservableListDeserializer<>(Member.class));
-        module.addDeserializer(ObservableList.class, new ObservableListDeserializer<>(Area.class));
+        module.addDeserializer(ObservableList.class, new ObservableListDeserializer<>());
+        module.addDeserializer(SimpleBooleanProperty.class, new SimpleBooleanPropertyDeserializer());
+        module.addDeserializer(SimpleLongProperty.class, new SimpleLongPropertyDeserializer());
+        module.addDeserializer(SimpleIntegerProperty.class, new SimpleIntegerPropertyDeserializer());
         module.addSerializer(Color.class, new ColorSerializer());
         module.addDeserializer(Color.class, new ColorDeserializer());
         m.registerModule(module);

@@ -9,8 +9,10 @@ public class Voxel {
     private final SimpleObjectProperty<ValidationStatus> validationStatus = new SimpleObjectProperty<>(ValidationStatus.UNDECIDED);
     private final SimpleBooleanProperty selected = new SimpleBooleanProperty(false);
 
-    private final int row;
-    private final int col;
+    private int row;
+    private int col;
+
+    public Voxel() {}
 
     public Voxel(int row, int col) {
         this.row = row;
@@ -43,6 +45,18 @@ public class Voxel {
 
     public SimpleBooleanProperty selectedProperty() {
         return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected.set(selected);
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public void setCol(int col) {
+        this.col = col;
     }
 
     @Override
