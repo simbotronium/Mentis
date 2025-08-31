@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="load projects from file" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="unversioned file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/save_file.json" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/save_file.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MainMenuViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/MainMenuViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectListCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/main-menu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/main-menu-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,7 +149,8 @@
       <workItem from="1756291020491" duration="3580000" />
       <workItem from="1756544372905" duration="6716000" />
       <workItem from="1756554825966" duration="8831000" />
-      <workItem from="1756643124225" duration="3584000" />
+      <workItem from="1756643124225" duration="3986000" />
+      <workItem from="1756651654359" duration="2230000" />
     </task>
     <task id="LOCAL-00001" summary="changed build.gradle for CD">
       <option name="closed" value="true" />
@@ -365,7 +376,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756646695070</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="unversioned file">
+      <option name="closed" value="true" />
+      <created>1756646761171</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1756646761171</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finally?" />
     <MESSAGE value="finally??" />
     <MESSAGE value="maybe now?" />
     <MESSAGE value="maybe now??" />
@@ -420,6 +438,7 @@
     <MESSAGE value="can edit project settings" />
     <MESSAGE value="save projects to file" />
     <MESSAGE value="load projects from file" />
-    <option name="LAST_COMMIT_MESSAGE" value="load projects from file" />
+    <MESSAGE value="unversioned file" />
+    <option name="LAST_COMMIT_MESSAGE" value="unversioned file" />
   </component>
 </project>

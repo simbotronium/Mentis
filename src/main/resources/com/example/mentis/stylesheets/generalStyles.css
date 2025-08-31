@@ -17,6 +17,12 @@
     -fx-font-size: 15;
 }
 
+.small-text {
+    -fx-text-fill: #333333;
+    -fx-font-family: arial;
+    -fx-font-size: 15;
+}
+
 .big-label {
     -fx-font-weight: bold;
     -fx-font-size: 40;

@@ -21,8 +21,7 @@
                </VBox.margin>
             </ImageView>
             <ListView fx:id="projectsListView" styleClass="transparent-listview" />
-            <Button mnemonicParsing="false" onAction="#onSomeProject" styleClass="primary-button" text="some project" />
-            <Button mnemonicParsing="false" onAction="#onNewProject" styleClass="secondary-button" text="new project" />
+            <Button mnemonicParsing="false" onAction="#onNewProject" prefWidth="300.0" styleClass="secondary-button" text="new project" />
          </children>
       </VBox>
    </children>

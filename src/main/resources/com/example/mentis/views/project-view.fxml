@@ -63,8 +63,12 @@
                               </Label>
                               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" styleClass="standard-container">
                                  <children>
-                                    <Label styleClass="standard-text" text="Mapping Areas" />
-                                    <Label styleClass="standard-text" text="max. deviation" />
+                                    <VBox fx:id="areasBox" spacing="10.0">
+                                       <children>
+                                          <Label styleClass="standard-text" text="Mapping Areas" />
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="deviationLabel" styleClass="standard-text" text="max. deviation" />
                                  </children>
                                  <padding>
                                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

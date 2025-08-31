@@ -3,6 +3,7 @@ package com.example.mentis.presentation;
 import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.ProjectListEntry;
 import com.example.mentis.business.logic.Manager;
+import com.example.mentis.business.logic.View;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
@@ -21,6 +22,7 @@ public class ProjectListCell extends ListCell<ProjectListEntry> {
         HBox.setHgrow(root, Priority.ALWAYS);
         button = new Button("ERROR");
         button.getStyleClass().add("primary-button");
+        button.setPrefWidth(300);
         root.getChildren().add(button);
     }
 
@@ -33,7 +35,10 @@ public class ProjectListCell extends ListCell<ProjectListEntry> {
             setText(null);
         } else {
             button.setText(projectListEntry.name());
-            button.setOnAction(e -> Manager.getInstance().currentProjectProperty().set(DataManager.getProjectById(projectListEntry.projectId())));
+            button.setOnAction(e -> {
+                Manager.getInstance().currentProjectProperty().set(DataManager.getProjectById(projectListEntry.projectId()));
+                Manager.getInstance().currentViewProperty().set(View.PROJECT);
+            });
             setGraphic(root);
             setText(null);
         }

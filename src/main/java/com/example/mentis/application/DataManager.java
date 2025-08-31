@@ -30,6 +30,7 @@ public class DataManager {
 
     public static void confirmProject(Project p) {
         projects.put(p.getID(), p);
+        entries.add(new ProjectListEntry(p.getName(), p.getID()));
     }
 
     public static Project getProjectById(long id) {
@@ -50,6 +51,13 @@ public class DataManager {
         module.addDeserializer(Color.class, new ColorDeserializer());
         m.registerModule(module);
 
+        try {
+            HashMap<Long, Project> map = m.readValue(new File(path), new TypeReference<HashMap<Long, Project>>() {});
+            System.out.println(map);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         Thread loadingThread = getLoadingThread();
         loadingThread.start();
     }
@@ -64,7 +72,7 @@ public class DataManager {
 
                 for (Project p: projects.values()) {
                     Platform.runLater(() -> entries.add(new ProjectListEntry(p.getName(), p.getID())));
-                    Thread.sleep(2000);
+                    Thread.sleep(500);
                 }
 
                 return null;

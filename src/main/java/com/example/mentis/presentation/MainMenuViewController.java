@@ -8,6 +8,7 @@ import com.example.mentis.business.data.ProjectListEntry;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.Side;
 import com.example.mentis.business.logic.View;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.ListView;
@@ -25,9 +26,17 @@ public class MainMenuViewController implements Controller {
 
     @FXML
     public void initialize() {
+        projectsListView.setFixedCellSize(40);
         projectsListView.setFocusTraversable(false);
         projectsListView.setItems(DataManager.getEntries());
         projectsListView.setCellFactory(list -> new ProjectListCell());
+
+        projectsListView.prefHeightProperty().bind(
+                Bindings.min(
+                        Bindings.size(projectsListView.getItems()).multiply(projectsListView.getFixedCellSize()),
+                        500
+                )
+        );
     }
 
     @FXML

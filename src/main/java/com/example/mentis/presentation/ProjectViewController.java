@@ -1,19 +1,24 @@
 package com.example.mentis.presentation;
 
+import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Member;
+import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import javafx.beans.binding.Bindings;
 import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.effect.GaussianBlur;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.*;
+import javafx.scene.shape.Circle;
 
 import java.io.IOException;
 
@@ -34,17 +39,21 @@ public class ProjectViewController implements Controller {
 
     @FXML
     private AnchorPane projectPane;
+    @FXML
+    private VBox areasBox;
+    @FXML
+    private Label deviationLabel;
 
     private final Manager manager = Manager.getInstance();
 
     @FXML
     public void initialize() {
-        nameLabel.setText(manager.getCurrentProject().getName());
+        updateView(manager.getCurrentProject());
 
         manager.currentProjectProperty().addListener((observable, oldValue, newValue) -> {
             System.out.println("changed project");
             if (newValue != null) {
-                memberLabel.setText("Members: " + newValue.getMembers().size());
+                updateView(newValue);
 
                 newValue.getMembers().addListener((ListChangeListener<? super Member>) o -> {
                     memberLabel.setText("Members: " + manager.getCurrentProject().getMembers().size());
@@ -65,6 +74,28 @@ public class ProjectViewController implements Controller {
             });
         }
 
+    }
+
+    private void updateView(Project newProject) {
+        memberLabel.setText("Members: " + newProject.getMembers().size());
+        nameLabel.setText(newProject.getName());
+        deviationLabel.setText("max. Deviation: " + newProject.getMaxDeviation() + "%");
+        createAreaComponents(newProject.getAreas());
+    }
+
+    private void createAreaComponents(ObservableList<Area> areas) {
+        for (Area area: areas) {
+            HBox hBox = new HBox();
+            Circle circle = new Circle(10);
+            circle.setFill(area.color());
+            Label label = new Label(area.name());
+            label.getStyleClass().add("standard-text");
+            hBox.setPadding(new Insets(2));
+            hBox.setSpacing(10);
+            hBox.setAlignment(Pos.CENTER_LEFT);
+            hBox.getChildren().addAll(circle, label);
+            areasBox.getChildren().add(hBox);
+        }
     }
 
     public Node getRoot() {
