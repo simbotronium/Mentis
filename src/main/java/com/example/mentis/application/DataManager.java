@@ -1,12 +1,20 @@
 package com.example.mentis.application;
 
+import com.example.mentis.application.serialisation.ColorDeserializer;
+import com.example.mentis.application.serialisation.ColorSerializer;
+import com.example.mentis.application.serialisation.ObservableListDeserializer;
+import com.example.mentis.business.data.Area;
+import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.data.ProjectListEntry;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
+import javafx.scene.paint.Color;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,18 +36,36 @@ public class DataManager {
         return projects.get(id);
     }
 
+    public static ObjectMapper m = new ObjectMapper();
+
     public static void readFromFile() {
         if (path == null) {
             System.out.println("could not load projects from file - no valid path set");
             return;
         }
+        SimpleModule module = new SimpleModule();
+        module.addDeserializer(ObservableList.class, new ObservableListDeserializer<>(Member.class));
+        module.addDeserializer(ObservableList.class, new ObservableListDeserializer<>(Area.class));
+        module.addSerializer(Color.class, new ColorSerializer());
+        module.addDeserializer(Color.class, new ColorDeserializer());
+        m.registerModule(module);
+
+        Thread loadingThread = getLoadingThread();
+        loadingThread.start();
+    }
+
+    private static Thread getLoadingThread() {
         Task<Void> loadingTask = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
                 System.out.println("starting task");
-                ObjectMapper mapper = new ObjectMapper();
-                projects = mapper.readValue(new File(path), new TypeReference<>() {});
-                System.out.println(projects.size());
+                projects = m.readValue(new File(path), new TypeReference<>() {});
+                System.out.println("found " + projects.size() + " projects");
+
+                for (Project p: projects.values()) {
+                    Platform.runLater(() -> entries.add(new ProjectListEntry(p.getName(), p.getID())));
+                    Thread.sleep(2000);
+                }
 
                 return null;
             }
@@ -47,16 +73,15 @@ public class DataManager {
 
         Thread loadingThread = new Thread(loadingTask);
         loadingThread.setDaemon(true);
-        loadingThread.start();
+        return loadingThread;
     }
 
     public static void saveToFile() {
-        ObjectMapper mapper = new ObjectMapper();
 
         try {
             if (path == null) throw new IOException("no valid path set");
 
-            mapper.writerWithDefaultPrettyPrinter()
+            m.writerWithDefaultPrettyPrinter()
                     .writeValue(new File(path), projects);
 
         } catch (IOException e) {

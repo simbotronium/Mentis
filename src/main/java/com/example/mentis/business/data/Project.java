@@ -1,7 +1,6 @@
 package com.example.mentis.business.data;
 
 import com.example.mentis.business.logic.UID;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -16,6 +15,7 @@ public class Project {
     private final SimpleIntegerProperty maxDeviation = new SimpleIntegerProperty(5);
     private final SimpleStringProperty name = new SimpleStringProperty("");
 
+    // TODO: deserializer dafür schreiben
     private final ObservableList<Area> areas = FXCollections.observableArrayList();
     private final ObservableList<Member> members = FXCollections.observableArrayList();
     private long ID = UID.next();

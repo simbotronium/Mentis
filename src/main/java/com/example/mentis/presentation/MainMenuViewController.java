@@ -25,7 +25,9 @@ public class MainMenuViewController implements Controller {
 
     @FXML
     public void initialize() {
+        projectsListView.setFocusTraversable(false);
         projectsListView.setItems(DataManager.getEntries());
+        projectsListView.setCellFactory(list -> new ProjectListCell());
     }
 
     @FXML
