@@ -1,0 +1,41 @@
+{
+  "1" : {
+    "typeOfSpectroscopy" : "normal",
+    "voxelDimensionSize" : 16,
+    "maxDeviation" : 5,
+    "name" : "DDD",
+    "areas" : [ {
+      "id" : 2,
+      "color" : "0x000080ff",
+      "name" : "a"
+    } ],
+    "members" : [ ],
+    "id" : 1
+  },
+  "2" : {
+    "typeOfSpectroscopy" : "normal",
+    "voxelDimensionSize" : 16,
+    "maxDeviation" : 5,
+    "name" : "EEE",
+    "areas" : [ {
+      "id" : 3,
+      "color" : "0x80334dff",
+      "name" : "b"
+    } ],
+    "members" : [ ],
+    "id" : 2
+  },
+  "3" : {
+    "typeOfSpectroscopy" : "normal",
+    "voxelDimensionSize" : 16,
+    "maxDeviation" : 5,
+    "name" : "FFF",
+    "areas" : [ {
+      "id" : 4,
+      "color" : "0x330033ff",
+      "name" : "B"
+    } ],
+    "members" : [ ],
+    "id" : 3
+  }
+}
