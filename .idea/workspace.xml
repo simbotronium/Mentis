@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="updating project view">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/serialisation/SimpleBooleanPropertyDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/serialisation/SimpleIntegerPropertyDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/serialisation/SimpleLongPropertyDeserializer.java" afterDir="false" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="fixed serialization issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/serialisation/ObservableListDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/serialisation/ObservableListDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Examination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Examination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/save_file.json" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/save_file.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/MentisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/MentisApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Voxel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Voxel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ExamViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ExamViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/VoxelComponentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/exam-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/exam-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +149,7 @@
       <workItem from="1756544372905" duration="6716000" />
       <workItem from="1756554825966" duration="8831000" />
       <workItem from="1756643124225" duration="3986000" />
-      <workItem from="1756651654359" duration="7213000" />
+      <workItem from="1756651654359" duration="9973000" />
     </task>
     <task id="LOCAL-00001" summary="changed build.gradle for CD">
       <option name="closed" value="true" />
@@ -393,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756654902933</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fixed serialization issues">
+      <option name="closed" value="true" />
+      <created>1756669000756</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1756669000756</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +429,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="maybe now?" />
     <MESSAGE value="maybe now??" />
     <MESSAGE value="ach komm" />
     <MESSAGE value="added icons" />
@@ -448,6 +453,7 @@
     <MESSAGE value="load projects from file" />
     <MESSAGE value="unversioned file" />
     <MESSAGE value="updating project view" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating project view" />
+    <MESSAGE value="fixed serialization issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed serialization issues" />
   </component>
 </project>

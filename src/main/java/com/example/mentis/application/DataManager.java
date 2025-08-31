@@ -51,13 +51,6 @@ public class DataManager {
         module.addDeserializer(Color.class, new ColorDeserializer());
         m.registerModule(module);
 
-        try {
-            HashMap<Long, Project> map = m.readValue(new File(path), new TypeReference<HashMap<Long, Project>>() {});
-            System.out.println(map);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
         Thread loadingThread = getLoadingThread();
         loadingThread.start();
     }

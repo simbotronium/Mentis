@@ -1,11 +1,14 @@
 package com.example.mentis.presentation;
 
+import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Voxel;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.ValidationStatus;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -46,6 +49,10 @@ public class ExamViewController implements Controller {
     private VBox selectionBox;
     @FXML
     private Label selectionLabel;
+    @FXML
+    private ChoiceBox<Area> areaChoice;
+    @FXML
+    private VBox mappingBox;
     private Voxel selectedVoxel;
 
 
@@ -54,6 +61,14 @@ public class ExamViewController implements Controller {
         System.out.println("searching overlay here: " + manager.getCurrentExamination().getOverlayFile().toURI());
         Image overlay = new Image(manager.getCurrentExamination().getOverlayFile().toURI().toString());
         selectionBox.setVisible(false);
+
+        ObservableList<Area> areas = Manager.getInstance().getCurrentProject().getAreas();
+        areaChoice.setItems(areas);
+        if (!areas.isEmpty()) areaChoice.setValue(areas.get(0));
+        mappingBox.setVisible(false);
+        areaChoice.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            selectedVoxel.setArea(newValue);
+        });
 
         leftImage.fitWidthProperty().bind(leftStack.widthProperty());
         leftImage.fitHeightProperty().bind(leftStack.heightProperty());
@@ -113,12 +128,15 @@ public class ExamViewController implements Controller {
 
     private void setSelectedVoxel(Voxel v) {
         if (v.isSelected()) {
-            selectionLabel.setText("selected voxel: " + v.toString());
-            this.selectionBox.setVisible(true);
             this.selectedVoxel = v;
+            selectionLabel.setText("selected voxel: " + v);
+            this.selectionBox.setVisible(true);
+            this.mappingBox.setVisible(true);
+            this.areaChoice.setValue(v.getArea());
         } else {
             selectionLabel.setText("no voxel selected");
             this.selectionBox.setVisible(false);
+            this.mappingBox.setVisible(false);
             this.selectedVoxel = null;
         }
     }

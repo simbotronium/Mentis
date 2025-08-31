@@ -1,9 +1,11 @@
 package com.example.mentis.business.data;
 
 import com.example.mentis.business.logic.ValidationStatus;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Voxel {
 
     private final SimpleObjectProperty<ValidationStatus> validationStatus = new SimpleObjectProperty<>(ValidationStatus.UNDECIDED);
@@ -11,6 +13,7 @@ public class Voxel {
 
     private int row;
     private int col;
+    private SimpleObjectProperty<Area> area = new SimpleObjectProperty<>();
 
     public Voxel() {}
 
@@ -57,6 +60,18 @@ public class Voxel {
 
     public void setCol(int col) {
         this.col = col;
+    }
+
+    public Area getArea() {
+        return area.get();
+    }
+
+    public void setArea(Area area) {
+        this.area .set(area);
+    }
+
+    public SimpleObjectProperty<Area> areaProperty() {
+        return area;
     }
 
     @Override

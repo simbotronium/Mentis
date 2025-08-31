@@ -25,14 +25,14 @@ public class VoxelComponentController implements Controller {
             if (newValue) {
                 root.setStroke(Color.WHITE);
             } else {
-                root.setStroke(voxel.getValidationStatus().getColor());
+                // TODO: setup for different grid positions
+                root.setColors();
                 root.animateHover(root.getContainer(), 1, root.getFillColor().deriveColor(0, 1, 1, 0.5), 200);
             }
         });
 
-        voxel.validationStatusProperty().addListener((observable, oldValue, newValue) -> {
-            root.setColors();
-        });
+        voxel.validationStatusProperty().addListener((observable, oldValue, newValue) -> root.setColors());
+        voxel.areaProperty().addListener((observable, oldValue, newValue) -> root.setColors());
     }
 
 

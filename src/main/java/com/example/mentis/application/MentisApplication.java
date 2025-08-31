@@ -13,7 +13,7 @@ public class MentisApplication extends Application {
 
         ViewManager mainController = new ViewManager();
         Scene scene = new Scene(mainController.getRoot(), 1920, 1080);
-        // stage.setOnCloseRequest(e -> DataManager.saveToFile());
+        stage.setOnCloseRequest(e -> DataManager.saveToFile());
         stage.setTitle("Mentis");
         stage.setScene(scene);
         stage.show();

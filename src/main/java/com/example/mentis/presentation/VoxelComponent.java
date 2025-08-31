@@ -1,6 +1,7 @@
 package com.example.mentis.presentation;
 
 import com.example.mentis.business.data.Voxel;
+import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.ValidationStatus;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -57,12 +58,17 @@ public class VoxelComponent extends Polygon {
                 }
             }
             case 2 -> {
-                this.fillColor = Color.PINK;
-                this.strokeColor = Color.PINK;
+                if (voxel.getArea() == null || Manager.getInstance().getCurrentProject().getAreas().isEmpty()) {
+                    this.fillColor = Color.GRAY;
+                    this.strokeColor = Color.GRAY;
+                } else {
+                    this.fillColor = voxel.getArea().color();
+                    this.strokeColor = voxel.getArea().color();
+                }
             }
         }
         super.setFill(this.fillColor.deriveColor(0, 1, 1, 0.5));
-        super.setStroke(this.strokeColor);
+        super.setStroke((voxel.isSelected()) ? Color.WHITE : this.strokeColor);
     }
 
     private void updateTriangle(StackPane container) {
