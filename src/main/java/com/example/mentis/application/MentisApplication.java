@@ -17,8 +17,7 @@ public class MentisApplication extends Application {
     public void start(Stage stage) {
         DataManager.createDataFolderIfMissing();
         setUpLogging();
-        log.info("starting application");
-        log.warn("this is a warning!");
+        log.warn("starting application");
         DataManager.readFromFile();
 
         ViewManager mainController = ViewManager.getInstance();

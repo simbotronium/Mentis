@@ -1,11 +1,14 @@
 package com.example.mentis.presentation;
 
+import com.example.mentis.application.DataManager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.controller.Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +18,7 @@ public class ViewManager implements Controller {
     private final Pane root = new StackPane();
     private final Map<View, Controller> cachedControllers = new HashMap<>();
     private FXMLLoader loader = new FXMLLoader();
+    private final Logger log = LoggerFactory.getLogger(ViewManager.class);
 
     private static final ViewManager instance = new ViewManager();
 
@@ -39,8 +43,7 @@ public class ViewManager implements Controller {
             cachedControllers.put(view, controller);
             root.getChildren().setAll(newRoot);
         } catch (Exception e) {
-            System.out.println("Something went wrong while loading View");
-            e.printStackTrace();
+            log.error("Something went wrong while loading View: " + e.getMessage());
         }
     }
 

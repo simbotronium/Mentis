@@ -13,6 +13,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.scene.paint.Color;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +27,7 @@ public class DataManager {
     private static String path;
     private static HashMap<Long, Project> projects = new HashMap<>();
     private static final ObservableList<ProjectListEntry> entries = FXCollections.observableArrayList();
+    private static final Logger log = LoggerFactory.getLogger(DataManager.class);
 
     public static void confirmProject(Project p) {
         projects.put(p.getID(), p);
@@ -39,7 +42,7 @@ public class DataManager {
 
     public static void readFromFile() {
         if (path == null) {
-            System.out.println("could not load projects from file - no valid path set");
+            log.info("could not load projects from file - no valid path set");
             return;
         }
         SimpleModule module = new SimpleModule();
@@ -59,9 +62,9 @@ public class DataManager {
         Task<Void> loadingTask = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
-                System.out.println("starting task");
+                log.info("starting task");
                 projects = m.readValue(new File(path), new TypeReference<>() {});
-                System.out.println("found " + projects.size() + " projects");
+                log.info("found " + projects.size() + " projects");
 
                 for (Project p: projects.values()) {
                     Platform.runLater(() -> entries.add(new ProjectListEntry(p.getName(), p.getID())));
@@ -86,7 +89,7 @@ public class DataManager {
                     .writeValue(new File(path), projects);
 
         } catch (IOException e) {
-            System.out.println("could not save - " + e.getMessage());
+            log.error("could not save - " + e.getMessage());
         }
     }
 
@@ -98,12 +101,12 @@ public class DataManager {
         if (Files.notExists(dataPath)) {
             try {
                 Files.createDirectories(dataPath);
-                System.out.println("created data folder: " + dataPath);
+                log.info("created data folder: " + dataPath);
             } catch (Exception e) {
-                System.err.println("error while creating data folder: " + e.getMessage());
+                log.error("error while creating data folder: " + e.getMessage());
             }
         } else {
-            System.out.println("data folder found: " + dataPath);
+            log.info("data folder found: " + dataPath);
         }
 
         path = dataPath.toString() + "/save_file.json";

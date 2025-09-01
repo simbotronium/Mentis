@@ -1,10 +1,14 @@
 package com.example.mentis.business.data;
 
+import com.example.mentis.application.DataManager;
 import com.example.mentis.business.logic.UID;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 
@@ -19,6 +23,8 @@ public class Project {
     private final ObservableList<Area> areas = FXCollections.observableArrayList();
     private final ObservableList<Member> members = FXCollections.observableArrayList();
     private long ID = UID.next();
+    @JsonIgnore
+    private final Logger log = LoggerFactory.getLogger(Project.class);
 
     public Project() {
         this("normal", 16, 5, "project" + LocalDateTime.now());
@@ -88,7 +94,7 @@ public class Project {
     }
 
     public void addMember(Member member) {
-        System.out.println("New Member with id: " + member.getId());
+        log.info("New Member with id: " + member.getId());
         this.members.add(member);
     }
 

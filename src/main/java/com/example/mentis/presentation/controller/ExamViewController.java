@@ -1,5 +1,6 @@
 package com.example.mentis.presentation.controller;
 
+import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Voxel;
 import com.example.mentis.business.logic.Manager;
@@ -18,6 +19,8 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Polygon;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 
@@ -55,11 +58,12 @@ public class ExamViewController implements Controller {
     @FXML
     private VBox mappingBox;
     private Voxel selectedVoxel;
+    private final Logger log = LoggerFactory.getLogger(ExamViewController.class);
 
 
     @FXML
     public void initialize() {
-        System.out.println("searching overlay here: " + manager.getCurrentExamination().getOverlayFile().toURI());
+        log.info("searching overlay here: " + manager.getCurrentExamination().getOverlayFile().toURI());
         Image overlay = new Image(manager.getCurrentExamination().getOverlayFile().toURI().toString());
         selectionBox.setVisible(false);
 

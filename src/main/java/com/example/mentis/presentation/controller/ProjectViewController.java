@@ -21,6 +21,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
@@ -47,13 +49,14 @@ public class ProjectViewController implements Controller {
     private Label deviationLabel;
 
     private final Manager manager = Manager.getInstance();
+    private final Logger log = LoggerFactory.getLogger(ProjectViewController.class);
 
     @FXML
     public void initialize() {
         updateView(manager.getCurrentProject());
 
         manager.currentProjectProperty().addListener((observable, oldValue, newValue) -> {
-            System.out.println("changed project");
+            log.info("changed project");
             if (newValue != null) {
                 updateView(newValue);
 
@@ -117,8 +120,7 @@ public class ProjectViewController implements Controller {
                 root.getChildren().add(overlayRoot);
                 projectPane.setEffect(new GaussianBlur(20));
             } catch (IOException e) {
-                System.out.println("Something went wrong while loading new member overlay:");
-                e.printStackTrace();
+                log.error("Something went wrong while loading new member overlay: " + e.getMessage());
             }
         } else {
             overlayController.refresh();

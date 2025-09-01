@@ -1,12 +1,15 @@
 package com.example.mentis.business.data;
 
 import com.example.mentis.business.logic.Side;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,9 @@ public class Member {
     private ObservableList<Examination> examinations = FXCollections.observableArrayList();
 
     private final SimpleObjectProperty<Side> side = new SimpleObjectProperty<>(Side.LEFT);
+
+    @JsonIgnore
+    private Logger log = LoggerFactory.getLogger(Member.class);
 
     public Member() {
 
@@ -38,7 +44,7 @@ public class Member {
     }
 
     public void addExamination(Examination e) {
-        System.out.println("New Examination with exam " + e.getExam());
+        log.info("New Examination with exam " + e.getExam());
         examinations.add(e);
     }
 

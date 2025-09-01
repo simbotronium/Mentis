@@ -2,6 +2,7 @@ package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.logic.Manager;
+import com.example.mentis.presentation.ViewManager;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -14,6 +15,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.converter.DefaultStringConverter;
 import javafx.util.converter.IntegerStringConverter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
@@ -36,6 +39,7 @@ public class NewExamOverlayController implements Controller {
     private final TextFormatter<String> examFormatter = new TextFormatter<>(new DefaultStringConverter());
     private final TextFormatter<Integer> sliceFormatter = new TextFormatter<>(new IntegerStringConverter());
     private final SimpleBooleanProperty show = new SimpleBooleanProperty(true);
+    private final Logger log = LoggerFactory.getLogger(NewExamOverlayController.class);
 
     @FXML
     public void initialize() {
@@ -90,7 +94,7 @@ public class NewExamOverlayController implements Controller {
         Stage stage = (Stage) root.getScene().getWindow();
 
         if (stage == null) {
-            System.out.println("No Stage set in NewExamOverlayController");
+            log.error("No Stage set in NewExamOverlayController");
             return;
         }
         FileChooser fileChooser = new FileChooser();
@@ -103,13 +107,13 @@ public class NewExamOverlayController implements Controller {
         File selectedFile = fileChooser.showOpenDialog(stage);
 
         if (selectedFile != null) {
-            System.out.println("selected File: " + selectedFile.getPath());
+            log.info("selected File: " + selectedFile.getPath());
             examination.setOverlayFile(selectedFile);
             sourceButton.setText(selectedFile.getName());
             sourceButton.getStyleClass().add("successful-upload");
 
         } else {
-            System.out.println("no file selected");
+            log.info("no file selected");
             sourceButton.getStyleClass().add("unsuccessful-upload");
         }
     }

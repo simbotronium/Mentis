@@ -1,10 +1,13 @@
 package com.example.mentis.presentation.components;
 
 import com.example.mentis.business.data.Member;
+import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.controller.MemberListCellController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
@@ -12,6 +15,7 @@ public class MemberListCell extends ListCell<Member> {
 
     private Parent root;
     private MemberListCellController controller;
+    private final Logger log = LoggerFactory.getLogger(MemberListCell.class);
 
     public MemberListCell() {
         try {
@@ -19,7 +23,7 @@ public class MemberListCell extends ListCell<Member> {
             root = loader.load();
             controller = loader.getController();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("Something went wrong while loading FXML: " + e.getMessage());
         }
     }
 
