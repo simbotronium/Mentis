@@ -36,13 +36,6 @@ public class Manager {
         return currentMember;
     }
 
-    public void addMember(Member m) {
-        if (currentProject.isNull().get()) {
-            return;
-        }
-        currentProject.get().addMember(m);
-    }
-
     public void addExamination(Examination e) {
         if (currentMember.isNull().get()) {
             return;

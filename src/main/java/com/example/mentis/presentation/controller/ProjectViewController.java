@@ -104,7 +104,7 @@ public class ProjectViewController implements Controller {
         return root;
     }
 
-    public void onAddNewMemberButton() {
+    public void onAddNewMember() {
         if (overlayController == null) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/mentis/overlays/new-member-overlay.fxml"));

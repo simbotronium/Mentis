@@ -5,9 +5,13 @@ import com.example.mentis.business.data.Member;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
+import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,6 +26,9 @@ public class MemberListCellController implements Controller {
 
     @FXML
     private Label examinationsLabel;
+    @FXML
+    private Button delete;
+    private FadeTransition fade;
 
     private Member member;
     private final Manager manager = Manager.getInstance();
@@ -30,6 +37,25 @@ public class MemberListCellController implements Controller {
         member = m;
         idLabel.setText(Long.toString(m.getId()));
         examinationsLabel.setText(createExaminationsString(m.getExaminations()));
+    }
+
+    @FXML
+    public void initialize() {
+        delete.setText("\u2716");
+        delete.getStyleClass().add("delete-button");
+        delete.setOpacity(0);
+        delete.setOnAction(e -> Manager.getInstance().getCurrentProject().getMembers().remove(member));
+
+        root.hoverProperty().addListener(((observable, was, is) -> animateDelete(is)));
+    }
+
+    private void animateDelete(boolean show) {
+        if (fade != null) fade.stop();
+        fade = new FadeTransition(Duration.millis(180), delete);
+        fade.setFromValue(delete.getOpacity());
+        fade.setToValue(show ? 1 : 0);
+        fade.setInterpolator(Interpolator.EASE_BOTH);
+        fade.play();
     }
 
     @FXML

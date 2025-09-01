@@ -26,28 +26,15 @@ public class NewMemberOverlayController implements Controller {
 
     private Member member = new Member();
     private final Manager manager = Manager.getInstance();
-
-    private final TextFormatter<Long> idFormatter = new TextFormatter<>(new LongStringConverter());
-    private final TextFormatter<Integer> ageFormatter = new TextFormatter<>(new IntegerStringConverter());
     private final SimpleBooleanProperty show = new SimpleBooleanProperty(true);
 
     @FXML
     public void initialize() {
-        idFormatter.valueProperty().set(0L);
-        ageFormatter.valueProperty().set(0);
-
-        idTextField.setTextFormatter(idFormatter);
-        ageTextField.setTextFormatter(ageFormatter);
-
         refresh();
     }
 
     public void refresh() {
         member = new Member();
-        idFormatter.valueProperty().set(0L);
-        ageFormatter.valueProperty().set(0);
-        member.idProperty().asObject().bindBidirectional(idFormatter.valueProperty());
-        member.ageProperty().asObject().bindBidirectional(ageFormatter.valueProperty());
     }
 
     public void onRadioButtonPress(ActionEvent e) {
@@ -56,9 +43,31 @@ public class NewMemberOverlayController implements Controller {
     }
 
     public void onOk() {
-        manager.addMember(member);
-        refresh();
-        show.set(false);
+        if (validInput()) {
+            manager.getCurrentProject().addMember(member);
+            refresh();
+            show.set(false);
+        }
+    }
+
+    private boolean validInput() {
+        boolean valid = true;
+        try {
+            member.setAge(Integer.parseInt(ageTextField.getText()));
+        } catch (NumberFormatException e) {
+            ageTextField.setText("");
+            ageTextField.getStyleClass().add("input-error");
+            valid = false;
+        }
+        try {
+            member.setId(Long.parseLong(idTextField.getText()));
+        } catch (NumberFormatException e) {
+            idTextField.setText("");
+            idTextField.getStyleClass().add("input-error");
+            valid = false;
+        }
+
+        return valid;
     }
 
     @Override

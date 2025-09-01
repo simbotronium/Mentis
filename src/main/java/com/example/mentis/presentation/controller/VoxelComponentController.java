@@ -25,7 +25,6 @@ public class VoxelComponentController implements Controller {
             if (newValue) {
                 root.setStroke(Color.WHITE);
             } else {
-                // TODO: setup for different grid positions
                 root.setColors();
                 root.animateHover(root.getContainer(), 1, root.getFillColor().deriveColor(0, 1, 1, 0.5), 200);
             }
