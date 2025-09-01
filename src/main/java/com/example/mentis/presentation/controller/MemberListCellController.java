@@ -4,6 +4,7 @@ import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.ViewManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -35,7 +36,7 @@ public class MemberListCellController implements Controller {
     protected void onEdit() {
         if (member != null) {
             manager.currentMemberProperty().set(member);
-            manager.currentViewProperty().set(View.MEMBER);
+            ViewManager.getInstance().changeView(View.MEMBER);
         }
     }
 

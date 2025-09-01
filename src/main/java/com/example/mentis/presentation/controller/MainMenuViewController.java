@@ -7,6 +7,7 @@ import com.example.mentis.business.data.ProjectListEntry;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.Side;
 import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.ProjectListCell;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
@@ -46,13 +47,13 @@ public class MainMenuViewController implements Controller {
             testProject.addMember(new Member(12, Side.RIGHT));
         }
         manager.currentProjectProperty().set(testProject);
-        manager.currentViewProperty().set(View.PROJECT);
+        ViewManager.getInstance().changeView(View.PROJECT);
     }
 
     @FXML
     protected void onNewProject() {
         manager.currentProjectProperty().set(new Project());
-        manager.currentViewProperty().set(View.PROJECT_SETTINGS);
+        ViewManager.getInstance().changeView(View.PROJECT_SETTINGS);
     }
 
     @FXML

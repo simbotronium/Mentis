@@ -4,6 +4,7 @@ import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.ProjectListEntry;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.ViewManager;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
@@ -37,7 +38,7 @@ public class ProjectListCell extends ListCell<ProjectListEntry> {
             button.setText(projectListEntry.name());
             button.setOnAction(e -> {
                 Manager.getInstance().currentProjectProperty().set(DataManager.getProjectById(projectListEntry.projectId()));
-                Manager.getInstance().currentViewProperty().set(View.PROJECT);
+                ViewManager.getInstance().changeView(View.PROJECT);
             });
             setGraphic(root);
             setText(null);

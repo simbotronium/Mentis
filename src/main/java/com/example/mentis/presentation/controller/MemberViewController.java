@@ -1,7 +1,10 @@
 package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Examination;
+import com.example.mentis.business.data.Member;
 import com.example.mentis.business.logic.Manager;
+import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.ExamListCell;
 import javafx.beans.binding.Bindings;
 import javafx.collections.ListChangeListener;
@@ -38,28 +41,27 @@ public class MemberViewController implements Controller {
         manager.currentMemberProperty().addListener((observable, oldValue, newValue) -> {
             System.out.println("changed Member");
             if (newValue != null) {
-                titleLabel.setText("Member: " + newValue.getId());
-                examinationsLabel.setText("Examinations: " + newValue.getExaminations().size());
-
-                newValue.getExaminations().addListener((ListChangeListener<? super Examination>) o -> {
-                    examinationsLabel.setText("Member: " + newValue.getId());
-                });
+                updateView(newValue);
             }
         });
 
+        if (manager.getCurrentMember() != null) {
+            updateView(manager.getCurrentMember());
+        }
+    }
+
+    private void updateView(Member m) {
+        titleLabel.setText("Member: " + manager.getCurrentMember().getId());
+        examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size());
+        manager.getCurrentMember().getExaminations().addListener((ListChangeListener<? super Examination>) o
+                -> examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size()));
+        m.getExaminations().addListener((ListChangeListener<? super Examination>) o
+                -> examinationsLabel.setText("Member: " + m.getId()));
+
         examListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentMember().getExaminations()));
         examListView.managedProperty().bind(examListView.visibleProperty());
-
         examListView.setItems(manager.getCurrentMember().getExaminations());
         examListView.setCellFactory(list -> new ExamListCell());
-
-        if (manager.getCurrentMember() != null) {
-            titleLabel.setText("Member: " + manager.getCurrentMember().getId());
-            examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size());
-            manager.getCurrentMember().getExaminations().addListener((ListChangeListener<? super Examination>) o -> {
-                examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size());
-            });
-        }
     }
 
     public void onAddNewExamButton() {
@@ -82,6 +84,11 @@ public class MemberViewController implements Controller {
             overlayController.refresh();
         }
         overlayController.showProperty().set(true);
+    }
+
+    @FXML
+    public void onBack() {
+        ViewManager.getInstance().changeView(View.PROJECT);
     }
 
     @Override

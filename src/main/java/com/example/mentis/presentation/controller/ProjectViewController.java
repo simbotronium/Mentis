@@ -5,6 +5,7 @@ import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.MemberListCell;
 import javafx.beans.binding.Bindings;
 import javafx.collections.ListChangeListener;
@@ -126,7 +127,7 @@ public class ProjectViewController implements Controller {
     }
 
     public void onBack() {
-        Manager.getInstance().currentViewProperty().set(View.MAIN_MENU);
+        ViewManager.getInstance().changeView(View.MAIN_MENU);
     }
 
 }

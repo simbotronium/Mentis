@@ -1,7 +1,6 @@
 package com.example.mentis.business.data;
 
 import com.example.mentis.business.logic.Side;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
@@ -13,12 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Member {
-    private SimpleLongProperty id = new SimpleLongProperty(0);
-    private SimpleIntegerProperty age = new SimpleIntegerProperty(0);
-    private SimpleBooleanProperty download = new SimpleBooleanProperty(false);
+    private final SimpleLongProperty id = new SimpleLongProperty(0);
+    private final SimpleIntegerProperty age = new SimpleIntegerProperty(0);
+    private final SimpleBooleanProperty download = new SimpleBooleanProperty(false);
     private ObservableList<Examination> examinations = FXCollections.observableArrayList();
 
-    private SimpleObjectProperty<Side> side = new SimpleObjectProperty<>(Side.LEFT);
+    private final SimpleObjectProperty<Side> side = new SimpleObjectProperty<>(Side.LEFT);
 
     public Member() {
 

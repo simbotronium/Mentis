@@ -11,7 +11,7 @@ public class MentisApplication extends Application {
         DataManager.createDataFolderIfMissing();
         DataManager.readFromFile();
 
-        ViewManager mainController = new ViewManager();
+        ViewManager mainController = ViewManager.getInstance();
         Scene scene = new Scene(mainController.getRoot(), 1920, 1080);
         stage.setOnCloseRequest(e -> DataManager.saveToFile());
         stage.setTitle("Mentis");

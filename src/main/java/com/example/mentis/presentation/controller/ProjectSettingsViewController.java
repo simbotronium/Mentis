@@ -5,6 +5,7 @@ import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.UID;
 import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.AreaListCell;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
@@ -114,7 +115,7 @@ public class ProjectSettingsViewController implements Controller {
 
     @FXML
     public void onBack() {
-        Manager.getInstance().currentViewProperty().set(View.MAIN_MENU);
+        ViewManager.getInstance().changeView(View.MAIN_MENU);
     }
 
     @FXML

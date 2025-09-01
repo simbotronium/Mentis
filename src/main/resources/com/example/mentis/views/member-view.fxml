@@ -25,7 +25,7 @@
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button mnemonicParsing="false" styleClass="secondary-button" text="Back" />
+                                    <Button mnemonicParsing="false" onAction="#onBack" styleClass="secondary-button" text="Back" />
                                  </children>
                               </HBox>
                               <Label fx:id="titleLabel" alignment="TOP_CENTER" text="Member: 12">

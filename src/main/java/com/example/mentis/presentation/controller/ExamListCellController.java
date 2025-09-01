@@ -3,6 +3,7 @@ package com.example.mentis.presentation.controller;
 import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.ViewManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -40,7 +41,7 @@ public class ExamListCellController implements Controller {
         Manager manager = Manager.getInstance();
         if (exam != null) {
             manager.currentExaminationProperty().set(exam);
-            manager.currentViewProperty().set(View.EXAM);
+            ViewManager.getInstance().changeView(View.EXAM);
         }
     }
 

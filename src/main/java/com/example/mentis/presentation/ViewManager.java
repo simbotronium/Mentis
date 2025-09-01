@@ -1,6 +1,5 @@
 package com.example.mentis.presentation;
 
-import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.controller.Controller;
 import javafx.fxml.FXMLLoader;
@@ -14,16 +13,17 @@ import java.util.Map;
 public class ViewManager implements Controller {
 
     private final Pane root = new StackPane();
-    private final Manager model = Manager.getInstance();
     private final Map<View, Controller> cachedControllers = new HashMap<>();
     private FXMLLoader loader = new FXMLLoader();
 
-    public ViewManager() {
-        model.currentViewProperty().addListener(((observable, oldValue, newValue) -> {
-            changeView(newValue);
-        }));
+    private static final ViewManager instance = new ViewManager();
 
-        model.currentViewProperty().set(View.MAIN_MENU);
+    public static ViewManager getInstance() {
+        return instance;
+    }
+
+    private ViewManager() {
+        changeView(View.MAIN_MENU);
     }
 
     public void changeView(View view) {

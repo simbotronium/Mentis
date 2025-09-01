@@ -4,28 +4,20 @@ import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
+import com.example.mentis.presentation.ViewManager;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class Manager {
 
     private static final Manager instance = new Manager();
-
-    // TODO: move to ViewManager
-    private final SimpleObjectProperty<View> currentView = new SimpleObjectProperty<>();
     private final SimpleObjectProperty<Project> currentProject = new SimpleObjectProperty<>();
     private final SimpleObjectProperty<Member> currentMember = new SimpleObjectProperty<>();
     private final SimpleObjectProperty<Examination> currentExamination = new SimpleObjectProperty<>();
 
-    private Manager() {
-
-    }
+    private Manager() {}
 
     public static Manager getInstance() {
         return instance;
-    }
-
-    public SimpleObjectProperty<View> currentViewProperty() {
-        return currentView;
     }
 
     public Project getCurrentProject() {
@@ -68,7 +60,7 @@ public class Manager {
 
     public void confirmProject() {
         DataManager.confirmProject(currentProject.get());
-        currentView.set(View.PROJECT);
+        ViewManager.getInstance().changeView(View.PROJECT);
     }
 
 }
