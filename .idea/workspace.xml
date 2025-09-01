@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="removed redundant currentViewProperty">
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="can delete members">
+      <change afterPath="$PROJECT_DIR$/mentisData/app.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mentisData/save_file.json" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/save_file.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/MemberListCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/MemberListCellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewMemberOverlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewMemberOverlayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ProjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ProjectViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/VoxelComponentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/VoxelComponentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/MemberListElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/MemberListElement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/MentisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/MentisApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +79,7 @@
       <recent name="$PROJECT_DIR$/build" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/mentis/assets" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/mentis/views" />
     </key>
@@ -151,7 +149,7 @@
       <workItem from="1756554825966" duration="8831000" />
       <workItem from="1756643124225" duration="3986000" />
       <workItem from="1756651654359" duration="10265000" />
-      <workItem from="1756728139739" duration="7543000" />
+      <workItem from="1756728139739" duration="10746000" />
     </task>
     <task id="LOCAL-00001" summary="changed build.gradle for CD">
       <option name="closed" value="true" />
@@ -425,11 +423,22 @@
       <option name="project" value="LOCAL" />
       <updated>1756732900678</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="can delete members">
+      <option name="closed" value="true" />
+      <created>1756737228482</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1756737228482</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -455,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixing icons" />
     <MESSAGE value="adding release to workflow" />
     <MESSAGE value="working on it" />
     <MESSAGE value="working on it!" />
@@ -480,6 +488,7 @@
     <MESSAGE value="map voxel via gui" />
     <MESSAGE value="new project structure" />
     <MESSAGE value="removed redundant currentViewProperty" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed redundant currentViewProperty" />
+    <MESSAGE value="can delete members" />
+    <option name="LAST_COMMIT_MESSAGE" value="can delete members" />
   </component>
 </project>

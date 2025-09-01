@@ -2,6 +2,8 @@ module com.example.mentis {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.fasterxml.jackson.databind;
+    requires org.slf4j;
+    requires ch.qos.logback.classic;
 
     opens com.example.mentis.application to javafx.fxml;
     opens com.example.mentis.presentation to javafx.fxml;
