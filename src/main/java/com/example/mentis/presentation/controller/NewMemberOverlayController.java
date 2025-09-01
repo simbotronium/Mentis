@@ -1,4 +1,4 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.logic.Manager;

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane fx:id="root" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mentis.presentation.ProjectViewController">
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mentis.presentation.controller.ProjectViewController">
    <children>
       <AnchorPane fx:id="projectPane" stylesheets="@../stylesheets/generalStyles.css">
          <children>

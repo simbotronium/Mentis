@@ -12,4 +12,6 @@ module com.example.mentis {
     exports com.example.mentis.application.serialisation;
     exports com.example.mentis.business.logic;
     opens com.example.mentis.application.serialisation to javafx.fxml;
+    opens com.example.mentis.presentation.controller to javafx.fxml;
+    opens com.example.mentis.presentation.components to javafx.fxml;
 }

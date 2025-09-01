@@ -1922,7 +1922,11 @@
           "selected" : false,
           "row" : 3,
           "col" : 6,
-          "area" : null
+          "area" : {
+            "id" : 6,
+            "color" : "0xff00ffff",
+            "name" : "UL"
+          }
         }, {
           "validationStatus" : "VALID",
           "selected" : false,
@@ -2006,7 +2010,7 @@
           "col" : 3,
           "area" : null
         }, {
-          "validationStatus" : "UNDECIDED",
+          "validationStatus" : "REFUTED",
           "selected" : false,
           "row" : 4,
           "col" : 4,

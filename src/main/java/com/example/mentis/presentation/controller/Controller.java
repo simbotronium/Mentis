@@ -1,4 +1,4 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.controller;
 
 import javafx.scene.Node;
 

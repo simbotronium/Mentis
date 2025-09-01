@@ -1,7 +1,7 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Voxel;
-import com.example.mentis.business.logic.ValidationStatus;
+import com.example.mentis.presentation.components.VoxelComponent;
 import javafx.scene.paint.Color;
 
 public class VoxelComponentController implements Controller {

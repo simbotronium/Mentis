@@ -1,4 +1,4 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.components;
 
 import com.example.mentis.business.data.Area;
 import javafx.animation.FadeTransition;

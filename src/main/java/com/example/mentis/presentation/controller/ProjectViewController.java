@@ -1,10 +1,11 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.components.MemberListCell;
 import javafx.beans.binding.Bindings;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;

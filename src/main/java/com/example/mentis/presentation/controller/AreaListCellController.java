@@ -1,7 +1,8 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Area;
 import com.example.mentis.business.logic.Manager;
+import com.example.mentis.presentation.components.AreaListCell;
 
 public class AreaListCellController implements Controller {
 

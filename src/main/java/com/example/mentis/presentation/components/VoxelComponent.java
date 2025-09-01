@@ -1,8 +1,10 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.components;
 
 import com.example.mentis.business.data.Voxel;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.ValidationStatus;
+import com.example.mentis.presentation.controller.Controller;
+import com.example.mentis.presentation.controller.VoxelComponentController;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;

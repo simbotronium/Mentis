@@ -140,3 +140,27 @@
 .invisible-text-field {
     -fx-background-color: transparent;
 }
+
+.choice-box {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.choice-box:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.choice-box:focused {
+    -fx-border-color: #86b7fe;
+    -fx-effect: dropshadow(three-pass-box, rgba(13,110,253,0.25), 3, 0, 0, 0);
+}
+
+.choice-box .label {
+    -fx-text-fill: #212529;
+}
+

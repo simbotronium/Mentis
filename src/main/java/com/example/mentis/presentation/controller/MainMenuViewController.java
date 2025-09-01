@@ -1,13 +1,13 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.controller;
 
 import com.example.mentis.application.DataManager;
-import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.data.ProjectListEntry;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.Side;
 import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.components.ProjectListCell;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.Node;

@@ -1,6 +1,7 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.components;
 
 import com.example.mentis.business.data.Examination;
+import com.example.mentis.presentation.controller.ExamListCellController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;

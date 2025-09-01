@@ -1,9 +1,10 @@
-package com.example.mentis.presentation;
+package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Voxel;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.ValidationStatus;
+import com.example.mentis.presentation.components.VoxelComponent;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.collections.ObservableList;
@@ -138,6 +139,7 @@ public class ExamViewController implements Controller {
             this.selectionBox.setVisible(false);
             this.mappingBox.setVisible(false);
             this.selectedVoxel = null;
+            areaChoice.setValue(null);
         }
     }
 
