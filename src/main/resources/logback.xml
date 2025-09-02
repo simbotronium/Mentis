@@ -1,24 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration debug="true">
-    <!-- Datei Appender -->
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+<configuration>
+    <!-- Datei-Appender für alle außer WARN -->
+    <appender name="ROLLING_NORMAL" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>mentisData/app.log</file>
-        <append>false</append>
+
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
         </encoder>
+
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>NEUTRAL</onMismatch>
+        </filter>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>mentisData/app.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+            <maxHistory>3</maxHistory>
+            <totalSizeCap>30MB</totalSizeCap>
+        </rollingPolicy>
     </appender>
 
-    <!-- Konsole Appender -->
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+    <!-- Datei-Appender NUR für WARN mit Leerzeilen davor -->
+    <appender name="ROLLING_WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>mentisData/app.log</file>
+
+        <encoder>
+            <pattern>%n%n%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>mentisData/app.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+            <maxHistory>3</maxHistory>
+            <totalSizeCap>30MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Konsole für alle außer WARN -->
+    <appender name="STDOUT_NORMAL" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
             <pattern>%d{HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
         </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>NEUTRAL</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- Konsole NUR für WARN mit Leerzeilen -->
+    <appender name="STDOUT_WARN" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%n%n%d{HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
     </appender>
 
     <!-- Root Logger -->
     <root level="debug">
-        <appender-ref ref="STDOUT"/>
-        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT_NORMAL"/>
+        <appender-ref ref="STDOUT_WARN"/>
+        <appender-ref ref="ROLLING_NORMAL"/>
+        <appender-ref ref="ROLLING_WARN"/>
     </root>
 </configuration>

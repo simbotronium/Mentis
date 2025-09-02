@@ -78,8 +78,16 @@
             <VBox fx:id="selectionBox" alignment="CENTER_LEFT" spacing="10.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label fx:id="selectionLabel" styleClass="standard-text" text="selected Voxel" />
-                  <Button fx:id="validateButton" mnemonicParsing="false" onAction="#onValidate" text="validate" />
-                  <Button fx:id="refuteButton" mnemonicParsing="false" onAction="#onRefute" text="refute" />
+                  <Button fx:id="validateButton" mnemonicParsing="false" onAction="#onValidate" prefWidth="120.0" text="validate">
+                     <styleClass>
+                        <String fx:value="secondary-button" />
+                        <String fx:value="validate-button" />
+                     </styleClass></Button>
+                  <Button fx:id="refuteButton" mnemonicParsing="false" onAction="#onRefute" prefWidth="120.0" text="refute">
+                     <styleClass>
+                        <String fx:value="secondary-button" />
+                        <String fx:value="reject-button" />
+                     </styleClass></Button>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

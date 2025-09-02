@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.LocalDateTime;
+
 public class MentisApplication extends Application {
 
     private static final Logger log = LoggerFactory.getLogger(MentisApplication.class);
@@ -17,7 +19,7 @@ public class MentisApplication extends Application {
     public void start(Stage stage) {
         DataManager.createDataFolderIfMissing();
         setUpLogging();
-        log.warn("starting application");
+        log.warn("starting application on " + LocalDateTime.now());
         DataManager.readFromFile();
 
         ViewManager mainController = ViewManager.getInstance();

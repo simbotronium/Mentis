@@ -1,5 +1,0 @@
-2025-09-01 22:03:15 INFO  [JavaFX Application Thread] c.e.m.application.MentisApplication - starting application
-2025-09-01 22:03:15 WARN  [JavaFX Application Thread] c.e.m.application.MentisApplication - this is a warning!
-2025-09-01 22:03:15 ERROR [JavaFX Application Thread] c.e.m.application.MentisApplication - this is an error
-2025-09-01 22:03:15 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
-2025-09-01 22:03:15 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects

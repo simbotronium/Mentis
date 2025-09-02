@@ -164,3 +164,32 @@
     -fx-text-fill: #212529;
 }
 
+.validate-button {
+    -fx-text-fill: #2b8a4a;
+    -fx-background-color: rgba(43, 138, 74, 0.1);
+    -fx-border-color: #2b8a4a;
+}
+
+.validate-button:hover {
+    -fx-background-color: rgba(43, 138, 74, 0.2);
+}
+
+.validate-button:pressed {
+    -fx-background-color: rgba(43, 138, 74, 0.4);
+}
+
+/* Reject (red) */
+.reject-button {
+    -fx-text-fill: #b33531;
+    -fx-background-color: rgba(179, 53, 49, 0.1);
+    -fx-border-color: #b33531;
+}
+
+.reject-button:hover {
+    -fx-background-color: rgba(179, 53, 49, 0.2);
+}
+
+.reject-button:pressed {
+    -fx-background-color: rgba(179, 53, 49, 0.4);
+}
+
