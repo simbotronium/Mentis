@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="tracing back to working state">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Area.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/ProjectSettingsViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-settings-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
