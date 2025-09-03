@@ -2,6 +2,7 @@ package com.example.mentis.application;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
+import com.example.mentis.business.logic.TxtParser;
 import com.example.mentis.presentation.ViewManager;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -17,10 +18,11 @@ public class MentisApplication extends Application {
 
     @Override
     public void start(Stage stage) {
-        DataManager.createDataFolderIfMissing();
         setUpLogging();
+        DataManager.createDataFolderIfMissing();
         log.warn("starting application on " + LocalDateTime.now());
         DataManager.readFromFile();
+        TxtParser.testParse();
 
         ViewManager mainController = ViewManager.getInstance();
         Scene scene = new Scene(mainController.getRoot(), 1920, 1080);

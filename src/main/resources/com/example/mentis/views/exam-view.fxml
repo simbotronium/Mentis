@@ -38,7 +38,6 @@
                </styleClass>
             </VBox>
             <Region HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" styleClass="secondary-button" text="Back" />
             <Button alignment="CENTER" mnemonicParsing="false" styleClass="primary-button" text="Save" />
          </children>
          <padding>

@@ -61,18 +61,18 @@ public class ExamViewController implements Controller {
     private final Logger log = LoggerFactory.getLogger(ExamViewController.class);
 
 
+    //TODO: fix voxel selection issue
     @FXML
     public void initialize() {
         log.info("searching overlay here: " + manager.getCurrentExamination().getOverlayFile().toURI());
         Image overlay = new Image(manager.getCurrentExamination().getOverlayFile().toURI().toString());
-        selectionBox.setVisible(false);
 
         ObservableList<Area> areas = Manager.getInstance().getCurrentProject().getAreas();
         areaChoice.setItems(areas);
         if (!areas.isEmpty()) areaChoice.setValue(areas.get(0));
-        mappingBox.setVisible(false);
         areaChoice.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             selectedVoxel.setArea(newValue);
+            this.setSelectedVoxel(null);
         });
 
         leftImage.fitWidthProperty().bind(leftStack.widthProperty());
@@ -86,6 +86,8 @@ public class ExamViewController implements Controller {
         middleImage.setImage(overlay);
         rightImage.setImage(overlay);
 
+        Arrays.stream(manager.getCurrentExamination().getVoxels()).forEach(v -> v.selectedProperty().set(false));
+        this.setSelectedVoxel(null);
         createVoxelViews();
     }
 
@@ -132,6 +134,12 @@ public class ExamViewController implements Controller {
     }
 
     private void setSelectedVoxel(Voxel v) {
+        if (v == null) {
+            this.selectionBox.setVisible(false);
+            this.mappingBox.setVisible(false);
+            this.selectedVoxel = null;
+            return;
+        }
         if (v.isSelected()) {
             this.selectedVoxel = v;
             selectionLabel.setText("selected voxel: " + v);
@@ -157,7 +165,6 @@ public class ExamViewController implements Controller {
 
     private void setSelectedVoxelValidationStatus(boolean valid) {
         this.selectedVoxel.setValidationStatus(valid ? ValidationStatus.VALID : ValidationStatus.REFUTED);
-        this.selectedVoxel.selectedProperty().set(false);
         this.selectionBox.setVisible(false);
         this.selectedVoxel = null;
     }

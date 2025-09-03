@@ -4,6 +4,9 @@ module com.example.mentis {
     requires com.fasterxml.jackson.databind;
     requires org.slf4j;
     requires ch.qos.logback.classic;
+    requires java.naming;
+    requires  org.apache.poi.ooxml;
+    requires org.apache.poi.poi;
 
     opens com.example.mentis.application to javafx.fxml;
     opens com.example.mentis.presentation to javafx.fxml;

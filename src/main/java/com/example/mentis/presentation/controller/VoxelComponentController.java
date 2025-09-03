@@ -30,8 +30,14 @@ public class VoxelComponentController implements Controller {
             }
         });
 
-        voxel.validationStatusProperty().addListener((observable, oldValue, newValue) -> root.setColors());
-        voxel.areaProperty().addListener((observable, oldValue, newValue) -> root.setColors());
+        voxel.validationStatusProperty().addListener((observable, oldValue, newValue) -> {
+            voxel.setSelected(false);
+            root.setColors();
+        });
+        voxel.areaProperty().addListener((observable, oldValue, newValue) -> {
+            voxel.setSelected(false);
+            root.setColors();
+        });
     }
 
 
