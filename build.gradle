@@ -61,7 +61,7 @@ jlink {
     skipInstaller = false
     installerType = System.getProperty('os.name').toLowerCase().contains('mac') ? 'dmg' :
             System.getProperty('os.name').toLowerCase().contains('win') ? 'exe' : 'deb'
-    appVersion = '1.0.0'
+    appVersion = '1.1.0'
     icon = 'src/main/resources/com/example/mentis/assets/AppIcon.icns'
   }
 }

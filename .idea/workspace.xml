@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="workspace">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build_mentis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build_mentis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
