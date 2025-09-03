@@ -1,0 +1,169 @@
+2025-09-03 00:27:57 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 00:27:57 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 00:27:57 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 00:28:32 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 00:28:32 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 00:28:32 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 00:34:10 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 00:34:10 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 00:34:10 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 00:36:25 ERROR [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - found 2591 lines
+2025-09-03 00:40:31 ERROR [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - 
+2025-09-03 00:41:08 ERROR [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - PETH	PI	GPE	GPC	PCRE	ATP-G-1	ATP-G-2	ATP-A-1	ATP-A-2	ATP-B-1	ATP-B-2	ATP-B-3	PCHO	MM	NAD(H)	
+2025-09-03 01:44:20 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 01:44:20 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 01:44:20 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 01:45:15 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 01:45:15 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 01:45:15 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 01:45:34 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 01:45:34 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 01:45:34 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 01:49:13 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 01:49:13 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 01:49:13 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 01:56:49 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 01:56:49 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 01:56:49 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 01:57:23 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 01:57:23 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 01:57:23 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 01:59:10 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 01:59:10 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 01:59:10 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 01:59:37 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 01:59:37 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 01:59:37 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:00:51 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:00:51 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:00:51 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:00:51 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to Frequencies (ppm)
+2025-09-03 02:00:52 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to 0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	
+2025-09-03 02:05:03 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:05:03 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:05:03 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:05:03 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to -2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	
+2025-09-03 02:05:04 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to 0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	
+2025-09-03 02:09:53 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:09:53 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:09:53 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:09:53 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to Frequencies (ppm)
+2025-09-03 02:09:53 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to 0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	
+2025-09-03 02:11:31 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:11:31 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:11:31 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:11:32 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to Frequencies (ppm)
+2025-09-03 02:11:32 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to 0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	0E0	
+2025-09-03 02:12:17 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:12:17 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:12:18 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:12:18 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to -2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	-2.2711E-1	
+2025-09-03 02:12:18 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - skipped to Not known	0E0	Not known	Not known
+2025-09-03 02:12:49 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:12:49 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:12:49 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:19:38 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:19:38 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:19:38 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:20:05 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:20:05 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:20:05 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:21:53 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:21:53 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:21:53 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:22:15 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 02:23:09 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:23:09 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:23:09 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:25:51 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 02:25:51 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 02:25:51 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - test parsing
+2025-09-03 02:25:51 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 02:25:51 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - found 256 value lines
+2025-09-03 02:25:53 INFO  [JavaFX Application Thread] c.e.mentis.business.logic.TxtParser - Excel-File finished!
+2025-09-03 11:09:46 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:09:46 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:09:46 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:09:57 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:10:10 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:10:10 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:10:10 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:10:19 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:11:48 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:11:48 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:11:48 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:11:55 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:12:05 ERROR [Thread-5] c.e.m.business.logic.ExcelCreator - could not generate Excel file:  (No such file or directory)
+2025-09-03 11:12:06 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - excel file finished
+2025-09-03 11:13:31 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:13:31 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:13:31 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:13:38 ERROR [Thread-5] c.e.m.business.logic.ExcelCreator - could not generate Excel file:  (No such file or directory)
+2025-09-03 11:14:43 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:14:43 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:14:44 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:14:52 ERROR [Thread-5] c.e.m.business.logic.ExcelCreator - could not generate Excel file:  (No such file or directory)
+2025-09-03 11:17:25 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:17:25 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:17:25 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:18:03 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Member with id: 12
+2025-09-03 11:18:13 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:18:24 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-03 11:18:27 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Member - New Examination with exam A
+2025-09-03 11:18:29 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-03 11:20:06 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:20:06 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:20:07 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:20:48 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Member with id: 12
+2025-09-03 11:21:13 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:21:24 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-03 11:21:26 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Member - New Examination with exam A
+2025-09-03 11:21:27 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:22:08 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Member with id: 10
+2025-09-03 11:22:11 INFO  [JavaFX Application Thread] c.e.mentis.presentation.ViewManager - changed Member
+2025-09-03 11:22:29 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:22:45 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-03 11:22:47 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Member - New Examination with exam B
+2025-09-03 11:23:31 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - found 256 value lines
+2025-09-03 11:23:31 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - found 256 value lines
+2025-09-03 11:23:33 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - excel file finished
+2025-09-03 11:27:27 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:27:27 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:27:27 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:29:05 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:29:05 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:29:05 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:29:33 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Member with id: 12
+2025-09-03 11:29:48 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:29:58 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-03 11:29:59 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Member - New Examination with exam A
+2025-09-03 11:30:01 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:30:33 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - found 256 value lines
+2025-09-03 11:30:34 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - excel file finished
+2025-09-03 11:30:36 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-03 11:31:29 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:31:29 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:31:29 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:31:39 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-03 11:32:37 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:32:37 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:32:37 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:32:53 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Member with id: 10
+2025-09-03 11:33:09 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:33:20 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-03 11:33:22 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Member - New Examination with exam B
+2025-09-03 11:33:23 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-03 11:33:46 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - found 256 value lines
+2025-09-03 11:33:47 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - found 256 value lines
+2025-09-03 11:33:48 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - excel file finished
+2025-09-03 11:45:15 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:45:15 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:45:15 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:45:32 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - found 256 value lines
+2025-09-03 11:45:33 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - excel file finished
+2025-09-03 11:45:45 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-03 11:46:59 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-03 11:46:59 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-03 11:46:59 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-03 11:47:07 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - found 256 value lines
+2025-09-03 11:47:09 INFO  [Thread-5] c.e.m.business.logic.ExcelCreator - excel file finished

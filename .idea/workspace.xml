@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="tracing back to working state">
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="implemented testing txt parsing and excel file creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/save_file.json" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/save_file.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/MentisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/MentisApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Examination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Examination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/TxtParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/ExcelCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewExamOverlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewExamOverlayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ProjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ProjectViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/exam-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/exam-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +34,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="CSS File" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -29,7 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="0af4a2e947427d83f86b0921874ed0880af70c48" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,13 +68,18 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/simonjackel/IdeaProjects/Mentis/build&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;GrepConsole&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -66,6 +88,8 @@
       <recent name="$PROJECT_DIR$/build" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/mentis" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/mentis/assets" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/mentis/views" />
     </key>
@@ -76,7 +100,7 @@
       <module name="Mentis.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.mentis.application.*" />
+          <option name="PATTERN" value="com.example.mentis.business.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,6 +152,17 @@
       <workItem from="1753201488504" duration="6519000" />
       <workItem from="1753208695175" duration="2796000" />
       <workItem from="1753535516713" duration="2707000" />
+      <workItem from="1755356725099" duration="12941000" />
+      <workItem from="1755699798002" duration="6363000" />
+      <workItem from="1756291020491" duration="3580000" />
+      <workItem from="1756544372905" duration="6716000" />
+      <workItem from="1756554825966" duration="8831000" />
+      <workItem from="1756643124225" duration="3986000" />
+      <workItem from="1756651654359" duration="10265000" />
+      <workItem from="1756728139739" duration="12853000" />
+      <workItem from="1756756175419" duration="9539000" />
+      <workItem from="1756850810234" duration="8416000" />
+      <workItem from="1756888312952" duration="4493000" />
     </task>
     <task id="LOCAL-00001" summary="changed build.gradle for CD">
       <option name="closed" value="true" />
@@ -241,11 +276,222 @@
       <option name="project" value="LOCAL" />
       <updated>1753210895393</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="setup navigation architecture">
+      <option name="closed" value="true" />
+      <created>1753545181818</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753545181818</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added AppFolderManager">
+      <option name="closed" value="true" />
+      <created>1753546689331</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1753546689331</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fixed ListView text color and performance issues">
+      <option name="closed" value="true" />
+      <created>1754402367340</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1754402367340</updated>
+    </task>
+    <task id="LOCAL-00018" summary="created MemberView and corresponding ListCell">
+      <option name="closed" value="true" />
+      <created>1754407000685</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1754407000685</updated>
+    </task>
+    <task id="LOCAL-00019" summary="implemented overlay for new exam and file upload">
+      <option name="closed" value="true" />
+      <created>1754508053087</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1754508053087</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixed displaying issue in NewExamOverlay">
+      <option name="closed" value="true" />
+      <created>1754513106562</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1754513106562</updated>
+    </task>
+    <task id="LOCAL-00021" summary="created exam view and started implemented voxel edit">
+      <option name="closed" value="true" />
+      <created>1755366152842</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1755366152842</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added animation to voxel">
+      <option name="closed" value="true" />
+      <created>1755367939176</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1755367939176</updated>
+    </task>
+    <task id="LOCAL-00023" summary="made voxel selectable">
+      <option name="closed" value="true" />
+      <created>1755373387063</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1755373387063</updated>
+    </task>
+    <task id="LOCAL-00024" summary="reworked voxel view">
+      <option name="closed" value="true" />
+      <created>1755705585240</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1755705585240</updated>
+    </task>
+    <task id="LOCAL-00025" summary="can add areas to new projects">
+      <option name="closed" value="true" />
+      <created>1756547658347</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1756547658347</updated>
+    </task>
+    <task id="LOCAL-00026" summary="can edit project settings">
+      <option name="closed" value="true" />
+      <created>1756551347767</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1756551347767</updated>
+    </task>
+    <task id="LOCAL-00027" summary="save projects to file">
+      <option name="closed" value="true" />
+      <created>1756563124580</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1756563124580</updated>
+    </task>
+    <task id="LOCAL-00028" summary="load projects from file">
+      <option name="closed" value="true" />
+      <created>1756646695070</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1756646695070</updated>
+    </task>
+    <task id="LOCAL-00029" summary="unversioned file">
+      <option name="closed" value="true" />
+      <created>1756646761171</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1756646761171</updated>
+    </task>
+    <task id="LOCAL-00030" summary="updating project view">
+      <option name="closed" value="true" />
+      <created>1756654902933</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1756654902933</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fixed serialization issues">
+      <option name="closed" value="true" />
+      <created>1756669000756</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1756669000756</updated>
+    </task>
+    <task id="LOCAL-00032" summary="map voxel via gui">
+      <option name="closed" value="true" />
+      <created>1756677105856</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1756677105856</updated>
+    </task>
+    <task id="LOCAL-00033" summary="new project structure">
+      <option name="closed" value="true" />
+      <created>1756731249843</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1756731249843</updated>
+    </task>
+    <task id="LOCAL-00034" summary="removed redundant currentViewProperty">
+      <option name="closed" value="true" />
+      <created>1756732900678</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1756732900678</updated>
+    </task>
+    <task id="LOCAL-00035" summary="can delete members">
+      <option name="closed" value="true" />
+      <created>1756737228482</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1756737228482</updated>
+    </task>
+    <task id="LOCAL-00036" summary="setup logger">
+      <option name="closed" value="true" />
+      <created>1756741480504</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1756741480504</updated>
+    </task>
+    <task id="LOCAL-00037" summary="replaced simple prints for logger">
+      <option name="closed" value="true" />
+      <created>1756757072908</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1756757072908</updated>
+    </task>
+    <task id="LOCAL-00038" summary="small changes for style and logger">
+      <option name="closed" value="true" />
+      <created>1756803637190</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1756803637190</updated>
+    </task>
+    <task id="LOCAL-00039" summary="logger files">
+      <option name="closed" value="true" />
+      <created>1756803650455</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1756803650455</updated>
+    </task>
+    <task id="LOCAL-00040" summary="implemented testing txt parsing and excel file creation">
+      <option name="closed" value="true" />
+      <created>1756859249753</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1756859249753</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -271,20 +517,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed build.gradle for CD" />
-    <MESSAGE value="changed build.gradle for CD...again" />
-    <MESSAGE value="trying again" />
-    <MESSAGE value="finally?" />
-    <MESSAGE value="finally??" />
-    <MESSAGE value="maybe now?" />
-    <MESSAGE value="maybe now??" />
-    <MESSAGE value="ach komm" />
-    <MESSAGE value="added icons" />
-    <MESSAGE value="fixing icons" />
-    <MESSAGE value="adding release to workflow" />
-    <MESSAGE value="working on it" />
-    <MESSAGE value="working on it!" />
-    <MESSAGE value="tracing back to working state" />
-    <option name="LAST_COMMIT_MESSAGE" value="tracing back to working state" />
+    <MESSAGE value="added AppFolderManager" />
+    <MESSAGE value="fixed ListView text color and performance issues" />
+    <MESSAGE value="created MemberView and corresponding ListCell" />
+    <MESSAGE value="implemented overlay for new exam and file upload" />
+    <MESSAGE value="fixed displaying issue in NewExamOverlay" />
+    <MESSAGE value="created exam view and started implemented voxel edit" />
+    <MESSAGE value="added animation to voxel" />
+    <MESSAGE value="made voxel selectable" />
+    <MESSAGE value="reworked voxel view" />
+    <MESSAGE value="can add areas to new projects" />
+    <MESSAGE value="can edit project settings" />
+    <MESSAGE value="save projects to file" />
+    <MESSAGE value="load projects from file" />
+    <MESSAGE value="unversioned file" />
+    <MESSAGE value="updating project view" />
+    <MESSAGE value="fixed serialization issues" />
+    <MESSAGE value="map voxel via gui" />
+    <MESSAGE value="new project structure" />
+    <MESSAGE value="removed redundant currentViewProperty" />
+    <MESSAGE value="can delete members" />
+    <MESSAGE value="setup logger" />
+    <MESSAGE value="replaced simple prints for logger" />
+    <MESSAGE value="small changes for style and logger" />
+    <MESSAGE value="logger files" />
+    <MESSAGE value="implemented testing txt parsing and excel file creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented testing txt parsing and excel file creation" />
   </component>
 </project>

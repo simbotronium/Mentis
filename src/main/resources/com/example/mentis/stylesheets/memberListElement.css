@@ -1,0 +1,29 @@
+.elementContainer {
+    -fx-background-color: #d9d9d9;
+    -fx-background-radius: 10;
+    -fx-text-fill: #333;
+}
+
+.elementContainer:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: inherit;
+}
+
+.elementContainer:focused {
+    -fx-background-color: transparent;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+}
+
+.delete-button {
+    -fx-border-color: #a83232;
+    -fx-text-fill: #a83232;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+}

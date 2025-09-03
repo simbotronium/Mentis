@@ -1,0 +1,20 @@
+2025-09-01 22:27:18 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-01 22:27:18 WARN  [JavaFX Application Thread] c.e.m.application.MentisApplication - starting application on 2025-09-01T22:27:18.440457
+2025-09-01 22:27:18 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-01 22:27:18 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-01 22:29:30 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-01 22:29:30 WARN  [JavaFX Application Thread] c.e.m.application.MentisApplication - starting application on 2025-09-01T22:29:30.842270
+2025-09-01 22:29:30 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-01 22:29:30 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-01 22:32:32 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-01 22:32:32 WARN  [JavaFX Application Thread] c.e.m.application.MentisApplication - starting application on 2025-09-01T22:32:32.447341
+2025-09-01 22:32:32 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-01 22:32:32 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-01 22:33:10 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-01 22:33:10 WARN  [JavaFX Application Thread] c.e.m.application.MentisApplication - starting application on 2025-09-01T22:33:10.489557
+2025-09-01 22:33:10 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-01 22:33:10 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-01 22:33:34 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/IdeaProjects/Mentis/mentisData
+2025-09-01 22:33:34 WARN  [JavaFX Application Thread] c.e.m.application.MentisApplication - starting application on 2025-09-01T22:33:34.967451
+2025-09-01 22:33:34 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-01 22:33:35 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
