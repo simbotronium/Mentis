@@ -15,6 +15,7 @@ public class Examination {
     private SimpleBooleanProperty mapped = new SimpleBooleanProperty(false);
     private Voxel[] voxels;
     private File overlayFile;
+    private String txtFilePath = "";
     private final int voxelDimensionSize;
 
     public Examination() {
@@ -103,5 +104,13 @@ public class Examination {
 
     public void setVoxels(Voxel[] voxels) {
         this.voxels = voxels;
+    }
+
+    public String getTxtFilePath() {
+        return txtFilePath;
+    }
+
+    public void setTxtFilePath(String txtFilePath) {
+        this.txtFilePath = txtFilePath;
     }
 }

@@ -2,6 +2,8 @@ package com.example.mentis.business.logic;
 
 import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.Examination;
+import com.example.mentis.business.data.Member;
+import com.example.mentis.business.data.Project;
 import com.example.mentis.business.data.Voxel;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -16,13 +18,12 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TxtParser {
+public class ExcelCreator {
 
-    private final static Logger log = LoggerFactory.getLogger(TxtParser.class);
+    private final static Logger log = LoggerFactory.getLogger(ExcelCreator.class);
 
     public static void testParse() {
         log.info("test parsing");
-        int count = 0;
         try(Scanner scanner = new Scanner(new File("src/main/resources/txt.txt"))) {
             skipToLine15(scanner);
 
@@ -30,6 +31,49 @@ public class TxtParser {
 
         } catch (IOException e) {
             log.error("Exception while parsing txt: " + e.getMessage());
+        }
+    }
+
+    public static void createExcel(Project p) {
+        int currentRow = 0;
+        boolean tableHeadsCreated = false;
+        Workbook workbook = new XSSFWorkbook();
+        Sheet sheet = workbook.createSheet(p.getName());
+        for (Member m: p.getMembers()) {
+            for (Examination e : m.getExaminations()) {
+                try (Scanner scanner = new Scanner(new File(e.getTxtFilePath()))) {
+                    if (!tableHeadsCreated) {
+                        skipToLine15(scanner);
+                        createTableHeads(sheet, Arrays.stream(scanner.nextLine().split("\\s+")).map(String::strip).toArray(String[]::new));
+                        tableHeadsCreated = true;
+                        currentRow++;
+                    }
+
+                    skipTo(scanner, "Frequencies");
+                    writeValues(scanner, sheet, currentRow);
+                    skipTo(scanner, "pH");
+                    writePhValues(scanner, sheet);
+                    writeVoxelValues(e, sheet, currentRow);
+
+                    currentRow += p.getVoxelDimensionSize() * p.getVoxelDimensionSize() + 1;
+
+                } catch (IOException ex) {
+                    log.error("could not generate Excel file: " + ex.getMessage());
+                    ex.printStackTrace();
+                    return;
+                }
+            }
+        }
+        autosize(sheet);
+        writeFile(workbook, p.getName() + ".xlsx");
+    }
+
+    private static void writeFile(Workbook workbook, String filename) {
+        try (FileOutputStream fileOut = new FileOutputStream("mentisData/" + filename)) {
+            workbook.write(fileOut);
+            log.info("excel file finished");
+        } catch (IOException e) {
+            log.error("could not write excel file: " + e.getMessage());
         }
     }
 
@@ -42,7 +86,7 @@ public class TxtParser {
         writeValues(scanner, sheet, 1);
         skipTo(scanner, "pH");
         writePhValues(scanner, sheet);
-        writeVoxelValues(DataManager.getProjectById(3).getMembers().get(0).getExaminations().get(0), sheet);
+        writeVoxelValues(DataManager.getProjectById(3).getMembers().get(0).getExaminations().get(0), sheet, 1);
 
         autosize(sheet);
 
@@ -74,14 +118,14 @@ public class TxtParser {
         }
     }
 
-    private static void writeVoxelValues(Examination e,Sheet sheet) {
+    private static void writeVoxelValues(Examination e,Sheet sheet, int rowNumber) {
         if (e == null) {
             log.error("exam is null");
             return;
         }
         Voxel[] voxels = e.getVoxels();
         for (int i = 0; i < voxels.length; i++) {
-            Row row = sheet.getRow(i + 1);
+            Row row = sheet.getRow(rowNumber + i);
             row.createCell(0).setCellValue("12");
             row.createCell(1).setCellValue(e.getExam());
             row.createCell(2).setCellValue(e.getSlice());

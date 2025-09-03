@@ -68,7 +68,6 @@ public class DataManager {
 
                 for (Project p: projects.values()) {
                     Platform.runLater(() -> entries.add(new ProjectListEntry(p.getName(), p.getID())));
-                    Thread.sleep(500);
                 }
 
                 return null;
@@ -85,9 +84,9 @@ public class DataManager {
         try {
             if (path == null) throw new IOException("no valid path set");
 
-            m.writerWithDefaultPrettyPrinter()
-                    .writeValue(new File(path), projects);
+            m.writerWithDefaultPrettyPrinter().writeValue(new File(path), projects);
 
+            log.info("updatet save file");
         } catch (IOException e) {
             log.error("could not save - " + e.getMessage());
         }

@@ -140,6 +140,11 @@
                                        </styleClass>
                                     </ListView>
                                     <Button mnemonicParsing="false" onAction="#onAddNewMember" styleClass="new-element-button" text="+" textAlignment="CENTER" />
+                                    <Button fx:id="downloadButton" mnemonicParsing="false" onAction="#onDownload" styleClass="new-element-button" text="Download" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
                                  </children>
                               </VBox>
                            </children>

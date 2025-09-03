@@ -193,3 +193,12 @@
     -fx-background-color: rgba(179, 53, 49, 0.4);
 }
 
+.successful-upload {
+    -fx-text-fill: lightgreen;
+    -fx-border-color: lightgreen;
+}
+
+.pending {
+    -fx-text-fill: black;
+    -fx-border-color: black;
+}

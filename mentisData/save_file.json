@@ -1300,6 +1300,7 @@
           "area" : null
         } ],
         "overlayFile" : "/Users/simonjackel/Downloads/overlay.jpeg",
+        "txtFilePath" : "",
         "voxelDimensionSize" : 16
       } ],
       "side" : "RIGHT"
@@ -1310,11 +1311,15 @@
     "typeOfSpectroscopy" : "normal",
     "voxelDimensionSize" : 16,
     "maxDeviation" : 5,
-    "name" : "BBB",
+    "name" : "CCC",
     "areas" : [ {
       "id" : 4,
-      "color" : "0x00ff00ff",
+      "color" : "0x0000ffff",
       "name" : "UL"
+    }, {
+      "id" : 5,
+      "color" : "0xffff00ff",
+      "name" : "OL"
     } ],
     "members" : [ {
       "id" : 12,
@@ -1581,755 +1586,755 @@
           "col" : 2,
           "area" : null
         }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 7,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 3,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 7,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 4,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 7,
+          "area" : {
+            "id" : 5,
+            "color" : "0xffff00ff",
+            "name" : "OL"
+          }
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 5,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 7,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 6,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 7,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 7,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 7,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 8,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 7,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 9,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 5,
+          "area" : {
+            "id" : 4,
+            "color" : "0x0000ffff",
+            "name" : "UL"
+          }
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 7,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 10,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 6,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 7,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 8,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 9,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 10,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 11,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 12,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 13,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 14,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 11,
+          "col" : 15,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 12,
+          "col" : 0,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 12,
+          "col" : 1,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 12,
+          "col" : 2,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 12,
+          "col" : 3,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 12,
+          "col" : 4,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 12,
+          "col" : 5,
+          "area" : null
+        }, {
+          "validationStatus" : "UNDECIDED",
+          "row" : 12,
+          "col" : 6,
+          "area" : null
+        }, {
           "validationStatus" : "VALID",
-          "row" : 3,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "VALID",
-          "row" : 3,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 3,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "REFUTED",
-          "row" : 4,
-          "col" : 3,
-          "area" : {
-            "id" : 4,
-            "color" : "0x00ff00ff",
-            "name" : "UL"
-          }
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "REFUTED",
-          "row" : 4,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 4,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 5,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 6,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 7,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 8,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 9,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 4,
-          "area" : {
-            "id" : 4,
-            "color" : "0x00ff00ff",
-            "name" : "UL"
-          }
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 10,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 7,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 8,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 9,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 10,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 11,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 12,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 13,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 14,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 11,
-          "col" : 15,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 12,
-          "col" : 0,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 12,
-          "col" : 1,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 12,
-          "col" : 2,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 12,
-          "col" : 3,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 12,
-          "col" : 4,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 12,
-          "col" : 5,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
-          "row" : 12,
-          "col" : 6,
-          "area" : null
-        }, {
-          "validationStatus" : "UNDECIDED",
           "row" : 12,
           "col" : 7,
           "area" : null
@@ -2417,11 +2422,7 @@
           "validationStatus" : "UNDECIDED",
           "row" : 13,
           "col" : 8,
-          "area" : {
-            "id" : 4,
-            "color" : "0x00ff00ff",
-            "name" : "UL"
-          }
+          "area" : null
         }, {
           "validationStatus" : "UNDECIDED",
           "row" : 13,
@@ -2619,9 +2620,10 @@
           "area" : null
         } ],
         "overlayFile" : "/Users/simonjackel/Downloads/overlay.jpeg",
+        "txtFilePath" : "/Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt",
         "voxelDimensionSize" : 16
       } ],
-      "side" : "LEFT"
+      "side" : "RIGHT"
     } ],
     "id" : 3
   }

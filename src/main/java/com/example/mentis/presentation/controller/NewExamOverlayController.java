@@ -71,6 +71,9 @@ public class NewExamOverlayController implements Controller {
         txtUploadButton.setWrapText(true);
         txtUploadButton.setTextAlignment(TextAlignment.CENTER);
         txtUploadButton.setAlignment(Pos.CENTER);
+
+        overlayUploadButton.setText("+\nOverlay");
+        txtUploadButton.setText("+\ntxt File");
     }
 
     @FXML
@@ -108,7 +111,11 @@ public class NewExamOverlayController implements Controller {
 
         if (selectedFile != null) {
             log.info("selected File: " + selectedFile.getPath());
-            examination.setOverlayFile(selectedFile);
+            if (fileDescription.equals("Textfiles")) {
+                examination.setTxtFilePath(selectedFile.getAbsolutePath());
+            } else {
+                examination.setOverlayFile(selectedFile);
+            }
             sourceButton.setText(selectedFile.getName());
             sourceButton.getStyleClass().add("successful-upload");
 

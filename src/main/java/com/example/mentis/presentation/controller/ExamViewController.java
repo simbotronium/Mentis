@@ -5,6 +5,8 @@ import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Voxel;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.ValidationStatus;
+import com.example.mentis.business.logic.View;
+import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.VoxelComponent;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -155,10 +157,12 @@ public class ExamViewController implements Controller {
         }
     }
 
+    @FXML
     public void onValidate() {
         this.setSelectedVoxelValidationStatus(true);
     }
 
+    @FXML
     public void onRefute() {
         this.setSelectedVoxelValidationStatus(false);
     }
@@ -167,6 +171,11 @@ public class ExamViewController implements Controller {
         this.selectedVoxel.setValidationStatus(valid ? ValidationStatus.VALID : ValidationStatus.REFUTED);
         this.selectionBox.setVisible(false);
         this.selectedVoxel = null;
+    }
+
+    @FXML
+    public void onSave() {
+        ViewManager.getInstance().changeView(View.MEMBER);
     }
 
     @Override

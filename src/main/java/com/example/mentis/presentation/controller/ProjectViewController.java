@@ -3,10 +3,12 @@ package com.example.mentis.presentation.controller;
 import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Member;
 import com.example.mentis.business.data.Project;
+import com.example.mentis.business.logic.ExcelCreator;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.MemberListCell;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -16,6 +18,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.effect.GaussianBlur;
@@ -47,6 +50,8 @@ public class ProjectViewController implements Controller {
     private VBox areasBox;
     @FXML
     private Label deviationLabel;
+    @FXML
+    private Button downloadButton;
 
     private final Manager manager = Manager.getInstance();
     private final Logger log = LoggerFactory.getLogger(ProjectViewController.class);
@@ -107,6 +112,7 @@ public class ProjectViewController implements Controller {
         return root;
     }
 
+    @FXML
     public void onAddNewMember() {
         if (overlayController == null) {
             try {
@@ -128,8 +134,26 @@ public class ProjectViewController implements Controller {
         overlayController.showProperty().set(true);
     }
 
+    @FXML
     public void onBack() {
         ViewManager.getInstance().changeView(View.MAIN_MENU);
+    }
+
+    @FXML
+    public void onDownload() {
+        Thread thread = new Thread(() -> {
+            Platform.runLater(() -> downloadButton.getStyleClass().add("pending"));
+            ExcelCreator.createExcel(Manager.getInstance().getCurrentProject());
+            Platform.runLater(() -> downloadButton.getStyleClass().remove(downloadButton.getStyleClass().size() - 1));
+            Platform.runLater(() -> downloadButton.getStyleClass().add("successful-upload"));
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            Platform.runLater(() -> downloadButton.getStyleClass().remove(downloadButton.getStyleClass().size() - 1));
+        });
+        thread.start();
     }
 
 }

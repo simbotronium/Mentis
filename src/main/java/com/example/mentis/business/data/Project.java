@@ -18,8 +18,6 @@ public class Project {
     private final SimpleIntegerProperty voxelDimensionSize = new SimpleIntegerProperty(0);
     private final SimpleIntegerProperty maxDeviation = new SimpleIntegerProperty(5);
     private final SimpleStringProperty name = new SimpleStringProperty("");
-
-    // TODO: deserializer dafür schreiben
     private final ObservableList<Area> areas = FXCollections.observableArrayList();
     private final ObservableList<Member> members = FXCollections.observableArrayList();
     private long ID = UID.next();
