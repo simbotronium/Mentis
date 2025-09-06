@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="new action">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/app.2025-09-01.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/app.2025-09-02.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Examination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Examination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "development",
     "last_opened_file_path": "/Users/simonjackel/IdeaProjects/Mentis/build",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",

@@ -6,6 +6,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Examination {
 
@@ -79,6 +81,7 @@ public class Examination {
     }
 
     public Voxel[] getVoxels() {
+        Arrays.sort(voxels, Comparator.comparingInt(Voxel::getCol).thenComparingInt(Voxel::getRow));
         return voxels;
     }
 

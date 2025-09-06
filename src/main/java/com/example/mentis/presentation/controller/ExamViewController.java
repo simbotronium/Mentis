@@ -110,9 +110,9 @@ public class ExamViewController implements Controller {
             Polygon triangle2 = new VoxelComponent(cell2, 2, 0.5, renderProperty, voxel);
             cell2.getChildren().add(triangle2);
 
-            leftGrid.add(cell0, voxel.getRow(), voxel.getCol());
-            middleGrid.add(cell1, voxel.getRow(), voxel.getCol());
-            rightGrid.add(cell2, voxel.getRow(), voxel.getCol());
+            leftGrid.add(cell0, voxel.getRow(), manager.getCurrentExamination().getVoxelDimensionSize() - voxel.getCol());
+            middleGrid.add(cell1, voxel.getRow(), manager.getCurrentExamination().getVoxelDimensionSize() - voxel.getCol());
+            rightGrid.add(cell2, voxel.getRow(), manager.getCurrentExamination().getVoxelDimensionSize() - voxel.getCol());
         }
 
         Platform.runLater(() -> renderProperty.set(true));
