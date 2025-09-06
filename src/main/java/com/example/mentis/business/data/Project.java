@@ -1,6 +1,5 @@
 package com.example.mentis.business.data;
 
-import com.example.mentis.application.DataManager;
 import com.example.mentis.business.logic.UID;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -19,7 +18,7 @@ public class Project {
     private final SimpleIntegerProperty maxDeviation = new SimpleIntegerProperty(5);
     private final SimpleStringProperty name = new SimpleStringProperty("");
     private final ObservableList<Area> areas = FXCollections.observableArrayList();
-    private final ObservableList<Member> members = FXCollections.observableArrayList();
+    private final ObservableList<Participant> participants = FXCollections.observableArrayList();
     private long ID = UID.next();
     @JsonIgnore
     private final Logger log = LoggerFactory.getLogger(Project.class);
@@ -87,13 +86,13 @@ public class Project {
         areas.add(a);
     }
 
-    public ObservableList<Member> getMembers() {
-        return members;
+    public ObservableList<Participant> getParticipants() {
+        return participants;
     }
 
-    public void addMember(Member member) {
-        log.info("New Member with id: " + member.getId());
-        this.members.add(member);
+    public void addParticipant(Participant participant) {
+        log.info("New Participant with id: " + participant.getId());
+        this.participants.add(participant);
     }
 
     public void deleteArea(long id) {

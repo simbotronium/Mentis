@@ -1,13 +1,13 @@
 package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Area;
-import com.example.mentis.business.data.Member;
+import com.example.mentis.business.data.Participant;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.logic.ExcelCreator;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
-import com.example.mentis.presentation.components.MemberListCell;
+import com.example.mentis.presentation.components.ParticipantListCell;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.collections.ListChangeListener;
@@ -35,14 +35,14 @@ public class ProjectViewController implements Controller {
     private StackPane root;
 
     @FXML
-    private Label memberLabel;
+    private Label participantLabel;
 
     @FXML
-    private ListView<Member> memberListView;
+    private ListView<Participant> participantListView;
     @FXML
     private Label nameLabel;
 
-    private NewMemberOverlayController overlayController;
+    private NewParticipantOverlayController overlayController;
 
     @FXML
     private AnchorPane projectPane;
@@ -65,29 +65,29 @@ public class ProjectViewController implements Controller {
             if (newValue != null) {
                 updateView(newValue);
 
-                newValue.getMembers().addListener((ListChangeListener<? super Member>) o -> {
-                    memberLabel.setText("Participants: " + manager.getCurrentProject().getMembers().size());
+                newValue.getParticipants().addListener((ListChangeListener<? super Participant>) o -> {
+                    participantLabel.setText("Participants: " + manager.getCurrentProject().getParticipants().size());
                 });
             }
         });
 
-        memberListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentProject().getMembers()));
-        memberListView.managedProperty().bind(memberListView.visibleProperty());
+        participantListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentProject().getParticipants()));
+        participantListView.managedProperty().bind(participantListView.visibleProperty());
 
-        memberListView.setItems(manager.getCurrentProject().getMembers());
-        memberListView.setCellFactory(list -> new MemberListCell());
+        participantListView.setItems(manager.getCurrentProject().getParticipants());
+        participantListView.setCellFactory(list -> new ParticipantListCell());
 
         if (manager.getCurrentProject() != null) {
-            memberLabel.setText("Participants: " + manager.getCurrentProject().getMembers().size());
-            manager.getCurrentProject().getMembers().addListener((ListChangeListener<? super Member>) o -> {
-                memberLabel.setText("Participants: " + manager.getCurrentProject().getMembers().size());
+            participantLabel.setText("Participants: " + manager.getCurrentProject().getParticipants().size());
+            manager.getCurrentProject().getParticipants().addListener((ListChangeListener<? super Participant>) o -> {
+                participantLabel.setText("Participants: " + manager.getCurrentProject().getParticipants().size());
             });
         }
 
     }
 
     private void updateView(Project newProject) {
-        memberLabel.setText("Participants: " + newProject.getMembers().size());
+        participantLabel.setText("Participants: " + newProject.getParticipants().size());
         nameLabel.setText(newProject.getName());
         deviationLabel.setText("max. Deviation: " + newProject.getMaxDeviation() + "%");
         createAreaComponents(newProject.getAreas());
@@ -113,10 +113,10 @@ public class ProjectViewController implements Controller {
     }
 
     @FXML
-    public void onAddNewMember() {
+    public void onAddNewParticipant() {
         if (overlayController == null) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/mentis/overlays/new-member-overlay.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/mentis/overlays/new-participant-overlay.fxml"));
                 Parent overlayRoot = loader.load();
                 overlayController = loader.getController();
                 overlayController.showProperty().addListener((observable, oldValue, newValue) -> {
@@ -126,7 +126,7 @@ public class ProjectViewController implements Controller {
                 root.getChildren().add(overlayRoot);
                 projectPane.setEffect(new GaussianBlur(20));
             } catch (IOException e) {
-                log.error("Something went wrong while loading new member overlay: " + e.getMessage());
+                log.error("Something went wrong while loading new participant overlay: " + e.getMessage());
             }
         } else {
             overlayController.refresh();

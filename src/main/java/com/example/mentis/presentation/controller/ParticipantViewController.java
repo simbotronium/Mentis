@@ -1,7 +1,7 @@
 package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Examination;
-import com.example.mentis.business.data.Member;
+import com.example.mentis.business.data.Participant;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-public class MemberViewController implements Controller {
+public class ParticipantViewController implements Controller {
 
     private final Manager manager = Manager.getInstance();
 
@@ -41,29 +41,29 @@ public class MemberViewController implements Controller {
 
     @FXML
     public void initialize() {
-        manager.currentMemberProperty().addListener((observable, oldValue, newValue) -> {
-            log.info("changed Member");
+        manager.currentParticipantProperty().addListener((observable, oldValue, newValue) -> {
+            log.info("changed Participant");
             if (newValue != null) {
                 updateView(newValue);
             }
         });
 
-        if (manager.getCurrentMember() != null) {
-            updateView(manager.getCurrentMember());
+        if (manager.getCurrentParticipant() != null) {
+            updateView(manager.getCurrentParticipant());
         }
     }
 
-    private void updateView(Member m) {
-        titleLabel.setText("Participant: " + manager.getCurrentMember().getId());
-        examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size());
-        manager.getCurrentMember().getExaminations().addListener((ListChangeListener<? super Examination>) o
-                -> examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size()));
+    private void updateView(Participant m) {
+        titleLabel.setText("Participant: " + manager.getCurrentParticipant().getId());
+        examinationsLabel.setText("Examinations: " + manager.getCurrentParticipant().getExaminations().size());
+        manager.getCurrentParticipant().getExaminations().addListener((ListChangeListener<? super Examination>) o
+                -> examinationsLabel.setText("Examinations: " + manager.getCurrentParticipant().getExaminations().size()));
         m.getExaminations().addListener((ListChangeListener<? super Examination>) o
                 -> examinationsLabel.setText("Participant: " + m.getId()));
 
-        examListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentMember().getExaminations()));
+        examListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentParticipant().getExaminations()));
         examListView.managedProperty().bind(examListView.visibleProperty());
-        examListView.setItems(manager.getCurrentMember().getExaminations());
+        examListView.setItems(manager.getCurrentParticipant().getExaminations());
         examListView.setCellFactory(list -> new ExamListCell());
     }
 
@@ -80,7 +80,7 @@ public class MemberViewController implements Controller {
                 root.getChildren().add(overlayRoot);
                 projectPane.setEffect(new GaussianBlur(20));
             } catch (IOException e) {
-                log.error("Something went wrong while loading new member overlay: " + e.getMessage());
+                log.error("Something went wrong while loading new participant overlay: " + e.getMessage());
             }
         } else {
             overlayController.refresh();

@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Member {
+public class Participant {
     private final SimpleLongProperty id = new SimpleLongProperty(0);
     private final SimpleIntegerProperty age = new SimpleIntegerProperty(0);
     private final SimpleBooleanProperty download = new SimpleBooleanProperty(false);
@@ -23,17 +23,17 @@ public class Member {
     private final SimpleObjectProperty<Side> side = new SimpleObjectProperty<>(Side.LEFT);
 
     @JsonIgnore
-    private Logger log = LoggerFactory.getLogger(Member.class);
+    private Logger log = LoggerFactory.getLogger(Participant.class);
 
-    public Member() {
+    public Participant() {
 
     }
 
-    public Member(long id, Side side) {
+    public Participant(long id, Side side) {
         this(id, side, new ArrayList<>());
     }
 
-    public Member(long id, Side side, List<Examination> examinations) {
+    public Participant(long id, Side side, List<Examination> examinations) {
         this.id.set(id);
         this.side.set(side);
         this.examinations.setAll(examinations);

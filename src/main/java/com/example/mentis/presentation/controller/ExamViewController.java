@@ -1,6 +1,5 @@
 package com.example.mentis.presentation.controller;
 
-import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Voxel;
 import com.example.mentis.business.logic.Manager;
@@ -175,7 +174,7 @@ public class ExamViewController implements Controller {
 
     @FXML
     public void onSave() {
-        ViewManager.getInstance().changeView(View.MEMBER);
+        ViewManager.getInstance().changeView(View.PARTICIPANT);
     }
 
     @Override

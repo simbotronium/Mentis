@@ -1,7 +1,7 @@
 package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Examination;
-import com.example.mentis.business.data.Member;
+import com.example.mentis.business.data.Participant;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
@@ -16,7 +16,7 @@ import javafx.util.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MemberListCellController implements Controller {
+public class ParticipantListCellController implements Controller {
 
     @FXML
     private GridPane root;
@@ -30,11 +30,11 @@ public class MemberListCellController implements Controller {
     private Button delete;
     private FadeTransition fade;
 
-    private Member member;
+    private Participant participant;
     private final Manager manager = Manager.getInstance();
 
-    public void setMember(Member m) {
-        member = m;
+    public void setParticipant(Participant m) {
+        participant = m;
         idLabel.setText(Long.toString(m.getId()));
         examinationsLabel.setText(createExaminationsString(m.getExaminations()));
     }
@@ -44,7 +44,7 @@ public class MemberListCellController implements Controller {
         delete.setText("\u2716");
         delete.getStyleClass().add("delete-button");
         delete.setOpacity(0);
-        delete.setOnAction(e -> Manager.getInstance().getCurrentProject().getMembers().remove(member));
+        delete.setOnAction(e -> Manager.getInstance().getCurrentProject().getParticipants().remove(participant));
 
         root.hoverProperty().addListener(((observable, was, is) -> animateDelete(is)));
     }
@@ -60,9 +60,9 @@ public class MemberListCellController implements Controller {
 
     @FXML
     protected void onEdit() {
-        if (member != null) {
-            manager.currentMemberProperty().set(member);
-            ViewManager.getInstance().changeView(View.MEMBER);
+        if (participant != null) {
+            manager.currentParticipantProperty().set(participant);
+            ViewManager.getInstance().changeView(View.PARTICIPANT);
         }
     }
 

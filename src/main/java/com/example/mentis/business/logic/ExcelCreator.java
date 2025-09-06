@@ -2,7 +2,7 @@ package com.example.mentis.business.logic;
 
 import com.example.mentis.application.DataManager;
 import com.example.mentis.business.data.Examination;
-import com.example.mentis.business.data.Member;
+import com.example.mentis.business.data.Participant;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.data.Voxel;
 import org.apache.poi.ss.usermodel.Row;
@@ -39,7 +39,7 @@ public class ExcelCreator {
         boolean tableHeadsCreated = false;
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet(p.getName());
-        for (Member m: p.getMembers()) {
+        for (Participant m: p.getParticipants()) {
             for (Examination e : m.getExaminations()) {
                 try (Scanner scanner = new Scanner(new File(e.getTxtFilePath()))) {
                     if (!tableHeadsCreated) {
@@ -86,7 +86,7 @@ public class ExcelCreator {
         writeValues(scanner, sheet, 1);
         skipTo(scanner, "pH");
         writePhValues(scanner, sheet);
-        writeVoxelValues(DataManager.getProjectById(3).getMembers().get(0).getExaminations().get(0), sheet, 1);
+        writeVoxelValues(DataManager.getProjectById(3).getParticipants().get(0).getExaminations().get(0), sheet, 1);
 
         autosize(sheet);
 

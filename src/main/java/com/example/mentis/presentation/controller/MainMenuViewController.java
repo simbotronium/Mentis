@@ -1,7 +1,7 @@
 package com.example.mentis.presentation.controller;
 
 import com.example.mentis.application.DataManager;
-import com.example.mentis.business.data.Member;
+import com.example.mentis.business.data.Participant;
 import com.example.mentis.business.data.Project;
 import com.example.mentis.business.data.ProjectListEntry;
 import com.example.mentis.business.logic.Manager;
@@ -44,7 +44,7 @@ public class MainMenuViewController implements Controller {
     protected void onSomeProject() {
         Project testProject = new Project("normal", 256, 5, "MyProject");
         for (int i = 0; i < 5; i++) {
-            testProject.addMember(new Member(12, Side.RIGHT));
+            testProject.addParticipant(new Participant(12, Side.RIGHT));
         }
         manager.currentProjectProperty().set(testProject);
         ViewManager.getInstance().changeView(View.PROJECT);
