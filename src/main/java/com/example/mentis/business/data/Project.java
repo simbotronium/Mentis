@@ -1,5 +1,6 @@
 package com.example.mentis.business.data;
 
+import com.example.mentis.application.DataManager;
 import com.example.mentis.business.logic.UID;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -19,7 +20,7 @@ public class Project {
     private final SimpleStringProperty name = new SimpleStringProperty("");
     private final ObservableList<Area> areas = FXCollections.observableArrayList();
     private final ObservableList<Participant> participants = FXCollections.observableArrayList();
-    private long ID = UID.next();
+    private long ID;
     @JsonIgnore
     private final Logger log = LoggerFactory.getLogger(Project.class);
 
@@ -32,6 +33,10 @@ public class Project {
         this.voxelDimensionSize.set(voxelDimensionSize);
         this.maxDeviation.set(maxDeviation);
         this.name.set(name);
+        this.ID = UID.next();
+        while (DataManager.getProjectById(this.getID()) != null) {
+            this.ID = UID.next();
+        }
     }
 
     public String getTypeOfSpectroscopy() {

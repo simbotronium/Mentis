@@ -55,3 +55,33 @@
 2025-09-06 18:30:37 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
 2025-09-06 18:30:37 INFO  [Thread-4] c.e.mentis.application.DataManager - found 1 projects
 2025-09-06 18:30:41 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-06 18:51:24 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-06 18:51:24 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-06 18:51:24 INFO  [Thread-4] c.e.mentis.application.DataManager - found 1 projects
+2025-09-06 18:51:38 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-06 18:51:46 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-06 18:51:47 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-06 18:51:47 INFO  [Thread-4] c.e.mentis.application.DataManager - found 2 projects
+2025-09-06 18:51:55 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-06 18:52:08 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-06 18:52:08 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-06 18:52:08 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-06 18:52:18 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-06 18:52:27 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-06 18:52:27 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-06 18:52:27 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-06 18:52:36 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-06 18:53:33 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-06 18:53:33 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-06 18:53:33 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-06 18:53:51 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-06 18:54:03 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-06 18:54:41 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-06 18:56:50 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-06 18:56:50 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-06 18:56:50 INFO  [Thread-4] c.e.mentis.application.DataManager - found 7 projects
+2025-09-06 18:56:57 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-06 18:57:26 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-06 18:57:26 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-06 18:57:26 INFO  [Thread-4] c.e.mentis.application.DataManager - found 7 projects
+2025-09-06 18:57:36 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file

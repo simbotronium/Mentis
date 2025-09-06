@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="fixed voxel order">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Participant.java" afterDir="false" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="changed 'Member' to 'Participant'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/ExcelCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/ExcelCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/logic/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/MemberListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/ParticipantListCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/MainMenuViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/MainMenuViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/MemberListCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ParticipantListCellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/MemberViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ParticipantViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewMemberOverlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewParticipantOverlayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ProjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ProjectViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/MemberListElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ParticipantListElement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-member-overlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-participant-overlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/member-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/participant-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -520,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757175436210</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="changed 'Member' to 'Participant'">
+      <option name="closed" value="true" />
+      <created>1757176270274</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1757176270274</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented overlay for new exam and file upload" />
     <MESSAGE value="fixed displaying issue in NewExamOverlay" />
     <MESSAGE value="created exam view and started implemented voxel edit" />
     <MESSAGE value="added animation to voxel" />
@@ -578,6 +573,7 @@
     <MESSAGE value="workspace" />
     <MESSAGE value="new action" />
     <MESSAGE value="fixed voxel order" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed voxel order" />
+    <MESSAGE value="changed 'Member' to 'Participant'" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed 'Member' to 'Participant'" />
   </component>
 </project>
