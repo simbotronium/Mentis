@@ -94,7 +94,7 @@ public class DataManager {
 
     public static void createDataFolderIfMissing() {
 
-        String basePath = System.getProperty("user.dir");
+        String basePath = System.getProperty("user.home");
         Path dataPath = Path.of(basePath, "mentisData");
 
         if (Files.notExists(dataPath)) {

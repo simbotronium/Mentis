@@ -54,12 +54,12 @@ public class MemberViewController implements Controller {
     }
 
     private void updateView(Member m) {
-        titleLabel.setText("Member: " + manager.getCurrentMember().getId());
+        titleLabel.setText("Participant: " + manager.getCurrentMember().getId());
         examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size());
         manager.getCurrentMember().getExaminations().addListener((ListChangeListener<? super Examination>) o
                 -> examinationsLabel.setText("Examinations: " + manager.getCurrentMember().getExaminations().size()));
         m.getExaminations().addListener((ListChangeListener<? super Examination>) o
-                -> examinationsLabel.setText("Member: " + m.getId()));
+                -> examinationsLabel.setText("Participant: " + m.getId()));
 
         examListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentMember().getExaminations()));
         examListView.managedProperty().bind(examListView.visibleProperty());

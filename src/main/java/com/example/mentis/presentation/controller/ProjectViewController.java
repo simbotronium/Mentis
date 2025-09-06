@@ -66,7 +66,7 @@ public class ProjectViewController implements Controller {
                 updateView(newValue);
 
                 newValue.getMembers().addListener((ListChangeListener<? super Member>) o -> {
-                    memberLabel.setText("Members: " + manager.getCurrentProject().getMembers().size());
+                    memberLabel.setText("Participants: " + manager.getCurrentProject().getMembers().size());
                 });
             }
         });
@@ -78,16 +78,16 @@ public class ProjectViewController implements Controller {
         memberListView.setCellFactory(list -> new MemberListCell());
 
         if (manager.getCurrentProject() != null) {
-            memberLabel.setText("Members: " + manager.getCurrentProject().getMembers().size());
+            memberLabel.setText("Participants: " + manager.getCurrentProject().getMembers().size());
             manager.getCurrentProject().getMembers().addListener((ListChangeListener<? super Member>) o -> {
-                memberLabel.setText("Members: " + manager.getCurrentProject().getMembers().size());
+                memberLabel.setText("Participants: " + manager.getCurrentProject().getMembers().size());
             });
         }
 
     }
 
     private void updateView(Project newProject) {
-        memberLabel.setText("Members: " + newProject.getMembers().size());
+        memberLabel.setText("Participants: " + newProject.getMembers().size());
         nameLabel.setText(newProject.getName());
         deviationLabel.setText("max. Deviation: " + newProject.getMaxDeviation() + "%");
         createAreaComponents(newProject.getAreas());

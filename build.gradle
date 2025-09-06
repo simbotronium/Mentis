@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '1.0-SNAPSHOT'
+version = '1.1.0'
 
 repositories {
   mavenCentral()
@@ -47,6 +47,14 @@ jar {
   }
 }
 
+shadowJar {
+  archiveClassifier.set("all")
+  mergeServiceFiles()
+}
+
+def x64JdkHome = "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"
+
+
 jlink {
   imageName = 'MentisApp'
   options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
@@ -58,12 +66,16 @@ jlink {
   jpackage {
     imageName = 'Mentis'
     installerName = 'MentisInstaller'
+    // imageName = 'Mentis_x64'
+    // installerName = 'MentisInstaller_x64'
     skipInstaller = false
     installerType = System.getProperty('os.name').toLowerCase().contains('mac') ? 'dmg' :
             System.getProperty('os.name').toLowerCase().contains('win') ? 'exe' : 'deb'
     appVersion = '1.1.0'
     icon = 'src/main/resources/com/example/mentis/assets/AppIcon.icns'
+    // jpackageHome = x64JdkHome
   }
+
 }
 
 tasks.withType(JavaCompile) {
