@@ -39,3 +39,147 @@
 2025-09-08 18:28:14 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Participant with id: 12
 2025-09-08 18:28:21 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
 2025-09-08 18:28:26 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 18:46:52 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 18:46:52 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 18:46:52 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-08 18:47:03 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:47:35 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 7
+2025-09-08 18:47:38 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 18:50:56 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 18:50:56 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 18:50:56 INFO  [Thread-4] c.e.mentis.application.DataManager - found 5 projects
+2025-09-08 18:51:17 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:51:46 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 18:54:46 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 18:54:46 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 18:54:46 INFO  [Thread-4] c.e.mentis.application.DataManager - found 7 projects
+2025-09-08 18:54:54 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 8
+2025-09-08 18:54:54 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 7
+2025-09-08 18:54:55 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 18:54:56 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 18:54:57 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 4
+2025-09-08 18:55:03 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:55:13 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:55:17 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:55:19 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:55:21 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:55:25 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 18:57:54 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 18:57:54 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 18:57:54 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-08 18:57:58 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 3
+2025-09-08 18:57:59 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 8
+2025-09-08 18:58:07 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:16 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:26 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:28 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:30 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:32 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:35 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:45 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:46 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project
+2025-09-08 18:58:48 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 19:00:34 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:00:34 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:00:34 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-08 19:00:40 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:00:41 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:00:42 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 9
+2025-09-08 19:00:49 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(6: project2025-09-08T19:00:49.170018)
+2025-09-08 19:00:54 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(7: project2025-09-08T19:00:54.286250)
+2025-09-08 19:01:34 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(6: DDD)
+2025-09-08 19:01:53 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: DDD)
+2025-09-08 19:02:06 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(2: AAA)
+2025-09-08 19:02:10 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: AAA)
+2025-09-08 19:03:02 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:03:02 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:03:02 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-08 19:03:15 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(6: AAA)
+2025-09-08 19:03:20 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: AAA)
+2025-09-08 19:03:26 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 19:16:26 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:16:26 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:16:26 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-08 19:16:30 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:16:30 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:16:31 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 9
+2025-09-08 19:16:38 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(6: project2025-09-08T19:16:38.349180)
+2025-09-08 19:16:46 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(7: project2025-09-08T19:16:46.832779)
+2025-09-08 19:18:47 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:18:47 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:18:47 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-08 19:18:50 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 9
+2025-09-08 19:18:51 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:18:52 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:18:57 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(6: project2025-09-08T19:18:57.764388)
+2025-09-08 19:19:16 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: CCC)
+2025-09-08 19:19:19 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(2: AAA)
+2025-09-08 19:19:21 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: AAA)
+2025-09-08 19:19:23 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(6: AAA)
+2025-09-08 19:19:33 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 19:24:58 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:24:58 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:24:58 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 19:25:03 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:25:15 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:25:44 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: project2025-09-08T19:25:44.858133)
+2025-09-08 19:26:11 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(4: CCC)
+2025-09-08 19:27:09 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(6: project2025-09-08T19:27:09.105434)
+2025-09-08 19:37:45 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:37:45 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:37:45 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 19:37:49 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:37:50 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:37:55 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: project2025-09-08T19:37:55.897386)
+2025-09-08 19:38:20 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(4: CCC)
+2025-09-08 19:38:42 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:38:42 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:38:42 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 19:38:46 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:38:46 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:38:52 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: project2025-09-08T19:38:52.369921)
+2025-09-08 19:56:17 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:56:17 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:56:17 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 19:56:21 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:56:21 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:56:31 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: project2025-09-08T19:56:31.150930)
+2025-09-08 19:56:39 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(4: CCC)
+2025-09-08 19:58:05 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:58:05 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:58:05 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 19:58:08 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:58:09 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:58:17 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: project2025-09-08T19:58:17.333660)
+2025-09-08 19:59:02 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 19:59:02 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 19:59:02 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 19:59:05 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 19:59:06 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
+2025-09-08 19:59:15 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: project2025-09-08T19:59:15.201042)
+2025-09-08 19:59:50 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 20:00:06 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 20:00:06 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 20:00:06 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 20:09:59 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 20:09:59 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 20:09:59 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 20:10:02 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 20:10:05 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 4
+2025-09-08 20:10:17 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(2: AAA)
+2025-09-08 20:10:41 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: project2025-09-08T20:10:41.259591)
+2025-09-08 20:21:37 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 20:21:37 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 20:21:37 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 20:21:41 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 4
+2025-09-08 20:21:42 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 5
+2025-09-08 20:21:50 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: project2025-09-08T20:21:50.613832)
+2025-09-08 20:21:57 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(4: BBB)
+2025-09-08 20:21:59 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: CCC)
+2025-09-08 20:22:01 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(2: AAA)
+2025-09-08 20:22:02 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(4: BBB)
+2025-09-08 20:22:13 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 20:22:22 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 20:22:22 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 20:22:22 INFO  [Thread-4] c.e.mentis.application.DataManager - found 3 projects
+2025-09-08 20:22:26 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file

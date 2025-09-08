@@ -50,9 +50,6 @@ public class ProjectSettingsViewController implements Controller {
         return root;
     }
 
-    // TODO: handle navigation (confirm / bacK)
-    // TODO: make project name editable
-
     @FXML
     public void initialize() {
         showTransition = new FadeTransition(Duration.millis(200), newAreaOverlay);
@@ -73,9 +70,13 @@ public class ProjectSettingsViewController implements Controller {
         deviationField.setTextFormatter(deviationFormatter);
         updateView(Manager.getInstance().getCurrentProject());
 
-        Manager.getInstance().currentProjectProperty().addListener((observable, oldValue, newValue)
-                -> areaList.setItems(Manager.getInstance().getCurrentProject().getAreas()));
-        areaList.setItems(Manager.getInstance().getCurrentProject().getAreas());
+        Manager.getInstance().currentProjectProperty().addListener((observable, oldValue, newValue) -> {
+            oldValue.voxelDimensionSizeProperty().asObject().unbindBidirectional(voxelNumberFormatter.valueProperty());
+            oldValue.maxDeviationProperty().asObject().unbindBidirectional(deviationFormatter.valueProperty());
+            oldValue.typeOfSpectroscopyProperty().unbindBidirectional(spectroscopyField.textProperty());
+            oldValue.nameProperty().unbindBidirectional(projectNameField.textProperty());
+            updateView(newValue);
+        });
         areaList.setCellFactory(list -> new AreaListCell(area -> {
             Manager.getInstance().getCurrentProject().getAreas().remove(area);
         }));
@@ -91,6 +92,8 @@ public class ProjectSettingsViewController implements Controller {
         project.maxDeviationProperty().asObject().bindBidirectional(deviationFormatter.valueProperty());
         project.typeOfSpectroscopyProperty().bindBidirectional(spectroscopyField.textProperty());
         project.nameProperty().bindBidirectional(projectNameField.textProperty());
+
+        areaList.setItems(project.getAreas());
     }
 
     public void onOverlayOk() {

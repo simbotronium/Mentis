@@ -10,6 +10,7 @@ import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.ParticipantListCell;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -54,6 +55,9 @@ public class ProjectViewController implements Controller {
     private Button downloadButton;
 
     private final Manager manager = Manager.getInstance();
+
+    private final ChangeListener<String> nameChangeListener = ((observable, oldValue, newValue) -> nameLabel.setText(newValue));
+    private final ListChangeListener<Participant> participantListChangeListener = o -> participantLabel.setText("Participants: " + o.getList().size());
     private final Logger log = LoggerFactory.getLogger(ProjectViewController.class);
 
     @FXML
@@ -61,27 +65,27 @@ public class ProjectViewController implements Controller {
         updateView(manager.getCurrentProject());
 
         manager.currentProjectProperty().addListener((observable, oldValue, newValue) -> {
-            log.info("changed project");
+            log.info("changed project: " + newValue);
+            if (oldValue != null){
+                oldValue.nameProperty().removeListener(nameChangeListener);
+                oldValue.getParticipants().removeListener(participantListChangeListener);
+            }
             if (newValue != null) {
                 updateView(newValue);
-
-                newValue.getParticipants().addListener((ListChangeListener<? super Participant>) o -> {
-                    participantLabel.setText("Participants: " + manager.getCurrentProject().getParticipants().size());
-                });
+                newValue.nameProperty().addListener(nameChangeListener);
+                newValue.getParticipants().addListener(participantListChangeListener);
             }
         });
 
         participantListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentProject().getParticipants()));
         participantListView.managedProperty().bind(participantListView.visibleProperty());
-
         participantListView.setItems(manager.getCurrentProject().getParticipants());
         participantListView.setCellFactory(list -> new ParticipantListCell());
 
         if (manager.getCurrentProject() != null) {
             participantLabel.setText("Participants: " + manager.getCurrentProject().getParticipants().size());
-            manager.getCurrentProject().getParticipants().addListener((ListChangeListener<? super Participant>) o -> {
-                participantLabel.setText("Participants: " + manager.getCurrentProject().getParticipants().size());
-            });
+            manager.getCurrentProject().getParticipants().addListener(participantListChangeListener);
+            manager.getCurrentProject().nameProperty().addListener(nameChangeListener);
         }
 
     }

@@ -122,4 +122,9 @@ public class Project {
         if (!(o instanceof Project)) return false;
         return this.ID == (((Project) o).ID);
     }
+
+    @Override
+    public String toString() {
+        return "Project(" + this.ID + ": " + this.name.get()  +")";
+    }
 }
