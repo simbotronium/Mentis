@@ -1,6 +1,7 @@
 package com.example.mentis.presentation.components;
 
 import com.example.mentis.business.data.Area;
+import com.example.mentis.presentation.transitions.DeleteButtonFadeTransition;
 import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.geometry.Insets;
@@ -26,6 +27,7 @@ public class AreaListCell extends ListCell<Area> {
     private final Consumer<Area> onDelete;
 
     private FadeTransition fade;
+    private final DeleteButtonFadeTransition deleteButtonFadeTransition;
 
     public AreaListCell(Consumer<Area> onDelete) {
         this.onDelete = onDelete;
@@ -34,6 +36,7 @@ public class AreaListCell extends ListCell<Area> {
         nameLabel = new Label("ERROR");
         circle = new Circle(15);
         delete = new Button("\u2716");
+        deleteButtonFadeTransition = new DeleteButtonFadeTransition(delete);
         Region region = new Region();
         HBox.setHgrow(region, Priority.ALWAYS);
 
@@ -53,12 +56,7 @@ public class AreaListCell extends ListCell<Area> {
     }
 
     private void animateDelete(boolean show) {
-        if (fade != null) fade.stop();
-        fade = new FadeTransition(Duration.millis(180), delete);
-        fade.setFromValue(delete.getOpacity());
-        fade.setToValue(show ? 1 : 0);
-        fade.setInterpolator(Interpolator.EASE_BOTH);
-        fade.play();
+        deleteButtonFadeTransition.play(show);
     }
 
     @Override

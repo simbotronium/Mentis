@@ -5,6 +5,7 @@ import com.example.mentis.business.data.Participant;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
+import com.example.mentis.presentation.transitions.DeleteButtonFadeTransition;
 import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.fxml.FXML;
@@ -28,7 +29,7 @@ public class ParticipantListCellController implements Controller {
     private Label examinationsLabel;
     @FXML
     private Button delete;
-    private FadeTransition fade;
+    private DeleteButtonFadeTransition deleteButtonFadeTransition;
 
     private Participant participant;
     private final Manager manager = Manager.getInstance();
@@ -45,17 +46,13 @@ public class ParticipantListCellController implements Controller {
         delete.getStyleClass().add("delete-button");
         delete.setOpacity(0);
         delete.setOnAction(e -> Manager.getInstance().getCurrentProject().getParticipants().remove(participant));
+        deleteButtonFadeTransition = new DeleteButtonFadeTransition(delete);
 
         root.hoverProperty().addListener(((observable, was, is) -> animateDelete(is)));
     }
 
     private void animateDelete(boolean show) {
-        if (fade != null) fade.stop();
-        fade = new FadeTransition(Duration.millis(180), delete);
-        fade.setFromValue(delete.getOpacity());
-        fade.setToValue(show ? 1 : 0);
-        fade.setInterpolator(Interpolator.EASE_BOTH);
-        fade.play();
+        deleteButtonFadeTransition.play(show);
     }
 
     @FXML

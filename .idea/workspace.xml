@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="changed 'Member' to 'Participant'">
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="should fix project ID overwrite issue">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/transitions/DeleteButtonFadeTransition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentisData/app.2025-09-03.0.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mentisData/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/business/data/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/generalStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/AreaListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/AreaListCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/ProjectListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/ProjectListCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ParticipantListCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ParticipantListCellController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -516,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757176270274</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="should fix project ID overwrite issue">
+      <option name="closed" value="true" />
+      <created>1757177894774</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1757177894774</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +561,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed displaying issue in NewExamOverlay" />
     <MESSAGE value="created exam view and started implemented voxel edit" />
     <MESSAGE value="added animation to voxel" />
     <MESSAGE value="made voxel selectable" />
@@ -574,6 +585,7 @@
     <MESSAGE value="new action" />
     <MESSAGE value="fixed voxel order" />
     <MESSAGE value="changed 'Member' to 'Participant'" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed 'Member' to 'Participant'" />
+    <MESSAGE value="should fix project ID overwrite issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="should fix project ID overwrite issue" />
   </component>
 </project>

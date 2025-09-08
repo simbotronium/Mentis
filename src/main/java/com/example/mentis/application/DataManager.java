@@ -34,6 +34,12 @@ public class DataManager {
         entries.add(new ProjectListEntry(p.getName(), p.getID()));
     }
 
+    public static void deleteProject(Long id) {
+        log.info("deleting project with id: " + id);
+        projects.remove(id);
+        entries.removeIf(entry -> entry.projectId() == id);
+    }
+
     public static Project getProjectById(long id) {
         return projects.get(id);
     }
