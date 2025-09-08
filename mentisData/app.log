@@ -33,3 +33,9 @@
 2025-09-08 17:44:54 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 8
 2025-09-08 17:44:56 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - deleting project with id: 6
 2025-09-08 17:45:01 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-08 18:28:02 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-08 18:28:02 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-08 18:28:02 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-08 18:28:14 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Participant with id: 12
+2025-09-08 18:28:21 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-08 18:28:26 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file

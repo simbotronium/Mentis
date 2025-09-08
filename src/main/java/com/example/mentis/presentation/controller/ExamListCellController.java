@@ -5,6 +5,7 @@ import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -27,6 +28,11 @@ public class ExamListCellController implements Controller {
 
     private final Color red = new Color(1.0, 0.0, 0.0, 1.0);
     private final Color green = new Color(0.0, 1.0, 0.0, 1.0);
+    @FXML
+    public void initialize() {
+        this.root.setCursor(Cursor.HAND);
+        this.root.setOnMouseClicked(e -> onEdit());
+    }
 
     public void setExamination(Examination exam) {
         this.exam = exam;

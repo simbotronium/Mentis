@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="should fix project ID overwrite issue">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/transitions/DeleteButtonFadeTransition.java" afterDir="false" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="can delete projects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mentisData/app.2025-09-03.0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mentisData/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/application/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/AreaListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/AreaListCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/ProjectListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/ProjectListCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/ExamListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/components/ExamListCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamListCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamListCellController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ParticipantListCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ParticipantListCellController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ExamListElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ExamListElement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ParticipantListElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ParticipantListElement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/participant-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/participant-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/project-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -528,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757177894774</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="can delete projects">
+      <option name="closed" value="true" />
+      <created>1757346327966</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1757346327966</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,7 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created exam view and started implemented voxel edit" />
     <MESSAGE value="added animation to voxel" />
     <MESSAGE value="made voxel selectable" />
     <MESSAGE value="reworked voxel view" />
@@ -586,6 +593,7 @@
     <MESSAGE value="fixed voxel order" />
     <MESSAGE value="changed 'Member' to 'Participant'" />
     <MESSAGE value="should fix project ID overwrite issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="should fix project ID overwrite issue" />
+    <MESSAGE value="can delete projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="can delete projects" />
   </component>
 </project>

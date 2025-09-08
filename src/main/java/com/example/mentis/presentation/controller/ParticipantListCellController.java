@@ -9,6 +9,7 @@ import com.example.mentis.presentation.transitions.DeleteButtonFadeTransition;
 import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -48,6 +49,8 @@ public class ParticipantListCellController implements Controller {
         delete.setOnAction(e -> Manager.getInstance().getCurrentProject().getParticipants().remove(participant));
         deleteButtonFadeTransition = new DeleteButtonFadeTransition(delete);
 
+        root.setCursor(Cursor.HAND);
+        root.setOnMouseClicked(e -> onEdit());
         root.hoverProperty().addListener(((observable, was, is) -> animateDelete(is)));
     }
 

@@ -4,6 +4,7 @@ import com.example.mentis.business.data.Examination;
 import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.controller.ExamListCellController;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import org.slf4j.Logger;
