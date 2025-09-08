@@ -115,6 +115,10 @@ public class ProjectSettingsViewController implements Controller {
         for (int i = 0; i < infos.size(); i++) {
             InfoComponent infoComponent = new InfoComponent(i);
             setUpInfoComponentListeners(infoComponent);
+            infoComponent.getTextField().setText(infos.get(i));
+            infoComponent.getTextField().setVisible(false);
+            infoComponent.getLabel().setVisible(true);
+            infoComponent.getLabel().setText(infos.get(i));
             infoBox.getChildren().add(infoComponent);
         }
     }

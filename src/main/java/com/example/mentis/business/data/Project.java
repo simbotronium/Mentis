@@ -22,7 +22,7 @@ public class Project {
     private final SimpleStringProperty name = new SimpleStringProperty("");
     private final ObservableList<Area> areas = FXCollections.observableArrayList();
     private final ObservableList<Participant> participants = FXCollections.observableArrayList();
-    private final List<String> infos = new ArrayList<>();
+    private final ObservableList<String> infos = FXCollections.observableArrayList();
     private long ID;
     @JsonIgnore
     private final Logger log = LoggerFactory.getLogger(Project.class);
@@ -111,7 +111,7 @@ public class Project {
         return areas;
     }
 
-    public List<String> getInfos() {
+    public ObservableList<String> getInfos() {
         return infos;
     }
 

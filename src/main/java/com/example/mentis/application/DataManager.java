@@ -30,6 +30,9 @@ public class DataManager {
     private static final Logger log = LoggerFactory.getLogger(DataManager.class);
 
     public static void confirmProject(Project p) {
+        if (projects.containsKey(p.getID())) {
+            return;
+        }
         projects.put(p.getID(), p);
         entries.add(new ProjectListEntry(p.getName(), p.getID()));
     }

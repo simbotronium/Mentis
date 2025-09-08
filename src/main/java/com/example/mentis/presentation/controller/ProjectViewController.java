@@ -17,12 +17,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.effect.GaussianBlur;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
 import org.slf4j.Logger;
@@ -56,28 +58,30 @@ public class ProjectViewController implements Controller {
     private Button downloadButton;
     @FXML
     private VBox settingsBox;
+    @FXML
+    private ImageView editIcon;
+    @FXML
+    private VBox infoBox;
 
     private final Manager manager = Manager.getInstance();
 
     private final ChangeListener<String> nameChangeListener = ((observable, oldValue, newValue) -> nameLabel.setText(newValue));
     private final ListChangeListener<Participant> participantListChangeListener = o -> participantLabel.setText("Participants: " + o.getList().size());
+    private final ListChangeListener<Area> areaListChangeListener = o -> createAreaComponents(Manager.getInstance().getCurrentProject().getAreas());
+    private final ListChangeListener<String> infoListChangeListener = o -> createFurtherInfos(Manager.getInstance().getCurrentProject().getInfos());
     private final Logger log = LoggerFactory.getLogger(ProjectViewController.class);
 
     @FXML
     public void initialize() {
+        editIcon.setCursor(Cursor.HAND);
         updateView(manager.getCurrentProject());
+        setupProjectListener(manager.getCurrentProject(), true);
 
         manager.currentProjectProperty().addListener((observable, oldValue, newValue) -> {
             log.info("changed project: " + newValue);
-            if (oldValue != null){
-                oldValue.nameProperty().removeListener(nameChangeListener);
-                oldValue.getParticipants().removeListener(participantListChangeListener);
-            }
-            if (newValue != null) {
-                updateView(newValue);
-                newValue.nameProperty().addListener(nameChangeListener);
-                newValue.getParticipants().addListener(participantListChangeListener);
-            }
+            setupProjectListener(oldValue, false);
+            setupProjectListener(newValue, true);
+            updateView(newValue);
         });
 
         participantListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentProject().getParticipants()));
@@ -93,7 +97,23 @@ public class ProjectViewController implements Controller {
 
     }
 
+    private void setupProjectListener(Project p , boolean add) {
+        if (p == null) return;
+        if (add) {
+            p.nameProperty().addListener(nameChangeListener);
+            p.getParticipants().addListener(participantListChangeListener);
+            p.getAreas().addListener(areaListChangeListener);
+            p.getInfos().addListener(infoListChangeListener);
+        } else {
+            p.nameProperty().removeListener(nameChangeListener);
+            p.getParticipants().removeListener(participantListChangeListener);
+            p.getAreas().removeListener(areaListChangeListener);
+            p.getInfos().removeListener(infoListChangeListener);
+        }
+    }
+
     private void updateView(Project newProject) {
+        if (newProject == null) return;
         participantLabel.setText("Participants: " + newProject.getParticipants().size());
         nameLabel.setText(newProject.getName());
         deviationLabel.setText("max. Deviation: " + newProject.getMaxDeviation() + "%");
@@ -102,14 +122,17 @@ public class ProjectViewController implements Controller {
     }
 
     private void createFurtherInfos(List<String> infos) {
+        infoBox.getChildren().clear();
         for (String info: infos) {
             if (!info.isBlank()) {
-                settingsBox.getChildren().add(new Label(info));
+                infoBox.getChildren().add(new Label(info));
             }
         }
     }
 
     private void createAreaComponents(ObservableList<Area> areas) {
+        System.out.println("creating area components");
+        areasBox.getChildren().clear();
         for (Area area: areas) {
             HBox hBox = new HBox();
             Circle circle = new Circle(10);
@@ -148,6 +171,11 @@ public class ProjectViewController implements Controller {
             overlayController.refresh();
         }
         overlayController.showProperty().set(true);
+    }
+
+    @FXML
+    public void onEdit() {
+        ViewManager.getInstance().changeView(View.PROJECT_SETTINGS);
     }
 
     @FXML
