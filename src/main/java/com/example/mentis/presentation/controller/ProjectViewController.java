@@ -29,6 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.List;
 
 public class ProjectViewController implements Controller {
 
@@ -53,6 +54,8 @@ public class ProjectViewController implements Controller {
     private Label deviationLabel;
     @FXML
     private Button downloadButton;
+    @FXML
+    private VBox settingsBox;
 
     private final Manager manager = Manager.getInstance();
 
@@ -95,6 +98,15 @@ public class ProjectViewController implements Controller {
         nameLabel.setText(newProject.getName());
         deviationLabel.setText("max. Deviation: " + newProject.getMaxDeviation() + "%");
         createAreaComponents(newProject.getAreas());
+        createFurtherInfos(newProject.getInfos());
+    }
+
+    private void createFurtherInfos(List<String> infos) {
+        for (String info: infos) {
+            if (!info.isBlank()) {
+                settingsBox.getChildren().add(new Label(info));
+            }
+        }
     }
 
     private void createAreaComponents(ObservableList<Area> areas) {

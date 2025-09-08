@@ -11,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Project {
 
@@ -20,6 +22,7 @@ public class Project {
     private final SimpleStringProperty name = new SimpleStringProperty("");
     private final ObservableList<Area> areas = FXCollections.observableArrayList();
     private final ObservableList<Participant> participants = FXCollections.observableArrayList();
+    private final List<String> infos = new ArrayList<>();
     private long ID;
     @JsonIgnore
     private final Logger log = LoggerFactory.getLogger(Project.class);
@@ -106,6 +109,14 @@ public class Project {
 
     public ObservableList<Area> getAreas() {
         return areas;
+    }
+
+    public List<String> getInfos() {
+        return infos;
+    }
+
+    public void addInfo(String info) {
+        this.infos.add(info);
     }
 
     public long getID() {

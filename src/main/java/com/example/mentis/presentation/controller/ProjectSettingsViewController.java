@@ -7,14 +7,21 @@ import com.example.mentis.business.logic.UID;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.AreaListCell;
+import com.example.mentis.presentation.components.InfoComponent;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.effect.GaussianBlur;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import javafx.util.converter.IntegerStringConverter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProjectSettingsViewController implements Controller {
 
@@ -40,6 +47,10 @@ public class ProjectSettingsViewController implements Controller {
     private TextField voxelOrderField;
     @FXML
     private TextField deviationField;
+    @FXML
+    private VBox infoBox;
+    @FXML
+    private Button newInfoButton;
     private FadeTransition showTransition;
     private FadeTransition hideTransition;
 
@@ -52,6 +63,8 @@ public class ProjectSettingsViewController implements Controller {
 
     @FXML
     public void initialize() {
+        HBox.setHgrow(infoBox, Priority.ALWAYS);
+
         showTransition = new FadeTransition(Duration.millis(200), newAreaOverlay);
         showTransition.setFromValue(0.0);
         showTransition.setToValue(1.0);
@@ -94,6 +107,32 @@ public class ProjectSettingsViewController implements Controller {
         project.nameProperty().bindBidirectional(projectNameField.textProperty());
 
         areaList.setItems(project.getAreas());
+        createInfos(project.getInfos());
+    }
+
+    private void createInfos(List<String> infos) {
+        infoBox.getChildren().clear();
+        for (int i = 0; i < infos.size(); i++) {
+            InfoComponent infoComponent = new InfoComponent(i);
+            setUpInfoComponentListeners(infoComponent);
+            infoBox.getChildren().add(infoComponent);
+        }
+    }
+
+    private void setUpInfoComponentListeners(InfoComponent ic) {
+        ic.getTextField().setOnAction(e -> {
+            Manager.getInstance().getCurrentProject().getInfos().set(ic.getIndex(), ic.getTextField().getText());
+            ic.getLabel().setText(ic.getTextField().getText());
+            ic.getLabel().setVisible(true);
+            ic.getTextField().setVisible(false);
+        });
+        ic.setOnMouseClicked(e -> {
+            if (ic.getTextField().isVisible()) {
+                return;
+            }
+            ic.getLabel().setVisible(false);
+            ic.getTextField().setVisible(true);
+        });
     }
 
     public void onOverlayOk() {
@@ -114,6 +153,14 @@ public class ProjectSettingsViewController implements Controller {
     public void closeOverlay() {
         projectPane.setEffect(null);
         hideTransition.play();
+    }
+
+    @FXML
+    public void onNewInfo() {
+        InfoComponent infoComponent = new InfoComponent(Manager.getInstance().getCurrentProject().getInfos().size());
+        infoBox.getChildren().add(infoComponent);
+        Manager.getInstance().getCurrentProject().addInfo("");
+        setUpInfoComponentListeners(infoComponent);
     }
 
     @FXML
