@@ -84,12 +84,6 @@ public class ProjectViewController implements Controller {
             updateView(newValue);
         });
 
-        participantListView.setSelectionModel(null);
-        participantListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentProject().getParticipants()));
-        participantListView.managedProperty().bind(participantListView.visibleProperty());
-        participantListView.setItems(manager.getCurrentProject().getParticipants());
-        participantListView.setCellFactory(list -> new ParticipantListCell());
-
         if (manager.getCurrentProject() != null) {
             participantLabel.setText("Participants: " + manager.getCurrentProject().getParticipants().size());
             manager.getCurrentProject().getParticipants().addListener(participantListChangeListener);
@@ -115,6 +109,15 @@ public class ProjectViewController implements Controller {
 
     private void updateView(Project newProject) {
         if (newProject == null) return;
+
+        participantListView.visibleProperty().unbind();
+        participantListView.managedProperty().unbind();
+        participantListView.setSelectionModel(null);
+        participantListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentProject().getParticipants()));
+        participantListView.managedProperty().bind(participantListView.visibleProperty());
+        participantListView.setItems(manager.getCurrentProject().getParticipants());
+        participantListView.setCellFactory(list -> new ParticipantListCell());
+
         participantLabel.setText("Participants: " + newProject.getParticipants().size());
         nameLabel.setText(newProject.getName());
         deviationLabel.setText("max. Deviation: " + newProject.getMaxDeviation() + "%");

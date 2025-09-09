@@ -44,6 +44,7 @@ public class ViewManager implements Controller {
             root.getChildren().setAll(newRoot);
         } catch (Exception e) {
             log.error("Something went wrong while loading View: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 

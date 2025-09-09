@@ -156,3 +156,70 @@
 2025-09-09 14:58:00 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam D and slice: 3
 2025-09-09 14:58:04 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
 2025-09-09 14:58:10 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 15:21:06 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:21:06 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:21:07 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:21:14 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(4: BBB)
+2025-09-09 15:21:15 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 15:21:34 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:21:34 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:21:34 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:21:41 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Participant with id: 12
+2025-09-09 15:21:46 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(4: BBB)
+2025-09-09 15:21:48 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: CCC)
+2025-09-09 15:21:50 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 15:24:39 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:24:39 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:24:39 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:24:48 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(4: BBB)
+2025-09-09 15:24:51 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: CCC)
+2025-09-09 15:24:53 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 15:25:03 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:25:03 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:25:03 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:25:08 INFO  [JavaFX Application Thread] c.e.m.p.c.ProjectViewController - changed project: Project(5: CCC)
+2025-09-09 15:25:11 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Participant with id: 15
+2025-09-09 15:25:13 ERROR [JavaFX Application Thread] c.e.mentis.presentation.ViewManager - Something went wrong while loading View: 
+/Users/simonjackel/IdeaProjects/Mentis/build/resources/main/com/example/mentis/views/participant-view.fxml
+
+2025-09-09 15:25:33 ERROR [JavaFX Application Thread] c.e.mentis.presentation.ViewManager - Something went wrong while loading View: 
+/Users/simonjackel/IdeaProjects/Mentis/build/resources/main/com/example/mentis/views/participant-view.fxml
+
+2025-09-09 15:25:33 ERROR [JavaFX Application Thread] c.e.mentis.presentation.ViewManager - Something went wrong while loading View: 
+/Users/simonjackel/IdeaProjects/Mentis/build/resources/main/com/example/mentis/views/participant-view.fxml
+
+2025-09-09 15:25:35 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 15:26:38 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:26:38 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:26:39 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:26:46 ERROR [JavaFX Application Thread] c.e.mentis.presentation.ViewManager - Something went wrong while loading View: 
+/Users/simonjackel/IdeaProjects/Mentis/build/resources/main/com/example/mentis/views/participant-view.fxml
+
+2025-09-09 15:27:22 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:27:22 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:27:22 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:27:26 ERROR [JavaFX Application Thread] c.e.mentis.presentation.ViewManager - Something went wrong while loading View: 
+/Users/simonjackel/IdeaProjects/Mentis/build/resources/main/com/example/mentis/views/participant-view.fxml
+
+2025-09-09 15:30:11 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:30:11 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:30:11 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:30:15 ERROR [JavaFX Application Thread] c.e.mentis.presentation.ViewManager - Something went wrong while loading View: 
+/Users/simonjackel/IdeaProjects/Mentis/build/resources/main/com/example/mentis/views/participant-view.fxml
+
+2025-09-09 15:31:26 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:31:26 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:31:26 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:31:42 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 15:31:52 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-09 15:31:53 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam A and slice: 3
+2025-09-09 15:32:06 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 15:32:07 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 15:39:03 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 15:39:03 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 15:39:03 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 15:39:24 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 15:39:35 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-09 15:39:35 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam V and slice: 12
+2025-09-09 15:39:37 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 15:39:40 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file

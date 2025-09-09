@@ -14,7 +14,6 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -122,6 +121,7 @@ public class ExamViewController implements Controller {
         Examination e = Manager.getInstance().getCurrentExamination();
         Participant p = Manager.getInstance().getCurrentParticipant();
         projectNameLabel.setText(Manager.getInstance().getCurrentProject().getName());
+
         examLabel.setText("Exam: " + e.getExam());
         sliceLabel.setText("Slice: " + e.getSlice());
         sideLabel.setText("Side: " + p.getSide());

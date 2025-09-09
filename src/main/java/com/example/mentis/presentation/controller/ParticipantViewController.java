@@ -80,6 +80,7 @@ public class ParticipantViewController implements Controller {
     }
 
     private String createAreasString(List<Area> areas) {
+        if (areas.isEmpty()) return "";
         StringBuilder res = new StringBuilder();
         for (Area a: areas) {
             res.append(a.name());

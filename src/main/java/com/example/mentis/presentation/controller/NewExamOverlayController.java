@@ -120,7 +120,7 @@ public class NewExamOverlayController implements Controller {
 
     @FXML
     public void onOverlayUpload() {
-        handleFileUpload(overlayUploadButton, "*.jpeg", "Picturefiles");
+        handleFileUpload(overlayUploadButton, "*.jpeg", "Picture files");
     }
 
     private void handleFileUpload(Button sourceButton, String fileExtension, String fileDescription) {
@@ -133,9 +133,17 @@ public class NewExamOverlayController implements Controller {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("select file");
 
-        fileChooser.getExtensionFilters().add(
-                new FileChooser.ExtensionFilter(fileDescription, fileExtension)
-        );
+        // temporary solution
+        if (fileDescription.equals("Picture files")) {
+            fileChooser.getExtensionFilters().add(
+                    new FileChooser.ExtensionFilter(fileDescription, fileExtension, "*.png", ".bmp")
+            );
+        } else {
+            fileChooser.getExtensionFilters().add(
+                    new FileChooser.ExtensionFilter(fileDescription, fileExtension)
+            );
+        }
+
 
         File selectedFile = fileChooser.showOpenDialog(stage);
 
