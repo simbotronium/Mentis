@@ -1,5 +1,6 @@
 package com.example.mentis.presentation.controller;
 
+import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.data.Participant;
 import com.example.mentis.business.logic.Manager;
@@ -17,10 +18,12 @@ import javafx.scene.control.ListView;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.List;
 
 public class ParticipantViewController implements Controller {
 
@@ -36,6 +39,12 @@ public class ParticipantViewController implements Controller {
     private Label examinationsLabel;
     @FXML
     private Label titleLabel;
+    @FXML
+    private Label areasLabel;
+    @FXML
+    private Label deviationLabel;
+    @FXML
+    private VBox infoBox;
     private final Logger log = LoggerFactory.getLogger(ViewManager.class);
 
     private NewExamOverlayController overlayController;
@@ -60,8 +69,23 @@ public class ParticipantViewController implements Controller {
     }
 
     private void updateLabels() {
+        infoBox.getChildren().clear();
         titleLabel.setText("Participant: " + manager.getCurrentParticipant().getId());
         examinationsLabel.setText("Examinations: " + manager.getCurrentParticipant().getExaminations().size());
+        areasLabel.setText("Mapping Areas: " + createAreasString(manager.getCurrentProject().getAreas()));
+        deviationLabel.setText("max. Deviation: " + manager.getCurrentProject().getMaxDeviation() + "%");
+        for (String info: manager.getCurrentProject().getInfos()) {
+            infoBox.getChildren().add(new Label(info));
+        }
+    }
+
+    private String createAreasString(List<Area> areas) {
+        StringBuilder res = new StringBuilder();
+        for (Area a: areas) {
+            res.append(a.name());
+            res.append(", ");
+        }
+        return res.substring(0, res.length() - 2);
     }
 
     private void updateView(Participant p) {
