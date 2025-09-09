@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="fixed some view updating issues in ProjectView and ParticipantView">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mentisData/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ParticipantViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ParticipantViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/participant-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/participant-view.fxml" afterDir="false" />
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="filled unused info space">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,15 +160,7 @@
       <workItem from="1756756175419" duration="9539000" />
       <workItem from="1756850810234" duration="8416000" />
       <workItem from="1756888312952" duration="4493000" />
-      <workItem from="1757411534900" duration="5005000" />
-    </task>
-    <task id="LOCAL-00003" summary="trying again">
-      <option name="closed" value="true" />
-      <created>1753202637715</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1753202637715</updated>
+      <workItem from="1757411534900" duration="5399000" />
     </task>
     <task id="LOCAL-00004" summary="finally?">
       <option name="closed" value="true" />
@@ -557,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757415329954</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="filled unused info space">
+      <option name="closed" value="true" />
+      <created>1757418250630</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1757418250630</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +587,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="save projects to file" />
     <MESSAGE value="load projects from file" />
     <MESSAGE value="unversioned file" />
     <MESSAGE value="updating project view" />
@@ -615,6 +611,7 @@
     <MESSAGE value="can add more infos to projects" />
     <MESSAGE value="re-edit project settings" />
     <MESSAGE value="fixed some view updating issues in ProjectView and ParticipantView" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some view updating issues in ProjectView and ParticipantView" />
+    <MESSAGE value="filled unused info space" />
+    <option name="LAST_COMMIT_MESSAGE" value="filled unused info space" />
   </component>
 </project>

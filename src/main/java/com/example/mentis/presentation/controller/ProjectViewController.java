@@ -132,7 +132,6 @@ public class ProjectViewController implements Controller {
     }
 
     private void createAreaComponents(ObservableList<Area> areas) {
-        System.out.println("creating area components");
         areasBox.getChildren().clear();
         for (Area area: areas) {
             HBox hBox = new HBox();

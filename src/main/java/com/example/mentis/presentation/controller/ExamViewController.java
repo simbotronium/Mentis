@@ -1,6 +1,8 @@
 package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Area;
+import com.example.mentis.business.data.Examination;
+import com.example.mentis.business.data.Project;
 import com.example.mentis.business.data.Voxel;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.ValidationStatus;
@@ -9,6 +11,7 @@ import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.VoxelComponent;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
@@ -60,11 +63,21 @@ public class ExamViewController implements Controller {
     private VBox mappingBox;
     private Voxel selectedVoxel;
     private final Logger log = LoggerFactory.getLogger(ExamViewController.class);
+    private final ChangeListener<Examination> examinationChangeListener = ((observable, oldValue, newValue) -> updateView());
 
 
     //TODO: fix voxel selection issue
     @FXML
     public void initialize() {
+        updateView();
+        manager.currentExaminationProperty().addListener(examinationChangeListener);
+    }
+
+    private void updateView() {
+        leftGrid.getChildren().clear();
+        middleGrid.getChildren().clear();
+        rightGrid.getChildren().clear();
+
         log.info("searching overlay here: " + manager.getCurrentExamination().getOverlayFile().toURI());
         Image overlay = new Image(manager.getCurrentExamination().getOverlayFile().toURI().toString());
 

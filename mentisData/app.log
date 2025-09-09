@@ -87,3 +87,20 @@
 2025-09-09 13:43:16 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
 2025-09-09 13:43:16 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
 2025-09-09 13:43:44 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 13:50:34 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 13:50:34 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 13:50:34 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 13:50:46 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 13:51:03 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 13:52:39 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 13:52:39 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 13:52:39 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 13:52:44 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 13:52:48 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 13:52:57 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 13:54:10 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 13:54:10 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 13:54:10 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 13:54:15 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 13:54:21 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 13:54:29 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
