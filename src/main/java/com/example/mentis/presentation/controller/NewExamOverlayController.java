@@ -35,31 +35,20 @@ public class NewExamOverlayController implements Controller {
 
     private Examination examination = new Examination();
     private final Manager manager = Manager.getInstance();
-
-    private final TextFormatter<String> examFormatter = new TextFormatter<>(new DefaultStringConverter());
-    private final TextFormatter<Integer> sliceFormatter = new TextFormatter<>(new IntegerStringConverter());
     private final SimpleBooleanProperty show = new SimpleBooleanProperty(true);
     private final Logger log = LoggerFactory.getLogger(NewExamOverlayController.class);
 
     @FXML
     public void initialize() {
-        sliceFormatter.valueProperty().set(0);
-        examTextField.setTextFormatter(examFormatter);
-        sliceTextField.setTextFormatter(sliceFormatter);
         refresh();
-    }
-
-    public void unbind() {
-        if (examination == null) return;
-        examination.examProperty().unbindBidirectional(examFormatter.valueProperty());
-        examination.sliceProperty().asObject().unbindBidirectional(sliceFormatter.valueProperty());
     }
 
     public void refresh() {
         examination = new Examination();
-        sliceFormatter.valueProperty().set(0);
-        examination.examProperty().bindBidirectional(examFormatter.valueProperty());
-        examination.sliceProperty().asObject().bindBidirectional(sliceFormatter.valueProperty());
+        examTextField.setText("");
+        sliceTextField.setText("");
+        examTextField.getStyleClass().remove("input-error");
+        sliceTextField.getStyleClass().remove("input-error");
         resetUpButtonStyles();
     }
 
@@ -81,11 +70,47 @@ public class NewExamOverlayController implements Controller {
     }
 
     @FXML
-    public void onOk() {
-        manager.addExamination(examination);
-        unbind();
+    public void onCancel() {
         refresh();
         show.set(false);
+    }
+
+    @FXML
+    public void onOk() {
+        if (validInput()) {
+            manager.addExamination(examination);
+            refresh();
+            show.set(false);
+        }
+    }
+
+    private boolean validInput() {
+        boolean valid = true;
+        if (!examTextField.getText().isEmpty() && examTextField.getText().matches("[A-Za-z]+")) {
+            examination.setExam(examTextField.getText());
+        } else {
+            examTextField.setText("");
+            examTextField.getStyleClass().add("input-error");
+            valid = false;
+        }
+        try {
+            examination.setSlice(Integer.parseInt(sliceTextField.getText()));
+        } catch (NumberFormatException e) {
+            sliceTextField.setText("");
+            sliceTextField.getStyleClass().add("unsuccessful-upload");
+            valid = false;
+        }
+
+        if (examination.getOverlayFile() == null) {
+            overlayUploadButton.getStyleClass().add("unsuccessful-upload");
+            valid = false;
+        }
+        if (examination.getTxtFilePath().isEmpty()) {
+            txtUploadButton.getStyleClass().add("unsuccessful-upload");
+            valid = false;
+        }
+
+        return valid;
     }
 
     @FXML
@@ -122,6 +147,7 @@ public class NewExamOverlayController implements Controller {
                 examination.setOverlayFile(selectedFile);
             }
             sourceButton.setText(selectedFile.getName());
+            sourceButton.getStyleClass().remove("unsuccessful-upload");
             sourceButton.getStyleClass().add("successful-upload");
 
         } else {

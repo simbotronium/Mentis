@@ -7,3 +7,10 @@
     -fx-text-fill: red;
     -fx-border-color: red;
 }
+
+.input-error {
+    -fx-border-width: 2px;
+    -fx-border-color: #e63946;
+    -fx-background-color: #ffe5e5;
+    -fx-text-fill: #e63946;
+}

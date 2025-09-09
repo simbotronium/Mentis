@@ -72,6 +72,12 @@ public class NewParticipantOverlayController implements Controller {
         return root;
     }
 
+    @FXML
+    public void onCancel() {
+        refresh();
+        show.set(false);
+    }
+
     public SimpleBooleanProperty showProperty() {
         return show;
     }

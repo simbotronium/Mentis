@@ -123,3 +123,36 @@
 2025-09-09 14:23:37 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
 2025-09-09 14:23:37 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
 2025-09-09 14:23:57 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 14:25:55 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 14:25:55 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 14:25:55 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 14:26:09 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Participant with id: 16
+2025-09-09 14:26:17 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam D and slice: 1
+2025-09-09 14:26:58 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam E and slice: 2
+2025-09-09 14:27:11 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam E and slice: 2
+2025-09-09 14:27:16 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 14:27:58 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 14:27:58 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 14:27:58 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 14:32:08 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam A and slice: 0
+2025-09-09 14:32:26 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam B and slice: 1
+2025-09-09 14:32:32 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 14:42:48 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 14:42:48 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 14:42:48 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 14:43:05 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Project - New Participant with id: 12
+2025-09-09 14:43:10 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam null and slice: 0
+2025-09-09 14:43:31 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file
+2025-09-09 14:56:00 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 14:56:00 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 14:56:00 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 14:56:24 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 14:56:39 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/basefit1.txt
+2025-09-09 14:57:11 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - data folder found: /Users/simonjackel/mentisData
+2025-09-09 14:57:11 INFO  [Thread-4] c.e.mentis.application.DataManager - starting task
+2025-09-09 14:57:11 INFO  [Thread-4] c.e.mentis.application.DataManager - found 4 projects
+2025-09-09 14:57:31 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 14:57:56 INFO  [JavaFX Application Thread] c.e.m.p.c.NewExamOverlayController - selected File: /Users/simonjackel/IdeaProjects/Mentis/src/main/resources/txt.txt
+2025-09-09 14:58:00 INFO  [JavaFX Application Thread] c.e.mentis.business.data.Participant - New Examination with exam D and slice: 3
+2025-09-09 14:58:04 INFO  [JavaFX Application Thread] c.e.m.p.c.ExamViewController - searching overlay here: file:/Users/simonjackel/Downloads/overlay.jpeg
+2025-09-09 14:58:10 INFO  [JavaFX Application Thread] c.e.mentis.application.DataManager - updatet save file

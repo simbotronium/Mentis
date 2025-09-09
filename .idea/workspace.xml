@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="refreshed ExamView infos">
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="delete exams">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mentisData/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/mentisData/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamListCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamListCellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ExamListElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/Components/ExamListElement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewExamOverlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewExamOverlayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewParticipantOverlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/NewParticipantOverlayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-exam-overlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-exam-overlay.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-participant-overlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/overlays/new-participant-overlay.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/overlayStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/stylesheets/overlayStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,15 +166,7 @@
       <workItem from="1756756175419" duration="9539000" />
       <workItem from="1756850810234" duration="8416000" />
       <workItem from="1756888312952" duration="4493000" />
-      <workItem from="1757411534900" duration="7015000" />
-    </task>
-    <task id="LOCAL-00006" summary="maybe now?">
-      <option name="closed" value="true" />
-      <created>1753204703783</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1753204703783</updated>
+      <workItem from="1757411534900" duration="8862000" />
     </task>
     <task id="LOCAL-00007" summary="maybe now??">
       <option name="closed" value="true" />
@@ -557,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757419310341</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="delete exams">
+      <option name="closed" value="true" />
+      <created>1757420651594</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1757420651595</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +593,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updating project view" />
     <MESSAGE value="fixed serialization issues" />
     <MESSAGE value="map voxel via gui" />
     <MESSAGE value="new project structure" />
@@ -615,6 +617,7 @@
     <MESSAGE value="filled unused info space" />
     <MESSAGE value="refreshed ExamView" />
     <MESSAGE value="refreshed ExamView infos" />
-    <option name="LAST_COMMIT_MESSAGE" value="refreshed ExamView infos" />
+    <MESSAGE value="delete exams" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete exams" />
   </component>
 </project>
