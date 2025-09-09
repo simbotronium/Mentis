@@ -79,6 +79,12 @@ public class ExamViewController implements Controller {
     //TODO: fix voxel selection issue
     @FXML
     public void initialize() {
+        areaChoice.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null){
+                selectedVoxel.setArea(newValue);
+                setSelectedVoxel(selectedVoxel);
+            }
+        });
         refresh();
         manager.currentExaminationProperty().addListener(examinationChangeListener);
     }
@@ -93,11 +99,7 @@ public class ExamViewController implements Controller {
 
         ObservableList<Area> areas = Manager.getInstance().getCurrentProject().getAreas();
         areaChoice.setItems(areas);
-        if (!areas.isEmpty()) areaChoice.setValue(areas.get(0));
-        areaChoice.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            selectedVoxel.setArea(newValue);
-            this.setSelectedVoxel(null);
-        });
+        areaChoice.setValue(null);
 
         updateLabels();
 
@@ -113,6 +115,7 @@ public class ExamViewController implements Controller {
         rightImage.setImage(overlay);
 
         Arrays.stream(manager.getCurrentExamination().getVoxels()).forEach(v -> v.selectedProperty().set(false));
+        System.out.println("aus refresh");
         this.setSelectedVoxel(null);
         createVoxelViews();
     }
@@ -158,11 +161,14 @@ public class ExamViewController implements Controller {
         cell.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         cell.setOnMouseClicked(e -> {
             if (voxel.isSelected()) {
+                System.out.println("clicked already selected Voxel");
                 voxel.selectedProperty().set(false);
             } else {
+                System.out.println("clicked not selected voxel");
                 Arrays.stream(manager.getCurrentExamination().getVoxels()).forEach(v -> v.selectedProperty().set(false));
                 voxel.selectedProperty().set(true);
             }
+            System.out.println("aus cell.onMouseClicked");
             this.setSelectedVoxel(voxel);
         });
         GridPane.setHgrow(cell, Priority.ALWAYS);
@@ -172,18 +178,21 @@ public class ExamViewController implements Controller {
 
     private void setSelectedVoxel(Voxel v) {
         if (v == null) {
+            System.out.println("setting null voxel");
             this.selectionBox.setVisible(false);
             this.mappingBox.setVisible(false);
             this.selectedVoxel = null;
             return;
         }
         if (v.isSelected()) {
+            System.out.println("setting selected voxel");
             this.selectedVoxel = v;
             selectionLabel.setText("selected voxel: " + v);
             this.selectionBox.setVisible(true);
             this.mappingBox.setVisible(true);
             this.areaChoice.setValue(v.getArea());
         } else {
+            System.out.println("setting not selected voxel");
             selectionLabel.setText("no voxel selected");
             this.selectionBox.setVisible(false);
             this.mappingBox.setVisible(false);
@@ -205,6 +214,7 @@ public class ExamViewController implements Controller {
     private void setSelectedVoxelValidationStatus(boolean valid) {
         this.selectedVoxel.setValidationStatus(valid ? ValidationStatus.VALID : ValidationStatus.REFUTED);
         this.selectionBox.setVisible(false);
+        this.mappingBox.setVisible(false);
         this.selectedVoxel = null;
     }
 
