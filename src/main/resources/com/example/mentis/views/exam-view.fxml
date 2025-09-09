@@ -18,14 +18,13 @@
          <children>
             <VBox spacing="20.0">
                <children>
-                  <Label text="ProjectName" />
+                  <Label fx:id="projectNameLabel" text="ProjectName" />
                   <HBox spacing="20.0">
                      <children>
-                        <Label text="Exam:" />
-                        <Label text="Slice:" />
-                        <Label text="Side:" />
-                        <Label text="Study:" />
-                        <Label text="Age:" />
+                        <Label fx:id="examLabel" text="Exam:" />
+                        <Label fx:id="sliceLabel" text="Slice:" />
+                        <Label fx:id="sideLabel" text="Side:" />
+                        <Label fx:id="ageLabel" text="Age:" />
                      </children>
                   </HBox>
                </children>

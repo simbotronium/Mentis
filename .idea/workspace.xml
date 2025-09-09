@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="filled unused info space">
+    <list default="true" id="191dab6e-c332-4544-bb5e-39f852979e9a" name="Changes" comment="refreshed ExamView">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mentis/presentation/controller/ExamViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/exam-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mentis/views/exam-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,15 +162,7 @@
       <workItem from="1756756175419" duration="9539000" />
       <workItem from="1756850810234" duration="8416000" />
       <workItem from="1756888312952" duration="4493000" />
-      <workItem from="1757411534900" duration="5399000" />
-    </task>
-    <task id="LOCAL-00004" summary="finally?">
-      <option name="closed" value="true" />
-      <created>1753203281555</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1753203281555</updated>
+      <workItem from="1757411534900" duration="6018000" />
     </task>
     <task id="LOCAL-00005" summary="finally??">
       <option name="closed" value="true" />
@@ -554,7 +548,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757418250630</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="refreshed ExamView">
+      <option name="closed" value="true" />
+      <created>1757418901244</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1757418901244</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +589,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="load projects from file" />
     <MESSAGE value="unversioned file" />
     <MESSAGE value="updating project view" />
     <MESSAGE value="fixed serialization issues" />
@@ -612,6 +613,7 @@
     <MESSAGE value="re-edit project settings" />
     <MESSAGE value="fixed some view updating issues in ProjectView and ParticipantView" />
     <MESSAGE value="filled unused info space" />
-    <option name="LAST_COMMIT_MESSAGE" value="filled unused info space" />
+    <MESSAGE value="refreshed ExamView" />
+    <option name="LAST_COMMIT_MESSAGE" value="refreshed ExamView" />
   </component>
 </project>

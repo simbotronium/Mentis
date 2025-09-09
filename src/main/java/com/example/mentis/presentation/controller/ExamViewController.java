@@ -2,7 +2,7 @@ package com.example.mentis.presentation.controller;
 
 import com.example.mentis.business.data.Area;
 import com.example.mentis.business.data.Examination;
-import com.example.mentis.business.data.Project;
+import com.example.mentis.business.data.Participant;
 import com.example.mentis.business.data.Voxel;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.ValidationStatus;
@@ -14,6 +14,7 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -61,19 +62,29 @@ public class ExamViewController implements Controller {
     private ChoiceBox<Area> areaChoice;
     @FXML
     private VBox mappingBox;
+    @FXML
+    private Label projectNameLabel;
+    @FXML
+    private Label examLabel;
+    @FXML
+    private Label sliceLabel;
+    @FXML
+    private Label sideLabel;
+    @FXML
+    private Label ageLabel;
     private Voxel selectedVoxel;
     private final Logger log = LoggerFactory.getLogger(ExamViewController.class);
-    private final ChangeListener<Examination> examinationChangeListener = ((observable, oldValue, newValue) -> updateView());
+    private final ChangeListener<Examination> examinationChangeListener = ((observable, oldValue, newValue) -> refresh());
 
 
     //TODO: fix voxel selection issue
     @FXML
     public void initialize() {
-        updateView();
+        refresh();
         manager.currentExaminationProperty().addListener(examinationChangeListener);
     }
 
-    private void updateView() {
+    private void refresh() {
         leftGrid.getChildren().clear();
         middleGrid.getChildren().clear();
         rightGrid.getChildren().clear();
@@ -89,6 +100,8 @@ public class ExamViewController implements Controller {
             this.setSelectedVoxel(null);
         });
 
+        updateLabels();
+
         leftImage.fitWidthProperty().bind(leftStack.widthProperty());
         leftImage.fitHeightProperty().bind(leftStack.heightProperty());
         rightImage.fitWidthProperty().bind(rightStack.widthProperty());
@@ -103,6 +116,16 @@ public class ExamViewController implements Controller {
         Arrays.stream(manager.getCurrentExamination().getVoxels()).forEach(v -> v.selectedProperty().set(false));
         this.setSelectedVoxel(null);
         createVoxelViews();
+    }
+
+    private void updateLabels() {
+        Examination e = Manager.getInstance().getCurrentExamination();
+        Participant p = Manager.getInstance().getCurrentParticipant();
+        projectNameLabel.setText(Manager.getInstance().getCurrentProject().getName());
+        examLabel.setText("Exam: " + e.getExam());
+        sliceLabel.setText("Slice: " + e.getSlice());
+        sideLabel.setText("Side: " + p.getSide());
+        ageLabel.setText("Age: " + p.getAge());
     }
 
     private void createVoxelViews() {
