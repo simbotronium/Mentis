@@ -84,6 +84,7 @@ public class ProjectViewController implements Controller {
             updateView(newValue);
         });
 
+        participantListView.setSelectionModel(null);
         participantListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentProject().getParticipants()));
         participantListView.managedProperty().bind(participantListView.visibleProperty());
         participantListView.setItems(manager.getCurrentProject().getParticipants());

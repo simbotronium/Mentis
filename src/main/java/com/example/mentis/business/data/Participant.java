@@ -44,7 +44,7 @@ public class Participant {
     }
 
     public void addExamination(Examination e) {
-        log.info("New Examination with exam " + e.getExam());
+        log.info("New Examination with exam " + e.getExam() + " and slice: " + e.getSlice());
         examinations.add(e);
     }
 

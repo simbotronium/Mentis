@@ -7,6 +7,7 @@ import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.components.ExamListCell;
 import javafx.beans.binding.Bindings;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,28 +39,34 @@ public class ParticipantViewController implements Controller {
     private final Logger log = LoggerFactory.getLogger(ViewManager.class);
 
     private NewExamOverlayController overlayController;
+    private ListChangeListener<Examination> examinationListChangeListener;
 
     @FXML
     public void initialize() {
-        manager.currentParticipantProperty().addListener((observable, oldValue, newValue) -> {
-            log.info("changed Participant");
-            if (newValue != null) {
-                updateView(newValue);
-            }
-        });
-
-        if (manager.getCurrentParticipant() != null) {
-            updateView(manager.getCurrentParticipant());
-        }
+        examListView.setFocusModel(null);
+        setupListener();
+        updateView(Manager.getInstance().getCurrentParticipant());
     }
 
-    private void updateView(Participant m) {
+    private void setupListener() {
+        examinationListChangeListener = o -> updateLabels();
+        ChangeListener<Participant> participantListChangeListener = ((observable, oldValue, newValue) -> {
+            if (oldValue != null) oldValue.getExaminations().removeListener(examinationListChangeListener);
+            newValue.getExaminations().addListener(examinationListChangeListener);
+            updateView(newValue);
+        });
+        manager.currentParticipantProperty().addListener(participantListChangeListener);
+        manager.getCurrentParticipant().getExaminations().addListener(examinationListChangeListener);
+    }
+
+    private void updateLabels() {
         titleLabel.setText("Participant: " + manager.getCurrentParticipant().getId());
         examinationsLabel.setText("Examinations: " + manager.getCurrentParticipant().getExaminations().size());
-        manager.getCurrentParticipant().getExaminations().addListener((ListChangeListener<? super Examination>) o
-                -> examinationsLabel.setText("Examinations: " + manager.getCurrentParticipant().getExaminations().size()));
-        m.getExaminations().addListener((ListChangeListener<? super Examination>) o
-                -> examinationsLabel.setText("Participant: " + m.getId()));
+    }
+
+    private void updateView(Participant p) {
+        if (p == null) return;
+        updateLabels();
 
         examListView.visibleProperty().bind(Bindings.isNotEmpty(manager.getCurrentParticipant().getExaminations()));
         examListView.managedProperty().bind(examListView.visibleProperty());
@@ -80,7 +87,7 @@ public class ParticipantViewController implements Controller {
                 root.getChildren().add(overlayRoot);
                 projectPane.setEffect(new GaussianBlur(20));
             } catch (IOException e) {
-                log.error("Something went wrong while loading new participant overlay: " + e.getMessage());
+                log.error("Something went wrong while loading new exam overlay: " + e.getMessage());
             }
         } else {
             overlayController.refresh();

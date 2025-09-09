@@ -8,6 +8,7 @@ import com.example.mentis.presentation.ViewManager;
 import com.example.mentis.presentation.transitions.DeleteButtonFadeTransition;
 import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
+import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.Cursor;
 import javafx.scene.control.Button;
@@ -35,10 +36,14 @@ public class ParticipantListCellController implements Controller {
     private Participant participant;
     private final Manager manager = Manager.getInstance();
 
-    public void setParticipant(Participant m) {
-        participant = m;
-        idLabel.setText(Long.toString(m.getId()));
-        examinationsLabel.setText(createExaminationsString(m.getExaminations()));
+    private final ListChangeListener<Examination> examinationListChangeListener = o -> examinationsLabel.setText(createExaminationsString((participant.getExaminations())));
+
+    public void setParticipant(Participant p) {
+        if (participant != null) participant.getExaminations().removeListener(examinationListChangeListener);
+        participant = p;
+        idLabel.setText(Long.toString(p.getId()));
+        examinationsLabel.setText(createExaminationsString(p.getExaminations()));
+        p.getExaminations().addListener(examinationListChangeListener);
     }
 
     @FXML

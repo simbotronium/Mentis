@@ -44,11 +44,15 @@ public class NewExamOverlayController implements Controller {
     @FXML
     public void initialize() {
         sliceFormatter.valueProperty().set(0);
-
         examTextField.setTextFormatter(examFormatter);
         sliceTextField.setTextFormatter(sliceFormatter);
-
         refresh();
+    }
+
+    public void unbind() {
+        if (examination == null) return;
+        examination.examProperty().unbindBidirectional(examFormatter.valueProperty());
+        examination.sliceProperty().asObject().unbindBidirectional(sliceFormatter.valueProperty());
     }
 
     public void refresh() {
@@ -79,6 +83,7 @@ public class NewExamOverlayController implements Controller {
     @FXML
     public void onOk() {
         manager.addExamination(examination);
+        unbind();
         refresh();
         show.set(false);
     }
