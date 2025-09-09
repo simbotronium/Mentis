@@ -4,8 +4,10 @@ import com.example.mentis.business.data.Examination;
 import com.example.mentis.business.logic.Manager;
 import com.example.mentis.business.logic.View;
 import com.example.mentis.presentation.ViewManager;
+import com.example.mentis.presentation.transitions.DeleteButtonFadeTransition;
 import javafx.fxml.FXML;
 import javafx.scene.Cursor;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -23,15 +25,25 @@ public class ExamListCellController implements Controller {
     private Circle valid;
     @FXML
     private Circle mapped;
+    @FXML
+    private Button delete;
 
     private Examination exam;
+    private DeleteButtonFadeTransition deleteButtonFadeTransition;
 
     private final Color red = new Color(1.0, 0.0, 0.0, 1.0);
     private final Color green = new Color(0.0, 1.0, 0.0, 1.0);
     @FXML
     public void initialize() {
-        this.root.setCursor(Cursor.HAND);
-        this.root.setOnMouseClicked(e -> onEdit());
+        delete.setText("\u2716");
+        delete.getStyleClass().add("delete-button");
+        delete.setOpacity(0);
+        delete.setOnAction(e -> Manager.getInstance().getCurrentParticipant().getExaminations().remove(exam));
+        deleteButtonFadeTransition = new DeleteButtonFadeTransition(delete);
+
+        root.setCursor(Cursor.HAND);
+        root.setOnMouseClicked(e -> onEdit());
+        root.hoverProperty().addListener(((observable, was, is) -> animateDelete(is)));
     }
 
     public void setExamination(Examination exam) {
@@ -40,6 +52,10 @@ public class ExamListCellController implements Controller {
         sliceLabel.setText(Integer.toString(exam.getSlice()));
         valid.setFill(exam.isValid() ? green : red);
         mapped.setFill(exam.isMapped() ? green : red);
+    }
+
+    private void animateDelete(boolean show) {
+        deleteButtonFadeTransition.play(show);
     }
 
     @FXML
